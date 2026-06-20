@@ -1,0 +1,33 @@
+
+
+/* Custom Interaction Animation Layer for Logo */
+.custom-matrix-logo {
+    will-change: transform; /* Hardware acceleration link to prevent blurry render layout shifts */
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Premium smooth finish easing */
+}
+
+/* Hover State Switch */
+.custom-matrix-logo:hover {
+    transform: scale(1.12) rotate(2deg); /* Scales beautifully and returns instantly on mouse leave */
+}
+
+  
+        /* Custom Smooth Scrollbar Logic for Premium Dashboard Panel */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0F1520;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #151D2A;
+            border-radius: 4px;
+            border: 1px solid rgba(138, 153, 173, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E6C36A;
+        }
