@@ -8,8 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
- 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body class="bg-brandDark text-white font-sans antialiased min-h-screen flex overflow-x-hidden">
@@ -89,7 +91,7 @@
                                 </a>
                             </li>
 
-                             <li>
+                            <li>
                                 <a href="withdraw.php"
                                     class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
                                     <span
@@ -98,7 +100,7 @@
                                 </a>
                             </li>
 
-                             <li>
+                            <li>
                                 <a href="withdraw.php"
                                     class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
                                     <span
@@ -107,7 +109,7 @@
                                 </a>
                             </li>
 
-                             <li>
+                            <li>
                                 <a href="withdraw.php"
                                     class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
                                     <span
@@ -322,8 +324,7 @@
             </div>
         </header>
 
-        <main class="p-4 sm:p-8 space-y-6 flex-1">
-
+        <!-- <main class="p-4 sm:p-8 space-y-6 flex-1">
             <div
                 class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-slate-800/60 mb-6">
                 <div class="space-y-1">
@@ -492,17 +493,784 @@
                     </table>
                 </div>
             </div>
+        </main> -->
 
 
+        <!-- MAIN SCROLLABLE OPERATIONS CONTROL HUB VIEW -->
+<main class="p-4 sm:p-8 space-y-6 flex-1">
 
+        <div
+                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-slate-800/60 mb-6">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2 font-mono text-[11px] tracking-wider text-brandMuted uppercase">
+                        <span>[ SYSTEM PORTAL ]</span>
+                        <i class="bi bi-chevron-right text-[9px]"></i>
+                        <span class="text-brandGold" id="pageBreadcrumb">DASHBOARD CORE</span>
+                    </div>
+                    <div class="flex items-center gap-3 mt-1">
+                        <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white font-sans uppercase"
+                            id="mainPageTitle">
+                            Dashboard
+                        </h2>
+                        <span
+                            class="flex items-center gap-1.5 px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-brandGreen text-[10px] font-mono rounded-md uppercase tracking-wide">
+                            <span class="w-1 h-1 bg-brandGreen rounded-full animate-pulse"></span>
+                            <span>Live Node</span>
+                        </span>
+                    </div>
+                </div>
 
-        </main>
+                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">
+                    <div
+                        class="px-4 py-2 bg-brandSurface border border-slate-800/60 rounded-xl flex flex-col min-w-[100px] sm:min-w-[120px]">
+                        <span class="text-[9px] text-brandMuted uppercase tracking-wider">[ NETWORK LATENCY ]</span>
+                        <span class="text-xs font-bold text-brandGreen mt-0.5 flex items-center gap-1">
+                            <i class="bi bi-wifi text-[11px]"></i> 14ms (Optimal)
+                        </span>
+                    </div>
 
+                    <button onclick="window.location.reload()"
+                        class="h-[42px] px-3 bg-brandDark border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold rounded-xl flex items-center justify-center transition-all text-sm focus:outline-none"
+                        title="Sync Current Component Nodes">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                </div>
+            </div>
+    
+    <!-- ==========================================================================
+       TOP ROW: WELCOME USER BANNER, TIMER & SYSTEM DETAILS
+       ========================================================================== -->
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+        <!-- Welcome Operator Box -->
+        <div class="bg-gradient-to-r from-brandSurface to-[#1b2636] p-4 rounded-xl border border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-lg">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-brandDark border border-brandGold/30 flex items-center justify-center">
+                    <i class="bi bi-person-badge text-brandGold text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest text-brandGold/70 block uppercase">[ REALGAINS NODE CONTROLLER ]</span>
+                    <h3 class="text-sm font-bold text-white tracking-wide">Welcome back, Realgains LLC</h3>
+                </div>
+            </div>
+            <!-- Live Time Matrix Indicator -->
+            <div class="flex items-center gap-2 font-mono text-[11px] bg-brandDark/50 px-3 py-1.5 rounded-lg border border-slate-800 text-brandMuted">
+                <i class="bi bi-clock-history text-brandGreen animate-pulse"></i>
+                <span>Date & Time: Saturday, 20 June 2026 | 06:55:42 pm</span>
+            </div>
+        </div>
 
+        <!-- Operator Identifiers Dynamic Nodes -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-mono">
+            <div class="p-3 bg-brandDark/40 border border-slate-800/80 rounded-xl flex flex-col justify-center">
+                <span class="text-[9px] text-brandMuted uppercase">[ USERNAME ]</span>
+                <span class="text-xs font-bold text-white mt-1 truncate">REALGAINS</span>
+            </div>
+            <div class="p-3 bg-brandDark/40 border border-slate-800/80 rounded-xl flex flex-col justify-center">
+                <span class="text-[9px] text-brandMuted uppercase">[ SYSTEM ID ]</span>
+                <span class="text-xs font-bold text-brandGreen mt-1">RG3038998</span>
+            </div>
+            <div class="p-3 bg-brandDark/40 border border-slate-800/80 rounded-xl flex flex-col justify-center">
+                <span class="text-[9px] text-brandMuted uppercase">[ SPONSOR ]</span>
+                <span class="text-xs font-bold text-brandGold mt-1 truncate">COMPANY</span>
+            </div>
+            <div class="p-3 bg-brandDark/40 border border-slate-800/80 rounded-xl flex flex-col justify-center">
+                <span class="text-[9px] text-brandMuted uppercase">[ ACTIVATION ]</span>
+                <span class="text-xs font-bold text-slate-300 mt-1">2026-06-13</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       REFERRAL & AFFILIATE RANK ENGINE PIPELINE
+       ========================================================================== -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <!-- Referral Link Display Field Box -->
+        <div class="lg:col-span-2 h-12 bg-brandDark border border-slate-800/80 rounded-xl px-4 flex items-center justify-between overflow-hidden group">
+            <div class="flex items-center gap-2 overflow-hidden w-[75%]">
+                <i class="bi bi-link-45deg text-brandGold text-lg shrink-0"></i>
+                <span class="text-xs font-mono text-brandMuted truncate tracking-wide">https://realgains.lc/referral.php?id=RG3038998</span>
+            </div>
+            <button onclick="navigator.clipboard.writeText('https://realgains.lc/referral.php?id=RG3038998')" class="h-8 px-3 bg-brandSurface hover:bg-brandGold border border-slate-800 hover:border-brandGold/40 text-brandGold hover:text-brandDark font-mono text-[10px] font-bold rounded-lg transition-all flex items-center gap-1.5 shrink-0 focus:outline-none">
+                <i class="bi bi-copy"></i> COPY LINK
+            </button>
+        </div>
+        <!-- Active Rank Badge Module -->
+        <div class="h-12 bg-gradient-to-r from-brandGold/10 via-brandSurface to-brandDark border border-brandGold/20 rounded-xl px-4 flex items-center justify-between font-mono">
+            <span class="text-[10px] tracking-wider text-brandMuted uppercase">[ NETWORK RANK ]</span>
+            <span class="text-xs font-black text-brandGold flex items-center gap-1.5">
+                <i class="bi bi-trophy-fill text-brandGold animate-bounce"></i> AFFILIATE
+            </span>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       CORE PRIMARY FINANCIAL STATS MESH (USDT GRADIENT UNDERLINES)
+       ========================================================================== -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <!-- Total Invested -->
+        <div class="bg-brandSurface p-5 rounded-2xl border border-slate-800/50 shadow-xl flex flex-col justify-between group relative overflow-hidden">
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brandGold to-transparent"></div>
+            <div class="flex items-center justify-between"><span class="text-xs font-mono tracking-wider text-brandMuted uppercase">[ TOTAL INVESTED AMOUNT ]</span><div class="text-brandGold"><i class="bi bi-arrow-up-right-circle-fill"></i></div></div>
+            <h3 class="text-2xl font-black font-mono tracking-tight text-white mt-4">$5,000.00</h3>
+        </div>
+        <!-- Total Income Earned -->
+        <div class="bg-brandSurface p-5 rounded-2xl border border-slate-800/50 shadow-xl flex flex-col justify-between group relative overflow-hidden">
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brandGreen to-transparent"></div>
+            <div class="flex items-center justify-between"><span class="text-xs font-mono tracking-wider text-brandMuted uppercase">[ TOTAL INCOME EARNED ]</span><div class="text-brandGreen"><i class="bi bi-graph-up-arrow"></i></div></div>
+            <h3 class="text-2xl font-black font-mono tracking-tight text-white mt-4">$5.0000</h3>
+        </div>
+        <!-- Activation Wallet Balance -->
+        <div class="bg-brandSurface p-5 rounded-2xl border border-slate-800/50 shadow-xl flex flex-col justify-between group relative overflow-hidden">
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
+            <div class="flex items-center justify-between"><span class="text-xs font-mono tracking-wider text-brandMuted uppercase">[ ACTIVATION WALLET BALANCE ]</span><div class="text-purple-400"><i class="bi bi-wallet2"></i></div></div>
+            <h3 class="text-2xl font-black font-mono tracking-tight text-white mt-4">$1.0187</h3>
+        </div>
+        <!-- Income Wallet Balance -->
+        <div class="bg-brandSurface p-5 rounded-2xl border border-slate-800/50 shadow-xl flex flex-col justify-between group relative overflow-hidden">
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-rose-500 to-transparent"></div>
+            <div class="flex items-center justify-between"><span class="text-xs font-mono tracking-wider text-brandMuted uppercase">[ INCOME WALLET BALANCE ]</span><div class="text-rose-400"><i class="bi bi-cash-coin"></i></div></div>
+            <h3 class="text-2xl font-black font-mono tracking-tight text-white mt-4">$5.0000</h3>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       CHALLENGE RUSH BOARD & PROFIT SHARING 5X PROMO CARDS
+       ========================================================================== -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+        <!-- XUV 700 Fast Track Challenge Card -->
+        <div class="bg-gradient-to-br from-brandSurface to-[#0d1624] border border-slate-800 p-5 rounded-2xl shadow-xl flex flex-col sm:flex-row justify-between items-center gap-4 relative overflow-hidden">
+            <div class="space-y-3 z-10">
+                <span class="px-2.5 py-0.5 bg-brandGold/10 border border-brandGold/30 text-brandGold font-mono text-[9px] rounded-md uppercase tracking-widest block w-max">100-Day Fast Track</span>
+                <h3 class="text-lg font-black tracking-tight text-white uppercase">Win a XUV 700 Complete</h3>
+                <div class="pt-2 font-mono text-[10px] text-brandMuted space-y-1">
+                    <p class="flex items-center gap-1.5"><span class="w-1 h-1 bg-slate-500 rounded-full"></span>Strong Leg 1 : <span class="text-white">$0</span></p>
+                    <p class="flex items-center gap-1.5"><span class="w-1 h-1 bg-slate-500 rounded-full"></span>Strong Leg 2 : <span class="text-white">$0</span></p>
+                    <p class="flex items-center gap-1.5"><span class="w-1 h-1 bg-slate-500 rounded-full"></span>Strong Leg 3 : <span class="text-white">$0</span></p>
+                </div>
+            </div>
+            <!-- Car Render Placeholder Frame with Glow Matrix Background -->
+            <div class="w-48 h-28 bg-brandDark/40 rounded-xl border border-slate-800/80 relative flex items-center justify-center p-2 group shadow-inner shrink-0">
+                <div class="absolute inset-0 bg-brandGold/5 rounded-xl filter blur-sm group-hover:bg-brandGold/10 transition-colors"></div>
+                <i class="bi bi-car-front-fill text-brandGold/40 text-4xl group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="absolute bottom-2 text-[9px] font-mono tracking-wider text-brandGold">[ VEHICLE VECTOR LINK ]</span>
+            </div>
+        </div>
+
+        <!-- Profit Sharing 5X Matrix Token Timer -->
+        <div class="bg-gradient-to-br from-brandSurface to-[#0d1624] border border-slate-800 p-5 rounded-2xl shadow-xl flex items-center justify-between gap-4">
+            <div class="space-y-2">
+                <span class="px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/30 text-brandGreen font-mono text-[9px] rounded-md uppercase tracking-widest block w-max">Booster Active</span>
+                <h3 class="text-lg font-black tracking-tight text-white uppercase">PROFIT SHARING 5X</h3>
+                <p class="text-[11px] text-brandMuted leading-tight font-mono max-w-sm">5 Direct within 15 days (With Same or Above Package)</p>
+                <div class="pt-2 font-mono text-[10px] text-brandMuted flex gap-4">
+                    <span>Direct Required: <strong class="text-brandGold">5</strong></span>
+                    <span>Direct Remaining: <strong class="text-rose-400">5</strong></span>
+                </div>
+            </div>
+            <!-- Dynamic Giant Big Timer Visual Node -->
+            <div class="w-24 h-24 bg-brandDark rounded-2xl border-2 border-brandGold/20 flex flex-col items-center justify-center text-center p-2 font-mono shadow-inner shrink-0">
+                <span class="text-2xl font-black text-brandGold tracking-tight">8</span>
+                <span class="text-[9px] text-brandMuted uppercase tracking-widest mt-0.5">Days Left</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       SECONDARY COMPACT MULTI-STATS TRACK MATRIX ROWS
+       ========================================================================== -->
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-6">
         
+        <!-- Left Sub-Matrix Container Card -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-brandSurface/30 border border-slate-800/50 p-4 rounded-2xl">
+            <!-- Direct Income -->
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/40 relative overflow-hidden">
+                <div class="absolute left-0 top-0 h-full w-1 bg-brandGold"></div>
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ DIRECT INCOME ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-white mt-1.5">$5.00 <i class="bi bi-arrow-up-right text-brandGreen text-xs"></i></h4>
+            </div>
+            <!-- Level Profit Sharing Income -->
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/40 relative overflow-hidden">
+                <div class="absolute left-0 top-0 h-full w-1 bg-brandGreen"></div>
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ LEVEL PROFIT SHARING INCOME ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-white mt-1.5">$0.00</h4>
+            </div>
+            <!-- Weekly Salary Income -->
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/40 relative overflow-hidden">
+                <div class="absolute left-0 top-0 h-full w-1 bg-purple-500"></div>
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ WEEKLY SALARY INCOME ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-white mt-1.5">$0.00</h4>
+            </div>
+            <!-- Daily Profit Income -->
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/40 relative overflow-hidden">
+                <div class="absolute left-0 top-0 h-full w-1 bg-rose-500"></div>
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ DAILY PROFIT INCOME ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-white mt-1.5">$0.00 <i class="bi bi-arrow-up-right text-brandGreen text-xs"></i></h4>
+            </div>
+        </div>
 
+        <!-- Right Sub-Matrix Container Card -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-brandSurface/30 border border-slate-800/50 p-4 rounded-2xl">
+            <!-- Rewards Income -->
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/40 relative overflow-hidden">
+                <div class="absolute left-0 top-0 h-full w-1 bg-cyan-500"></div>
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ REWARDS INCOME ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-white mt-1.5">$0.00 <i class="bi bi-arrow-up-right text-brandGreen text-xs"></i></h4>
+            </div>
+            <!-- Team Sharing Pool Income -->
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/40 relative overflow-hidden">
+                <div class="absolute left-0 top-0 h-full w-1 bg-amber-500"></div>
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ TEAM SHARING POOL INCOME ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-white mt-1.5">$0.00</h4>
+            </div>
+            <!-- Direct Members -->
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/40 relative overflow-hidden">
+                <div class="absolute left-0 top-0 h-full w-1 bg-brandGold"></div>
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ DIRECT MEMBERS ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-white mt-1.5 flex items-center gap-2">1 <span class="text-[10px] font-normal text-brandMuted uppercase">[ <i class="bi bi-people-fill text-brandGold"></i> Users ]</span></h4>
+            </div>
+            <!-- Downline Members -->
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/40 relative overflow-hidden">
+                <div class="absolute left-0 top-0 h-full w-1 bg-brandGreen"></div>
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ DOWNLINE MEMBERS ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-white mt-1.5 flex items-center gap-2">1 <span class="text-[10px] font-normal text-brandMuted uppercase">[ <i class="bi bi-diagram-3-fill text-brandGreen"></i> Nodes ]</span></h4>
+            </div>
+        </div>
 
+    </div>
+
+    <!-- ==========================================================================
+       INTERMEDIATE TEAM BUSINESS SYSTEM META BARS BLOCK
+       ========================================================================== -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-center font-mono text-[11px]">
+        <div class="p-3 bg-brandDark/60 border border-slate-800/80 rounded-xl flex items-center justify-between px-4">
+            <span class="text-brandMuted uppercase flex items-center gap-1.5"><i class="bi bi-bar-chart-fill text-brandGold"></i> Profit Share Level</span>
+            <span class="font-bold text-brandGold uppercase">Level 1</span>
+        </div>
+        <div class="p-3 bg-brandDark/60 border border-slate-800/80 rounded-xl flex items-center justify-between px-4">
+            <span class="text-brandMuted uppercase flex items-center gap-1.5"><i class="bi bi-briefcase-fill text-brandGreen"></i> Total Team Business</span>
+            <span class="font-bold text-brandGreen">$100</span>
+        </div>
+        <div class="p-3 bg-brandDark/60 border border-slate-800/80 rounded-xl flex items-center justify-between px-4">
+            <span class="text-brandMuted uppercase flex items-center gap-1.5"><i class="bi bi-lightning-fill text-purple-400"></i> Strong Team Business</span>
+            <span class="font-bold text-purple-400">$100</span>
+        </div>
+        <div class="p-3 bg-brandDark/60 border border-slate-800/80 rounded-xl flex items-center justify-between px-4">
+            <span class="text-brandMuted uppercase flex items-center gap-1.5"><i class="bi bi-pie-chart-fill text-brandMuted"></i> Other Team Business</span>
+            <span class="font-bold text-white">$0</span>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       LOWER FINANCIAL TIER DATA ROW METRICS
+       ========================================================================== -->
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-6">
+        <!-- Left Side Tier Blocks -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-brandSurface p-5 rounded-2xl border border-slate-800/50 shadow-xl relative overflow-hidden">
+                <div class="absolute bottom-0 left-0 w-full h-1 bg-brandGreen"></div>
+                <div class="flex items-center justify-between"><span class="text-xs font-mono tracking-wider text-brandMuted uppercase">[ CURRENT ACTIVE INVESTMENT ]</span><i class="bi bi-house-door-fill text-brandGreen"></i></div>
+                <h3 class="text-2xl font-black font-mono tracking-tight text-white mt-4">$5000</h3>
+            </div>
+            <div class="bg-brandSurface p-5 rounded-2xl border border-slate-800/50 shadow-xl relative overflow-hidden">
+                <div class="absolute bottom-0 left-0 w-full h-1 bg-purple-500"></div>
+                <div class="flex items-center justify-between"><span class="text-xs font-mono tracking-wider text-brandMuted uppercase">[ CURRENT ACTIVE EARNING ]</span><i class="bi bi-lightning-charge-fill text-purple-400"></i></div>
+                <h3 class="text-2xl font-black font-mono tracking-tight text-white mt-4">$5.00</h3>
+            </div>
+        </div>
+        <!-- Right Side Tier Blocks -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-brandSurface p-5 rounded-2xl border border-slate-800/50 shadow-xl relative overflow-hidden">
+                <div class="absolute bottom-0 left-0 w-full h-1 bg-rose-500"></div>
+                <div class="flex items-center justify-between"><span class="text-xs font-mono tracking-wider text-brandMuted uppercase">[ CURRENT ACTIVE REMAINING ]</span><i class="bi bi-hourglass-split text-rose-400"></i></div>
+                <h3 class="text-2xl font-black font-mono tracking-tight text-white mt-4">$14995</h3>
+            </div>
+            <div class="bg-brandSurface p-5 rounded-2xl border border-slate-800/50 shadow-xl relative overflow-hidden">
+                <div class="absolute bottom-0 left-0 w-full h-1 bg-cyan-500"></div>
+                <div class="flex items-center justify-between"><span class="text-xs font-mono tracking-wider text-brandMuted uppercase">[ TODAY TEAM BUSINESS ]</span><i class="bi bi-shield-check text-cyan-400"></i></div>
+                <h3 class="text-2xl font-black font-mono tracking-tight text-white mt-4">$0</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       RANKS & REWARDS CRITERIA ADVANCED DATA TABLE MODULE
+       ========================================================================== -->
+    <div class="bg-brandSurface rounded-2xl border border-slate-800/60 overflow-hidden shadow-2xl">
+        <div class="p-5 border-b border-slate-800/60 font-mono">
+            <h3 class="text-sm font-bold text-white flex items-center gap-2 uppercase tracking-wide">
+                <i class="bi bi-award-fill text-brandGold"></i> Ranks & Rewards Criteria
+            </h3>
+            <p class="text-[11px] text-brandMuted mt-0.5">Automated algorithmic network system structural level mapping criteria matrix.</p>
+        </div>
         
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse min-w-[800px]">
+                <thead>
+                    <tr class="bg-brandDark/40 border-b border-slate-800/60 text-[11px] font-mono uppercase tracking-wider text-brandMuted">
+                        <th class="py-3.5 px-5 text-center w-14">Sl.No.</th>
+                        <th class="py-3.5 px-5">Rank Tier</th>
+                        <th class="py-3.5 px-5">Total Matching</th>
+                        <th class="py-3.5 px-5">Strong Team (50%)</th>
+                        <th class="py-3.5 px-5">Other Team (50%)</th>
+                        <th class="py-3.5 px-5">Reward Pay</th>
+                        <th class="py-3.5 px-5">Salary Fix</th>
+                        <th class="py-3.5 px-5 text-center">Verification Status</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800/40 text-xs font-mono">
+                    <!-- Row 1 -->
+                    <tr class="hover:bg-brandDark/20 transition-colors">
+                        <td class="py-3.5 px-5 text-center text-brandMuted">1</td>
+                        <td class="py-3.5 px-5 text-white font-bold font-sans tracking-wide">Executive</td>
+                        <td class="py-3.5 px-5 text-slate-300">$20000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$10000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$10000</td>
+                        <td class="py-3.5 px-5 text-brandGold font-bold">$300</td>
+                        <td class="py-3.5 px-5 text-brandGreen font-bold">$50</td>
+                        <td class="py-3.5 px-5 text-center"><span class="px-2.5 py-0.5 bg-brandDark border border-slate-800 text-[10px] text-amber-500 font-bold rounded-md">Pending</span></td>
+                    </tr>
+                    <!-- Row 2 -->
+                    <tr class="hover:bg-brandDark/20 transition-colors">
+                        <td class="py-3.5 px-5 text-center text-brandMuted">2</td>
+                        <td class="py-3.5 px-5 text-white font-bold font-sans tracking-wide">Senior</td>
+                        <td class="py-3.5 px-5 text-slate-300">$60000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$30000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$30000</td>
+                        <td class="py-3.5 px-5 text-brandGold font-bold">$750</td>
+                        <td class="py-3.5 px-5 text-brandGreen font-bold">$100</td>
+                        <td class="py-3.5 px-5 text-center"><span class="px-2.5 py-0.5 bg-brandDark border border-slate-800 text-[10px] text-amber-500 font-bold rounded-md">Pending</span></td>
+                    </tr>
+                    <!-- Row 3 -->
+                    <tr class="hover:bg-brandDark/20 transition-colors">
+                        <td class="py-3.5 px-5 text-center text-brandMuted">3</td>
+                        <td class="py-3.5 px-5 text-white font-bold font-sans tracking-wide">Manager</td>
+                        <td class="py-3.5 px-5 text-slate-300">$200000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$100000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$100000</td>
+                        <td class="py-3.5 px-5 text-brandGold font-bold">$1500</td>
+                        <td class="py-3.5 px-5 text-brandGreen font-bold">$300</td>
+                        <td class="py-3.5 px-5 text-center"><span class="px-2.5 py-0.5 bg-brandDark border border-slate-800 text-[10px] text-amber-500 font-bold rounded-md">Pending</span></td>
+                    </tr>
+                    <!-- Row 4 -->
+                    <tr class="hover:bg-brandDark/20 transition-colors">
+                        <td class="py-3.5 px-5 text-center text-brandMuted">4</td>
+                        <td class="py-3.5 px-5 text-white font-bold font-sans tracking-wide">Director</td>
+                        <td class="py-3.5 px-5 text-slate-300">$600000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$300000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$300000</td>
+                        <td class="py-3.5 px-5 text-brandGold font-bold">$5000</td>
+                        <td class="py-3.5 px-5 text-brandGreen font-bold">$1000</td>
+                        <td class="py-3.5 px-5 text-center"><span class="px-2.5 py-0.5 bg-brandDark border border-slate-800 text-[10px] text-amber-500 font-bold rounded-md">Pending</span></td>
+                    </tr>
+                    <!-- Row 5 -->
+                    <tr class="hover:bg-brandDark/20 transition-colors">
+                        <td class="py-3.5 px-5 text-center text-brandMuted">5</td>
+                        <td class="py-3.5 px-5 text-white font-bold font-sans tracking-wide">President</td>
+                        <td class="py-3.5 px-5 text-slate-300">$2000000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$1000000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$1000000</td>
+                        <td class="py-3.5 px-5 text-brandGold font-bold">$15000</td>
+                        <td class="py-3.5 px-5 text-brandGreen font-bold">$2000</td>
+                        <td class="py-3.5 px-5 text-center"><span class="px-2.5 py-0.5 bg-brandDark border border-slate-800 text-[10px] text-amber-500 font-bold rounded-md">Pending</span></td>
+                    </tr>
+                    <!-- Row 6 -->
+                    <tr class="hover:bg-brandDark/20 transition-colors">
+                        <td class="py-3.5 px-5 text-center text-brandMuted">6</td>
+                        <td class="py-3.5 px-5 text-white font-bold font-sans tracking-wide">Diamond</td>
+                        <td class="py-3.5 px-5 text-slate-300">$6000000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$3000000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$3000000</td>
+                        <td class="py-3.5 px-5 text-brandGold font-bold">$30000</td>
+                        <td class="py-3.5 px-5 text-brandGreen font-bold">$4000</td>
+                        <td class="py-3.5 px-5 text-center"><span class="px-2.5 py-0.5 bg-brandDark border border-slate-800 text-[10px] text-amber-500 font-bold rounded-md">Pending</span></td>
+                    </tr>
+                    <!-- Row 7 -->
+                    <tr class="hover:bg-brandDark/20 transition-colors">
+                        <td class="py-3.5 px-5 text-center text-brandMuted">7</td>
+                        <td class="py-3.5 px-5 text-white font-bold font-sans tracking-wide">Kohinoor</td>
+                        <td class="py-3.5 px-5 text-slate-300">$20000000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$10000000</td>
+                        <td class="py-3.5 px-5 text-slate-400">$10000000</td>
+                        <td class="py-3.5 px-5 text-brandGold font-bold">$100000</td>
+                        <td class="py-3.5 px-5 text-brandGreen font-bold">$10000</td>
+                        <td class="py-3.5 px-5 text-center"><span class="px-2.5 py-0.5 bg-brandDark border border-slate-800 text-[10px] text-amber-500 font-bold rounded-md">Pending</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</main>
+
+
+
+
+        <main class="p-4 sm:p-8 space-y-6 flex-1">
+
+
+            <div
+                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-slate-800/60 mb-6">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2 font-mono text-[11px] tracking-wider text-brandMuted uppercase">
+                        <span>[ SYSTEM PORTAL ]</span>
+                        <i class="bi bi-chevron-right text-[9px]"></i>
+                        <span class="text-brandGold" id="pageBreadcrumb">DASHBOARD CORE</span>
+                    </div>
+                    <div class="flex items-center gap-3 mt-1">
+                        <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white font-sans uppercase"
+                            id="mainPageTitle">
+                            Dashboard
+                        </h2>
+                        <span
+                            class="flex items-center gap-1.5 px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-brandGreen text-[10px] font-mono rounded-md uppercase tracking-wide">
+                            <span class="w-1 h-1 bg-brandGreen rounded-full animate-pulse"></span>
+                            <span>Live Node</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">
+                    <div
+                        class="px-4 py-2 bg-brandSurface border border-slate-800/60 rounded-xl flex flex-col min-w-[100px] sm:min-w-[120px]">
+                        <span class="text-[9px] text-brandMuted uppercase tracking-wider">[ NETWORK LATENCY ]</span>
+                        <span class="text-xs font-bold text-brandGreen mt-0.5 flex items-center gap-1">
+                            <i class="bi bi-wifi text-[11px]"></i> 14ms (Optimal)
+                        </span>
+                    </div>
+
+                    <button onclick="window.location.reload()"
+                        class="h-[42px] px-3 bg-brandDark border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold rounded-xl flex items-center justify-center transition-all text-sm focus:outline-none"
+                        title="Sync Current Component Nodes">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                </div>
+            </div>
+    
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+        <div class="bg-gradient-to-r from-brandSurface via-[#1a2436] to-[#121b29] p-5 rounded-2xl border border-slate-700/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-[0_0_25px_rgba(230,195,106,0.05)] relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-r from-brandGold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="flex items-center gap-3.5 relative z-10">
+                <div class="w-11 h-11 rounded-xl bg-brandDark border border-brandGold/40 flex items-center justify-center shadow-[0_0_15px_rgba(230,195,106,0.15)] group-hover:border-brandGold transition-colors">
+                    <i class="bi bi-person-badge text-brandGold text-xl animate-pulse"></i>
+                </div>
+                <div>
+                    <span class="text-[10px] font-mono tracking-widest text-brandGold font-bold block uppercase bg-gradient-to-r from-brandGold to-amber-300 bg-clip-text text-transparent">[ CORE NODE CONTROLLER ]</span>
+                    <h3 class="text-base font-black text-white tracking-wide mt-0.5">Welcome back, Realgains LLC</h3>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 font-mono text-[11px] bg-brandDark/60 px-3 py-2 rounded-xl border border-slate-800 text-slate-300 shadow-inner relative z-10">
+                <span class="w-2 h-2 bg-brandGreen rounded-full animate-ping"></span>
+                <span class="text-brandGreen font-bold">LIVE:</span>
+                <span class="text-slate-400">Saturday, 20 June 2026 | 06:55:42 pm</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-mono">
+            <div class="p-3 bg-brandSurface/40 border border-slate-800 hover:border-slate-700 rounded-xl flex flex-col justify-center transition-all">
+                <span class="text-[9px] text-brandMuted uppercase tracking-wider">[ USERNAME ]</span>
+                <span class="text-xs font-bold text-slate-200 mt-1 truncate">REALGAINS</span>
+            </div>
+            <div class="p-3 bg-brandSurface/40 border border-slate-800 hover:border-brandGreen/30 rounded-xl flex flex-col justify-center transition-all shadow-[0_0_10px_rgba(53,211,117,0.02)]">
+                <span class="text-[9px] text-brandGreen font-bold uppercase tracking-wider">[ SYSTEM ID ]</span>
+                <span class="text-xs font-black text-white mt-1">RG3038998</span>
+            </div>
+            <div class="p-3 bg-brandSurface/40 border border-slate-800 hover:border-brandGold/30 rounded-xl flex flex-col justify-center transition-all shadow-[0_0_10px_rgba(230,195,106,0.02)]">
+                <span class="text-[9px] text-brandGold font-bold uppercase tracking-wider">[ SPONSOR ]</span>
+                <span class="text-xs font-black text-white mt-1 truncate">COMPANY</span>
+            </div>
+            <div class="p-3 bg-brandSurface/40 border border-slate-800 hover:border-slate-700 rounded-xl flex flex-col justify-center transition-all">
+                <span class="text-[9px] text-brandMuted uppercase tracking-wider">[ ACTIVATION ]</span>
+                <span class="text-xs font-bold text-slate-300 mt-1">2026-06-13</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="lg:col-span-2 h-12 bg-brandDark border border-slate-800/80 rounded-xl px-4 flex items-center justify-between overflow-hidden group hover:border-slate-700 transition-colors">
+            <div class="flex items-center gap-2 overflow-hidden w-[75%]">
+                <i class="bi bi-link-45deg text-brandGold text-lg shrink-0"></i>
+                <span class="text-xs font-mono text-slate-400 truncate tracking-wide selection:bg-brandGold selection:text-brandDark">https://realgains.lc/referral.php?id=RG3038998</span>
+            </div>
+            <button onclick="navigator.clipboard.writeText('https://realgains.lc/referral.php?id=RG3038998')" class="h-8 px-3 bg-brandSurface hover:bg-gradient-to-r hover:from-brandGold hover:to-amber-400 border border-slate-800 hover:border-transparent text-brandGold hover:text-brandDark font-mono text-[10px] font-black rounded-lg transition-all flex items-center gap-1.5 shrink-0 focus:outline-none shadow-md">
+                <i class="bi bi-copy"></i> COPY LINK
+            </button>
+        </div>
+        <div class="h-12 bg-gradient-to-r from-brandGold/20 via-[#1c2330] to-brandDark border border-brandGold/30 rounded-xl px-4 flex items-center justify-between font-mono shadow-[0_0_15px_rgba(230,195,106,0.08)]">
+            <span class="text-[10px] tracking-wider text-brandGold font-bold uppercase">[ RANK STATUS ]</span>
+            <span class="text-xs font-black bg-gradient-to-r from-brandGold to-amber-300 bg-clip-text text-transparent flex items-center gap-1.5">
+                <i class="bi bi-trophy-fill text-brandGold text-sm animate-bounce"></i> AFFILIATE
+            </span>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="bg-gradient-to-b from-brandSurface to-brandDark p-5 rounded-2xl border border-slate-800/80 shadow-xl flex flex-col justify-between group hover:border-brandGold/40 transition-all duration-300 hover:-translate-y-1 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_10px_25px_rgba(230,195,106,0.08)]">
+            <div class="flex items-center justify-between">
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase">[ TOTAL INVESTED AMOUNT ]</span>
+                <div class="w-8 h-8 rounded-lg bg-brandGold/10 flex items-center justify-center text-brandGold group-hover:bg-brandGold group-hover:text-brandDark transition-all"><i class="bi bi-wallet2"></i></div>
+            </div>
+            <h3 class="text-2xl font-black font-mono tracking-tight text-white mt-4">$5,000.00</h3>
+            <div class="w-full h-1 bg-slate-800 rounded-full mt-3 overflow-hidden"><div class="w-[75%] h-full bg-gradient-to-r from-brandGold to-amber-300 rounded-full"></div></div>
+        </div>
+        <div class="bg-gradient-to-b from-brandSurface to-brandDark p-5 rounded-2xl border border-slate-800/80 shadow-xl flex flex-col justify-between group hover:border-brandGreen/40 transition-all duration-300 hover:-translate-y-1 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_10px_25px_rgba(53,211,117,0.08)]">
+            <div class="flex items-center justify-between">
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase">[ TOTAL INCOME EARNED ]</span>
+                <div class="w-8 h-8 rounded-lg bg-brandGreen/10 flex items-center justify-center text-brandGreen group-hover:bg-brandGreen group-hover:text-brandDark transition-all"><i class="bi bi-graph-up-arrow"></i></div>
+            </div>
+            <h3 class="text-2xl font-black font-mono tracking-tight bg-gradient-to-r from-brandGreen to-emerald-400 bg-clip-text text-transparent mt-4">+$5.0000</h3>
+            <div class="w-full h-1 bg-slate-800 rounded-full mt-3 overflow-hidden"><div class="w-[45%] h-full bg-brandGreen rounded-full"></div></div>
+        </div>
+        <div class="bg-gradient-to-b from-brandSurface to-brandDark p-5 rounded-2xl border border-slate-800/80 shadow-xl flex flex-col justify-between group hover:border-cyan-500/40 transition-all duration-300 hover:-translate-y-1 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_10px_25px_rgba(6,182,212,0.08)]">
+            <div class="flex items-center justify-between">
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase">[ ACTIVATION WALLET ]</span>
+                <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-brandDark transition-all"><i class="bi bi-cpu-fill"></i></div>
+            </div>
+            <h3 class="text-2xl font-black font-mono tracking-tight text-white mt-4">$1.0187</h3>
+            <div class="w-full h-1 bg-slate-800 rounded-full mt-3 overflow-hidden"><div class="w-[20%] h-full bg-cyan-500 rounded-full"></div></div>
+        </div>
+        <div class="bg-gradient-to-b from-brandSurface to-brandDark p-5 rounded-2xl border border-slate-800/80 shadow-xl flex flex-col justify-between group hover:border-rose-500/40 transition-all duration-300 hover:-translate-y-1 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_10px_25px_rgba(244,63,94,0.08)]">
+            <div class="flex items-center justify-between">
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase">[ INCOME WALLET ]</span>
+                <div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center text-rose-400 group-hover:bg-rose-500 group-hover:text-brandDark transition-all"><i class="bi bi-cash-coin"></i></div>
+            </div>
+            <h3 class="text-2xl font-black font-mono tracking-tight text-white mt-4">$5.0000</h3>
+            <div class="w-full h-1 bg-slate-800 rounded-full mt-3 overflow-hidden"><div class="w-[60%] h-full bg-rose-500 rounded-full"></div></div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+        <div class="bg-gradient-to-br from-brandSurface via-[#141d2b] to-[#0a101a] border border-slate-800 p-6 rounded-2xl shadow-2xl flex flex-col sm:flex-row justify-between items-center gap-6 relative overflow-hidden group hover:border-brandGold/30 transition-all duration-300">
+            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brandGold/5 rounded-full filter blur-2xl group-hover:bg-brandGold/10 transition-colors"></div>
+            <div class="space-y-3 z-10 w-full sm:w-[60%]">
+                <span class="px-2.5 py-0.5 bg-gradient-to-r from-brandGold to-amber-500 text-brandDark font-mono text-[9px] font-black rounded-md uppercase tracking-widest block w-max shadow-md">100-DAY FAST TRACK</span>
+                <h3 class="text-lg font-black tracking-tight text-white uppercase group-hover:text-brandGold transition-colors">Win a XUV 700 Complete</h3>
+                <div class="pt-2 font-mono text-[10px] text-slate-400 space-y-1 bg-brandDark/40 p-3 rounded-xl border border-slate-800/60">
+                    <p class="flex items-center justify-between"><span>Strong Leg 1 :</span> <span class="text-white font-bold">$0</span></p>
+                    <p class="flex items-center justify-between"><span>Strong Leg 2 :</span> <span class="text-white font-bold">$0</span></p>
+                    <p class="flex items-center justify-between"><span>Strong Leg 3 :</span> <span class="text-white font-bold">$0</span></p>
+                </div>
+            </div>
+            <div class="w-full sm:w-44 h-28 bg-[#090e17] rounded-xl border border-slate-800 flex flex-col items-center justify-center p-4 relative shadow-inner shrink-0 group-hover:border-brandGold/20 transition-colors">
+                <div class="w-12 h-12 rounded-full bg-brandGold/10 flex items-center justify-center mb-1 shadow-[0_0_15px_rgba(230,195,106,0.1)]"><i class="bi bi-car-front-fill text-brandGold text-xl animate-pulse"></i></div>
+                <span class="text-[9px] font-mono tracking-wider font-bold text-brandGold uppercase">XUV CHALLENGE</span>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-brandSurface via-[#141d2b] to-[#0a101a] border border-slate-800 p-6 rounded-2xl shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6 group hover:border-brandGreen/30 transition-all duration-300 relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brandGreen/5 rounded-full filter blur-2xl group-hover:bg-brandGreen/10 transition-colors"></div>
+            <div class="space-y-2 z-10">
+                <span class="px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/30 text-brandGreen font-mono text-[9px] font-bold rounded-md uppercase tracking-widest block w-max animate-pulse">Booster Process Active</span>
+                <h3 class="text-lg font-black tracking-tight text-white uppercase group-hover:text-brandGreen transition-colors">PROFIT SHARING 5X</h3>
+                <p class="text-[11px] text-slate-400 leading-normal font-mono max-w-sm mt-1">5 Direct within 15 days (With Same or Above Package)</p>
+                <div class="pt-2 font-mono text-[10px] text-slate-400 flex gap-4 bg-brandDark/40 px-3 py-2 rounded-lg border border-slate-800/60 w-max mt-2">
+                    <span>Required: <strong class="text-brandGold font-black">5</strong></span>
+                    <span>Remaining: <strong class="text-rose-400 font-black">5</strong></span>
+                </div>
+            </div>
+            <div class="w-24 h-24 bg-[#090e17] rounded-2xl border-2 border-brandGreen/20 flex flex-col items-center justify-center text-center p-2 font-mono shadow-[0_0_20px_rgba(53,211,117,0.05)] group-hover:border-brandGreen/50 transition-colors shrink-0">
+                <span class="text-3xl font-black bg-gradient-to-r from-brandGreen to-emerald-400 bg-clip-text text-transparent tracking-tight">8</span>
+                <span class="text-[9px] text-brandMuted uppercase tracking-widest font-bold mt-0.5">Days Left</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-6">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-gradient-to-b from-brandSurface/40 to-transparent border border-slate-800/50 p-4 rounded-2xl shadow-inner">
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/60 hover:border-brandGold/40 transition-colors group relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-1 bg-brandGold"></div>
+                <span class="text-[9px] font-mono tracking-wider text-brandMuted uppercase block">[ DIRECT INCOME ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-white mt-2 flex items-center justify-between">$5.00 <span class="px-1.5 py-0.5 bg-brandGreen/10 rounded font-sans text-[10px] font-bold text-brandGreen">+Live</span></h4>
+            </div>
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/60 hover:border-brandGreen/40 transition-colors group relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-1 bg-brandGreen"></div>
+                <span class="text-[9px] font-mono tracking-wider text-brandMuted uppercase block">[ LEVEL PROFIT SHARING ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-slate-400 mt-2">$0.00</h4>
+            </div>
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/60 hover:border-purple-500/40 transition-colors group relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-1 bg-purple-500"></div>
+                <span class="text-[9px] font-mono tracking-wider text-brandMuted uppercase block">[ WEEKLY SALARY ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-slate-400 mt-2">$0.00</h4>
+            </div>
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/60 hover:border-rose-500/40 transition-colors group relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-1 bg-rose-500"></div>
+                <span class="text-[9px] font-mono tracking-wider text-brandMuted uppercase block">[ DAILY PROFIT INCOME ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-slate-400 mt-2">$0.00</h4>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-gradient-to-b from-brandSurface/40 to-transparent border border-slate-800/50 p-4 rounded-2xl shadow-inner">
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/60 hover:border-cyan-500/40 transition-colors group relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-1 bg-cyan-500"></div>
+                <span class="text-[9px] font-mono tracking-wider text-brandMuted uppercase block">[ REWARDS INCOME ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-slate-400 mt-2">$0.00</h4>
+            </div>
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/60 hover:border-amber-500/40 transition-colors group relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-1 bg-amber-500"></div>
+                <span class="text-[9px] font-mono tracking-wider text-brandMuted uppercase block">[ TEAM SHARING POOL ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-slate-400 mt-2">$0.00</h4>
+            </div>
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/60 hover:border-blue-500/40 transition-colors group relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-1 bg-blue-500"></div>
+                <span class="text-[9px] font-mono tracking-wider text-brandMuted uppercase block">[ DIRECT MEMBERS ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-white mt-2 flex items-center gap-2">1 <span class="px-2 py-0.5 bg-blue-500/10 border border-blue-500/20 text-[9px] font-bold text-blue-400 rounded-md uppercase">1 Account</span></h4>
+            </div>
+            <div class="bg-brandSurface p-4 rounded-xl border border-slate-800/60 hover:border-orange-500/40 transition-colors group relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-1 bg-orange-500"></div>
+                <span class="text-[9px] font-mono tracking-wider text-brandMuted uppercase block">[ DOWNLINE STRUCTURE ]</span>
+                <h4 class="text-lg font-black font-mono tracking-tight text-white mt-2 flex items-center gap-2">1 <span class="px-2 py-0.5 bg-orange-500/10 border border-orange-500/20 text-[9px] font-bold text-orange-400 rounded-md uppercase">1 Active Node</span></h4>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-center font-mono text-[11px]">
+        <div class="p-3.5 bg-brandSurface border-b-2 border-brandGold rounded-xl flex items-center justify-between px-4 shadow-md">
+            <span class="text-slate-400 uppercase flex items-center gap-1.5"><i class="bi bi-bar-chart-fill text-brandGold"></i> Profit Level</span>
+            <span class="font-black text-brandGold bg-brandGold/10 border border-brandGold/20 px-2 py-0.5 rounded-md uppercase">Level 1</span>
+        </div>
+        <div class="p-3.5 bg-brandSurface border-b-2 border-brandGreen rounded-xl flex items-center justify-between px-4 shadow-md">
+            <span class="text-slate-400 uppercase flex items-center gap-1.5"><i class="bi bi-briefcase-fill text-brandGreen"></i> Team Business</span>
+            <span class="font-black text-brandGreen bg-brandGreen/10 border border-brandGreen/20 px-2 py-0.5 rounded-md">$100</span>
+        </div>
+        <div class="p-3.5 bg-brandSurface border-b-2 border-purple-500 rounded-xl flex items-center justify-between px-4 shadow-md">
+            <span class="text-slate-400 uppercase flex items-center gap-1.5"><i class="bi bi-lightning-fill text-purple-400"></i> Strong Team</span>
+            <span class="font-black text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded-md">$100</span>
+        </div>
+        <div class="p-3.5 bg-brandSurface border-b-2 border-slate-700 rounded-xl flex items-center justify-between px-4 shadow-md">
+            <span class="text-slate-400 uppercase flex items-center gap-1.5"><i class="bi bi-pie-chart-fill text-slate-500"></i> Other Team</span>
+            <span class="font-black text-white bg-slate-800 border border-slate-700 px-2 py-0.5 rounded-md">$0</span>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-gradient-to-br from-brandSurface to-brandDark p-5 rounded-2xl border border-slate-800 shadow-lg relative overflow-hidden group hover:border-brandGreen/30 transition-all">
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ CURRENT ACTIVE INVESTMENT ]</span>
+                <h3 class="text-3xl font-black font-mono tracking-tight text-white mt-4 flex items-center justify-between">$5000 <i class="bi bi-shield-lock-fill text-brandGreen/40 text-2xl"></i></h3>
+            </div>
+            <div class="bg-gradient-to-br from-brandSurface to-brandDark p-5 rounded-2xl border border-slate-800 shadow-lg relative overflow-hidden group hover:border-purple-500/30 transition-all">
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ CURRENT ACTIVE EARNING ]</span>
+                <h3 class="text-3xl font-black font-mono tracking-tight bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent mt-4 flex items-center justify-between">$5.00 <i class="bi bi-lightning-charge-fill text-purple-500/40 text-2xl"></i></h3>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-gradient-to-br from-brandSurface to-brandDark p-5 rounded-2xl border border-slate-800 shadow-lg relative overflow-hidden group hover:border-rose-500/30 transition-all">
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ CURRENT ACTIVE REMAINING ]</span>
+                <h3 class="text-3xl font-black font-mono tracking-tight text-white mt-4 flex items-center justify-between">$14995 <i class="bi bi-hourglass-split text-rose-500/40 text-2xl"></i></h3>
+            </div>
+            <div class="bg-gradient-to-br from-brandSurface to-brandDark p-5 rounded-2xl border border-slate-800 shadow-lg relative overflow-hidden group hover:border-cyan-500/30 transition-all">
+                <span class="text-[10px] font-mono tracking-wider text-brandMuted uppercase block">[ TODAY TEAM BUSINESS ]</span>
+                <h3 class="text-3xl font-black font-mono tracking-tight text-white mt-4 flex items-center justify-between">$0 <i class="bi bi-globe text-cyan-500/40 text-2xl"></i></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-brandSurface rounded-2xl border border-slate-800/80 overflow-hidden shadow-2xl relative">
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brandGold/40 to-transparent"></div>
+        <div class="p-5 bg-brandDark/20 border-b border-slate-800/60 font-mono flex items-center justify-between flex-wrap gap-2">
+            <div>
+                <h3 class="text-sm font-black text-white flex items-center gap-2 uppercase tracking-wide">
+                    <i class="bi bi-award-fill text-brandGold text-base animate-pulse"></i> Ranks & Rewards Matrix Criteria
+                </h3>
+                <p class="text-[11px] text-brandMuted mt-0.5">Real-time data synchronization log rules tree mapping layer.</p>
+            </div>
+            <span class="px-3 py-1 bg-brandDark border border-slate-800 text-[10px] font-mono text-brandGold rounded-lg uppercase tracking-wider font-bold shadow-inner">[ 7 System Tiers ]</span>
+        </div>
+        
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse min-w-[900px]">
+                <thead>
+                    <tr class="bg-brandDark/50 border-b border-slate-800/60 text-[11px] font-mono uppercase tracking-wider text-brandMuted">
+                        <th class="py-4 px-6 text-center w-16">Sl.No.</th>
+                        <th class="py-4 px-6">Rank Node Tier</th>
+                        <th class="py-4 px-6">Total Matching</th>
+                        <th class="py-4 px-6">Strong Team (50%)</th>
+                        <th class="py-4 px-6">Other Team (50%)</th>
+                        <th class="py-4 px-6">Reward Pay</th>
+                        <th class="py-4 px-6">Salary Bonus</th>
+                        <th class="py-4 px-6 text-center w-36">System Status</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800/40 text-xs font-mono">
+                    <tr class="hover:bg-brandDark/30 transition-colors group">
+                        <td class="py-4 px-6 text-center text-brandMuted group-hover:text-brandGold transition-colors font-bold">1</td>
+                        <td class="py-4 px-6 text-white font-black font-sans tracking-wide text-sm">Executive</td>
+                        <td class="py-4 px-6 text-slate-300 font-bold">$20000</td>
+                        <td class="py-4 px-6 text-slate-400">$10000</td>
+                        <td class="py-4 px-6 text-slate-400">$10000</td>
+                        <td class="py-4 px-6 text-brandGold font-black text-sm">$300</td>
+                        <td class="py-4 px-6 text-brandGreen font-black text-sm">$50</td>
+                        <td class="py-4 px-6 text-center"><span class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-[10px] text-amber-400 font-black rounded-lg uppercase tracking-wider shadow-sm animate-pulse">Pending Node</span></td>
+                    </tr>
+                    <tr class="hover:bg-brandDark/30 transition-colors group">
+                        <td class="py-4 px-6 text-center text-brandMuted group-hover:text-brandGold transition-colors font-bold">2</td>
+                        <td class="py-4 px-6 text-white font-black font-sans tracking-wide text-sm">Senior</td>
+                        <td class="py-4 px-6 text-slate-300 font-bold">$60000</td>
+                        <td class="py-4 px-6 text-slate-400">$30000</td>
+                        <td class="py-4 px-6 text-slate-400">$30000</td>
+                        <td class="py-4 px-6 text-brandGold font-black text-sm">$750</td>
+                        <td class="py-4 px-6 text-brandGreen font-black text-sm">$100</td>
+                        <td class="py-4 px-6 text-center"><span class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-[10px] text-amber-400 font-black rounded-lg uppercase tracking-wider shadow-sm">Pending Node</span></td>
+                    </tr>
+                    <tr class="hover:bg-brandDark/30 transition-colors group">
+                        <td class="py-4 px-6 text-center text-brandMuted group-hover:text-brandGold transition-colors font-bold">3</td>
+                        <td class="py-4 px-6 text-white font-black font-sans tracking-wide text-sm">Manager</td>
+                        <td class="py-4 px-6 text-slate-300 font-bold">$200000</td>
+                        <td class="py-4 px-6 text-slate-400">$100000</td>
+                        <td class="py-4 px-6 text-slate-400">$100000</td>
+                        <td class="py-4 px-6 text-brandGold font-black text-sm">$1500</td>
+                        <td class="py-4 px-6 text-brandGreen font-black text-sm">$300</td>
+                        <td class="py-4 px-6 text-center"><span class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-[10px] text-amber-400 font-black rounded-lg uppercase tracking-wider shadow-sm">Pending Node</span></td>
+                    </tr>
+                    <tr class="hover:bg-brandDark/30 transition-colors group">
+                        <td class="py-4 px-6 text-center text-brandMuted group-hover:text-brandGold transition-colors font-bold">4</td>
+                        <td class="py-4 px-6 text-white font-black font-sans tracking-wide text-sm">Director</td>
+                        <td class="py-4 px-6 text-slate-300 font-bold">$600000</td>
+                        <td class="py-4 px-6 text-slate-400">$300000</td>
+                        <td class="py-4 px-6 text-slate-400">$300000</td>
+                        <td class="py-4 px-6 text-brandGold font-black text-sm">$5000</td>
+                        <td class="py-4 px-6 text-brandGreen font-black text-sm">$1000</td>
+                        <td class="py-4 px-6 text-center"><span class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-[10px] text-amber-400 font-black rounded-lg uppercase tracking-wider shadow-sm">Pending Node</span></td>
+                    </tr>
+                    <tr class="hover:bg-brandDark/30 transition-colors group">
+                        <td class="py-4 px-6 text-center text-brandMuted group-hover:text-brandGold transition-colors font-bold">5</td>
+                        <td class="py-4 px-6 text-white font-black font-sans tracking-wide text-sm">President</td>
+                        <td class="py-4 px-6 text-slate-300 font-bold">$2000000</td>
+                        <td class="py-4 px-6 text-slate-400">$1000000</td>
+                        <td class="py-4 px-6 text-slate-400">$1000000</td>
+                        <td class="py-4 px-6 text-brandGold font-black text-sm">$15000</td>
+                        <td class="py-4 px-6 text-brandGreen font-black text-sm">$2000</td>
+                        <td class="py-4 px-4 text-center"><span class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-[10px] text-amber-400 font-black rounded-lg uppercase tracking-wider shadow-sm">Pending Node</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</main>
+
+
+
+
+        <footer
+            class="mt-auto px-4 sm:px-8 py-5 bg-brandSurface/40 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-sm tracking-wide text-brandMuted">
+            <!-- Left Section: Copyright Identity -->
+            <div class="flex items-center gap-1">
+                <span>Copyright &copy; 2026. All rights reserved.</span>
+            </div>
+
+            <!-- Right Section: System Version & Links -->
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1 h-1 bg-brandGreen rounded-full animate-pulse"></span>
+                    <span class="text-white font-medium">REALGAINS<span class="text-brandGreen">.IO</span></span>
+                </div>
+                <span class="text-slate-700">|</span>
+                <span>v2.4.0-Build [Active]</span>
+            </div>
+        </footer>
+
     </div>
 
     <script src="assets/js/app.js"></script>
