@@ -360,11 +360,9 @@
             <div class="flex items-center gap-3">
 
                 <div class="relative">
-                    <button id="notificationBellBtn" onclick="toggleNotificationMenu()"
-                        class="w-10 h-10 rounded-xl bg-brandDark/80 border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold flex items-center justify-center transition-all relative focus:outline-none">
-                        <i class="bi bi-bell"></i>
-                        <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-brandGreen rounded-full"></span>
-                    </button>
+                   <button onclick="toggleMobileSidebar()" class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all focus:outline-none">
+    <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
+</button>
 
                     <div id="notificationDropdownPanel"
                         class="hidden opacity-0 scale-95 absolute top-14 right-0 w-80 bg-brandSurface border border-slate-800/80 rounded-2xl shadow-2xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">

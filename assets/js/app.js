@@ -52,35 +52,49 @@ function toggleMobileSidebar() {
 
     if (isDesktop) {
         // --- DESKTOP VIEWPORT LAYOUT ---
-        sidebar.classList.toggle('lg:-translate-x-full');
-        mainContent.classList.toggle('lg:pl-64');
-        
-        // FIXED LOGIC: lg:-translate-x-full means SIDEBAR IS CLOSED -> Show Close Icon
-        if (sidebar.classList.contains('lg:-translate-x-full')) {
-            toggleIcon.classList.replace('bi-list', 'bi-x-lg');
-        } else {
-            // SIDEBAR IS OPEN -> Show Tree Line Menu Icon
+        // Check standard utility configuration class
+        const isCurrentlyHidden = sidebar.classList.contains('lg:-translate-x-full');
+
+        if (isCurrentlyHidden) {
+            // Sidebar abhi chhipa (hide) hua hai -> Isko SCREEN PAR LAYEIN
+            sidebar.classList.remove('lg:-translate-x-full');
+            mainContent.classList.add('lg:pl-64');
+            
+            // JAB SIDEBAR DIKHE -> SHOW THREE LINES (Aapki condition ke mutabik)
             toggleIcon.classList.replace('bi-x-lg', 'bi-list');
+        } else {
+            // Sidebar abhi screen par dikh raha hai -> ISKO HIDE KAREIN
+            sidebar.classList.add('lg:-translate-x-full');
+            mainContent.classList.remove('lg:pl-64');
+            
+            // JAB SIDEBAR HIDE HO -> SHOW CLOSE (X) ICON (Aapki condition ke mutabik)
+            toggleIcon.classList.replace('bi-list', 'bi-x-lg');
         }
     } else {
-        // --- MOBILE DRAWER LAYOUT ---
-        sidebar.classList.toggle('-translate-x-full');
-        
-        // FIXED LOGIC: -translate-x-full means SIDEBAR IS CLOSED -> Show Close Icon
-        if (sidebar.classList.contains('-translate-x-full')) {
-            toggleIcon.classList.replace('bi-list', 'bi-x-lg');
-            overlay.classList.remove('opacity-100');
-            setTimeout(() => overlay.classList.add('hidden'), 300);
-            document.body.classList.remove('overflow-hidden');
-        } else {
-            // SIDEBAR IS OPEN -> Show Tree Line Menu Icon
-            toggleIcon.classList.replace('bi-x-lg', 'bi-list');
+        // --- MOBILE DRAWER LAYOUT (Same rule apply as requested) ---
+        const isCurrentlyHiddenMobile = sidebar.classList.contains('-translate-x-full');
+
+        if (isCurrentlyHiddenMobile) {
+            // Mobile par sidebar ko open karein
+            sidebar.classList.remove('-translate-x-full');
+            toggleIcon.classList.replace('bi-x-lg', 'bi-list'); // Open par Three lines
+            
             overlay.classList.remove('hidden');
             setTimeout(() => overlay.classList.add('opacity-100'), 10);
             document.body.classList.add('overflow-hidden');
+        } else {
+            // Mobile par sidebar ko hide karein
+            sidebar.classList.add('-translate-x-full');
+            toggleIcon.classList.replace('bi-l-g', 'bi-x-lg'); // Hide par Close icon
+            toggleIcon.classList.replace('bi-list', 'bi-x-lg');
+            
+            overlay.classList.remove('opacity-100');
+            setTimeout(() => overlay.classList.add('hidden'), 300);
+            document.body.classList.remove('overflow-hidden');
         }
     }
 }
+
 
 // Window resize stabilization configuration safely mapping default icons
 window.addEventListener('resize', () => {
