@@ -39,7 +39,6 @@ function toggleNavMenu(buttonElement) {
         chevron.classList.toggle('rotate-180');
     }
 }
-
 function toggleMobileSidebar() {
     const sidebar = document.getElementById('sidebarPanel');
     const overlay = document.getElementById('sidebarOverlay');
@@ -51,42 +50,44 @@ function toggleMobileSidebar() {
     const isDesktop = window.innerWidth >= 1024;
 
     if (isDesktop) {
-        // --- DESKTOP VIEWPORT LAYOUT ---
-        // Check standard utility configuration class
-        const isCurrentlyHidden = sidebar.classList.contains('lg:-translate-x-full');
+        // ==========================================================================
+        // 1. DESKTOP VIEWPORT LAYOUT: LIVE CLASS DETECTION
+        // ==========================================================================
+        // Agar class list me hidden wali class hai, matlab sidebar abhi HIDE hai
+        const isHiddenNow = sidebar.classList.contains('lg:-translate-x-full');
 
-        if (isCurrentlyHidden) {
-            // Sidebar abhi chhipa (hide) hua hai -> Isko SCREEN PAR LAYEIN
+        if (isHiddenNow) {
+            // Sidebar chhipa hua tha -> Isko SCREEN PAR LAYEIN
             sidebar.classList.remove('lg:-translate-x-full');
             mainContent.classList.add('lg:pl-64');
-            
-            // JAB SIDEBAR DIKHE -> SHOW THREE LINES (Aapki condition ke mutabik)
-            toggleIcon.classList.replace('bi-x-lg', 'bi-list');
+            // JAB SIDEBAR DIKHE -> SHOW THREE LINES
+            toggleIcon.className = "bi bi-list transition-transform duration-200";
         } else {
-            // Sidebar abhi screen par dikh raha hai -> ISKO HIDE KAREIN
+            // Sidebar screen par dikh raha tha -> ISKO HIDE KAREIN
             sidebar.classList.add('lg:-translate-x-full');
             mainContent.classList.remove('lg:pl-64');
-            
-            // JAB SIDEBAR HIDE HO -> SHOW CLOSE (X) ICON (Aapki condition ke mutabik)
-            toggleIcon.classList.replace('bi-list', 'bi-x-lg');
+            // JAB SIDEBAR HIDE HO -> SHOW CLOSE (X) ICON
+            toggleIcon.className = "bi bi-x-lg transition-transform duration-200";
         }
     } else {
-        // --- MOBILE DRAWER LAYOUT (Same rule apply as requested) ---
-        const isCurrentlyHiddenMobile = sidebar.classList.contains('-translate-x-full');
+        // ==========================================================================
+        // 2. MOBILE DRAWER LAYOUT: LIVE CLASS DETECTION (ICON FIXED TO bi-list)
+        // ==========================================================================
+        toggleIcon.className = "bi bi-list transition-transform duration-200";
+        
+        // Mobile par check karo ki kya sidebar chhipa hua hai
+        const isHiddenNowMobile = sidebar.classList.contains('-translate-x-full');
 
-        if (isCurrentlyHiddenMobile) {
-            // Mobile par sidebar ko open karein
+        if (isHiddenNowMobile) {
+            // Mobile par chhipa tha -> Isko slide karke OPEN KAREIN
             sidebar.classList.remove('-translate-x-full');
-            toggleIcon.classList.replace('bi-x-lg', 'bi-list'); // Open par Three lines
             
             overlay.classList.remove('hidden');
             setTimeout(() => overlay.classList.add('opacity-100'), 10);
             document.body.classList.add('overflow-hidden');
         } else {
-            // Mobile par sidebar ko hide karein
+            // Mobile par open tha -> Isko slide karke HIDE KAREIN
             sidebar.classList.add('-translate-x-full');
-            toggleIcon.classList.replace('bi-l-g', 'bi-x-lg'); // Hide par Close icon
-            toggleIcon.classList.replace('bi-list', 'bi-x-lg');
             
             overlay.classList.remove('opacity-100');
             setTimeout(() => overlay.classList.add('hidden'), 300);
@@ -95,42 +96,16 @@ function toggleMobileSidebar() {
     }
 }
 
-
-// Window resize stabilization configuration safely mapping default icons
-window.addEventListener('resize', () => {
+// ==========================================================================
+// OVERLAY CLICK MANAGER: Mobile par dark screen par click hone par close ho
+// ==========================================================================
+document.getElementById('sidebarOverlay')?.addEventListener('click', () => {
     const sidebar = document.getElementById('sidebarPanel');
-    const overlay = document.getElementById('sidebarOverlay');
-    const mainContent = document.getElementById('mainContent');
-    const toggleIcon = document.getElementById('menuToggleIcon');
-    
-    if (!sidebar || !overlay || !mainContent || !toggleIcon) return;
-
-    if (window.innerWidth >= 1024) {
-        overlay.classList.remove('opacity-100');
-        overlay.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
-        
-        if (!sidebar.classList.contains('lg:-translate-x-full')) {
-            mainContent.add('lg:pl-64');
-            toggleIcon.classList.replace('bi-x-lg', 'bi-list');
-        } else {
-            mainContent.classList.remove('lg:pl-64');
-            toggleIcon.classList.replace('bi-list', 'bi-x-lg');
-        }
-    } else {
-        mainContent.classList.remove('lg:pl-64');
-        if (sidebar.classList.contains('-translate-x-full')) {
-            toggleIcon.classList.replace('bi-list', 'bi-x-lg');
-            overlay.classList.remove('opacity-100');
-            overlay.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        } else {
-            toggleIcon.classList.replace('bi-x-lg', 'bi-list');
-        }
+    // Agar mobile par sidebar khula hua hai (yaani usme hide wali class NAHI hai)
+    if (sidebar && !sidebar.classList.contains('-translate-x-full')) {
+        toggleMobileSidebar();
     }
 });
-
-
 
 // Global Notification Dropdown Panel Controls Trigger Hub
 function toggleNotificationMenu() {
