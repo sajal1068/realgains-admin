@@ -56,7 +56,7 @@
                     <li>
                         <a href="profile.html"
                             class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-diagram-3 group-hover:text-brandGold transition-colors"></i>
+                            <i class="bi bi-person-circle group-hover:text-brandGold transition-colors"></i>
                             <span>My Profile</span>
                         </a>
                     </li>
@@ -124,7 +124,7 @@
                         <button onclick="toggleNavMenu(this)"
                             class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-wallet2 group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-wallet-fill group-hover:text-brandGold transition-colors"></i>
                                 <span>Income Wallet</span>
                             </div>
                             <i
@@ -172,7 +172,7 @@
                     <li>
                         <a href="affiliate.html"
                             class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-diagram-3 group-hover:text-brandGold transition-colors"></i>
+                            <i class="bi bi-cash-stack group-hover:text-brandGold transition-colors"></i>
                             <span>Make Investment</span>
                         </a>
                     </li> 
@@ -181,7 +181,7 @@
                         <button onclick="toggleNavMenu(this)"
                             class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-cash-stack group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-people-fill group-hover:text-brandGold transition-colors"></i>
                                 <span>Team Reports</span>
                             </div>
                             <i
@@ -221,7 +221,7 @@
                         <button onclick="toggleNavMenu(this)"
                             class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-cash-stack group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-file-earmark-text-fill group-hover:text-brandGold transition-colors"></i>
                                 <span>Income Reports</span>
                             </div>
                             <i
@@ -287,7 +287,7 @@
                         <button onclick="toggleNavMenu(this)"
                             class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-cash-stack group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-gear-fill group-hover:text-brandGold transition-colors"></i>
                                 <span>Password Settings</span>
                             </div>
                             <i
@@ -319,7 +319,7 @@
                     <li>
                         <a href="security.html"
                             class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-shield-check group-hover:text-brandGold transition-colors"></i>
+                            <i class="bi bi-box-arrow-right group-hover:text-brandGold transition-colors"></i>
                             <span>Logout</span>
                         </a>
                     </li>
@@ -346,10 +346,9 @@
         <header
             class="h-20 bg-brandSurface/80 backdrop-blur-md border-b border-slate-800/60 sticky top-0 z-40 px-4 sm:px-8 flex items-center justify-between">
             <div class="flex items-center gap-4">
-                <button onclick="toggleMobileSidebar()"
-                    class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all shadow-md focus:outline-none">
-                    <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
-                </button>
+                <button onclick="toggleMobileSidebar()" class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all focus:outline-none">
+    <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
+</button>
                 <div>
                     <h1 class="text-sm sm:text-base font-bold tracking-tight">System Control Matrix</h1>
                     <p class="text-[11px] font-mono text-brandMuted hidden sm:block">Active system session operational
@@ -360,9 +359,11 @@
             <div class="flex items-center gap-3">
 
                 <div class="relative">
-                   <button onclick="toggleMobileSidebar()" class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all focus:outline-none">
-    <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
-</button>
+                   <button id="notificationBellBtn" onclick="toggleNotificationMenu()"
+                        class="w-10 h-10 rounded-xl bg-brandDark/80 border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold flex items-center justify-center transition-all relative focus:outline-none">
+                        <i class="bi bi-bell"></i>
+                        <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-brandGreen rounded-full"></span>
+                    </button>
 
                     <div id="notificationDropdownPanel"
                         class="hidden opacity-0 scale-95 absolute top-14 right-0 w-80 bg-brandSurface border border-slate-800/80 rounded-2xl shadow-2xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">
