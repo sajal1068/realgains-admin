@@ -8,7 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body class="bg-brandDark text-white font-sans antialiased min-h-screen flex overflow-x-hidden">
@@ -38,24 +41,21 @@
                 <span class="px-3 text-[10px] font-mono tracking-wider text-brandMuted uppercase block mb-3">[ CORE NODE
                     MATRIX ]</span>
 
-                <ul class="space-y-1.5">                    
+                <ul class="space-y-1.5">
 
                     <li>
                         <a href="index.html"
                             class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-speedometer2 group-hover:text-brandGold transition-colors"></i>
-                            <span>Dasboard</span>
+                             <i class="bi bi-grid-1x2-fill  group-hover:text-brandGold transition-colors"></i>
+                            <span>Dashboard</span>
                         </a>
-                    </li>
+                    </li>                    
 
-                       <li>
+                    <li>
                         <a href="profile.html"
-                            class="flex items-center justify-between px-4 py-3 bg-brandDark text-brandGold rounded-xl border border-brandGold/20 font-medium text-sm transition-all group">
-                            <div class="flex items-center gap-3">
-                                <i class="bi bi-person-circle text-brandGold"></i>
-                                <span>My profile</span>
-                            </div>
-                            <span class="w-1.5 h-1.5 bg-brandGreen rounded-full animate-pulse"></span>
+                            class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
+                            <i class="bi bi-person-circle group-hover:text-brandGold transition-colors"></i>
+                            <span>My Profile</span>
                         </a>
                     </li>
 
@@ -344,10 +344,9 @@
         <header
             class="h-20 bg-brandSurface/80 backdrop-blur-md border-b border-slate-800/60 sticky top-0 z-40 px-4 sm:px-8 flex items-center justify-between">
             <div class="flex items-center gap-4">
-                <button onclick="toggleMobileSidebar()"
-                    class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all shadow-md focus:outline-none">
-                    <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
-                </button>
+                <button onclick="toggleMobileSidebar()" class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all focus:outline-none">
+    <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
+</button>
                 <div class="flex items-center h-10 overflow-hidden">
                     <img src="assets/images/logo.png" alt="Logo"
                         class="w-auto h-8 sm:h-9 object-contain custom-matrix-logo" style="max-width: 140px;">
@@ -357,7 +356,7 @@
             <div class="flex items-center gap-3">
 
                 <div class="relative">
-                    <button id="notificationBellBtn" onclick="toggleNotificationMenu()"
+                   <button id="notificationBellBtn" onclick="toggleNotificationMenu()"
                         class="w-10 h-10 rounded-xl bg-brandDark/80 border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold flex items-center justify-center transition-all relative focus:outline-none">
                         <i class="bi bi-bell"></i>
                         <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-brandGreen rounded-full"></span>
@@ -445,212 +444,117 @@
             </div>
         </header>
 
-       
 
 
-        <!-- MAIN SCROLLABLE OPERATIONS CONTROL HUB VIEW -->
+
+
+
+
+
+
 <main class="p-4 sm:p-8 space-y-6 flex-1">
 
-     <div
-                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-slate-800/60 mb-6">
+      <div
+                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-800/60 mb-4">
                 <div class="space-y-1">
                     <div class="flex items-center gap-2 font-mono text-[11px] tracking-wider text-brandMuted uppercase">
-                        <span>[ SYSTEM PORTAL ]</span>
+                        <span>[ Activation Wallet ]</span>
                         <i class="bi bi-chevron-right text-[9px]"></i>
-                        <span class="text-brandGold">[ ACCOUNT CONSOLE ]</span>
+                        <span class="text-brandGold" id="pageBreadcrumb">Add Fund</span>
                     </div>
                     <div class="flex items-center gap-3 mt-1">
-                        <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white font-sans uppercase">
-                            Operator Profile
+                        <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white font-sans uppercase"
+                            id="mainPageTitle">
+                            Add Fund
                         </h2>
                         <span
                             class="flex items-center gap-1.5 px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-brandGreen text-[10px] font-mono rounded-md uppercase tracking-wide">
                             <span class="w-1 h-1 bg-brandGreen rounded-full animate-pulse"></span>
-                            <span>Sync Secure</span>
+                            <span>Live Node</span>
                         </span>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">
-                    <div
-                        class="px-4 py-2 bg-brandSurface border border-slate-800/60 rounded-xl flex flex-col min-w-[120px]">
-                        <span class="text-[9px] text-brandMuted uppercase tracking-wider">[ ACCESS LEVEL ]</span>
-                        <span class="text-xs font-bold text-brandGold mt-0.5 flex items-center gap-1">
-                            <i class="bi bi-shield-lock-fill text-[11px]"></i> Verified Admin
-                        </span>
-                    </div>
+                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">                  
+
                     <button onclick="window.location.reload()"
-                        class="h-[42px] px-3 bg-brandDark border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold rounded-xl flex items-center justify-center transition-all text-sm focus:outline-none">
+                        class="h-[42px] px-3 bg-brandDark border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold rounded-xl flex items-center justify-center transition-all text-sm focus:outline-none"
+                        title="Sync Current Component Nodes">
                         <i class="bi bi-arrow-clockwise"></i>
                     </button>
                 </div>
-            </div>  
+            </div>
     
-    <!-- DYNAMIC BACKGROUND ORBS & PATTERNS FOR PROFILE SPACE -->
-    <div class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
-        <div class="absolute top-[20%] left-[10%] w-[400px] h-[400px] bg-brandGreen/5 rounded-full filter blur-[80px] animate-pulse"></div>
-        <div class="absolute bottom-[25%] right-[5%] w-[350px] h-[350px] bg-brandGold/5 rounded-full filter blur-[90px]"></div>
+    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="absolute top-[10%] right-[15%] w-[300px] h-[300px] bg-brandGold/5 rounded-full filter blur-[90px]"></div>
+        <div class="absolute bottom-[20%] left-[5%] w-[350px] h-[350px] bg-brandGreen/5 rounded-full filter blur-[80px] animate-pulse"></div>
     </div>
 
-    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="relative z-10 bg-[#131b2e]/90 backdrop-blur-md border border-slate-700/50 p-6 sm:p-8 rounded-2xl shadow-[0_25px_50px_rgba(0,0,0,0.5)] group transition-all duration-300 hover:border-brandGold/30">
         
-        <!-- ==========================================================================
-           LEFT COLUMN: EDIT PROFILE INTERACTION MATRIX FORM (2-COLUMNS GRID)
-           ========================================================================== -->
-        <div class="lg:col-span-2 bg-[#131b2e]/90 backdrop-blur-md border border-slate-700/50 p-6 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.4)] relative group transition-all duration-300 hover:border-brandGreen/30">
-            <!-- Neon Edge Accent Line Top Layer -->
-            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-brandGreen via-brandGold to-transparent"></div>
-            
-            <div class="border-b border-slate-800/80 pb-4 mb-5 font-mono">
-                <h3 class="text-sm font-black text-white flex items-center gap-2 uppercase tracking-wider">
-                    <i class="bi bi-sliders text-brandGreen"></i> Edit Profile Console
+        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-brandGold via-brandGreen to-transparent"></div>
+
+        <div class="border-b border-slate-800/80 pb-5 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div class="space-y-1">
+                <h3 class="text-base font-black text-white flex items-center gap-2.5 uppercase tracking-wider">
+                    <i class="bi bi-wallet-fill text-brandGold"></i> Add Fund In Investment Wallet
                 </h3>
-                <p class="text-[11px] text-brandMuted mt-0.5">Modify system ledger account parameters below securely.</p>
+                <p class="text-[11px] font-mono text-brandMuted">Deploy cryptographic fund pipelines to credit your system node layout.</p>
             </div>
-
-            <!-- Form Framework Fields Layout -->
-            <form onsubmit="event.preventDefault();" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <!-- First Name Field -->
-                    <div class="space-y-1.5">
-                        <label class="text-[10px] font-mono tracking-widest text-brandMuted uppercase block">First Name*</label>
-                        <div class="relative">
-                            <i class="bi bi-person absolute left-3.5 top-3 text-brandMuted text-xs"></i>
-                            <input type="text" value="Realgains" class="w-full h-10 pl-9 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-xs text-white rounded-xl focus:outline-none transition-all font-sans" required>
-                        </div>
-                    </div>
-
-                    <!-- Last Name Field -->
-                    <div class="space-y-1.5">
-                        <label class="text-[10px] font-mono tracking-widest text-brandMuted uppercase block">Last Name</label>
-                        <div class="relative">
-                            <i class="bi bi-person absolute left-3.5 top-3 text-brandMuted text-xs"></i>
-                            <input type="text" value="LLC" class="w-full h-10 pl-9 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-xs text-white rounded-xl focus:outline-none transition-all font-sans">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Phone Link Tracker Field -->
-                <div class="space-y-1.5">
-                    <label class="text-[10px] font-mono tracking-widest text-brandMuted uppercase block">Phone</label>
-                    <div class="relative">
-                        <i class="bi bi-telephone absolute left-3.5 top-3 text-brandMuted text-xs"></i>
-                        <input type="text" placeholder="Enter contact track mapping context" class="w-full h-10 pl-9 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-xs text-white rounded-xl focus:outline-none transition-all font-mono">
-                    </div>
-                </div>
-
-                <!-- Email Identity Core -->
-                <div class="space-y-1.5">
-                    <label class="text-[10px] font-mono tracking-widest text-brandMuted uppercase block">Email ID Link*</label>
-                    <div class="relative">
-                        <i class="bi bi-envelope absolute left-3.5 top-3 text-brandMuted text-xs"></i>
-                        <input type="email" value="info@realgains.llc" class="w-full h-10 pl-9 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-xs text-white rounded-xl focus:outline-none transition-all font-sans" required>
-                    </div>
-                </div>
-
-                <!-- USDT Crypto Node Targeting Value Address -->
-                <div class="space-y-1.5">
-                    <label class="text-[10px] font-mono tracking-widest text-brandMuted uppercase block text-brandGreen font-bold">USDT.BEP20 Address Network Target*</label>
-                    <div class="relative">
-                        <i class="bi bi-currency-bitcoin absolute left-3.5 top-3 text-brandGreen text-xs"></i>
-                        <input type="text" value="0xBa27944738BcE91ADCe1449055e867Ab52DCaBec" class="w-full h-10 pl-9 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-xs text-white rounded-xl focus:outline-none transition-all font-mono select-all" required>
-                    </div>
-                </div>
-
-                <!-- Country Selector Token Base -->
-                <div class="space-y-1.5">
-                    <label class="text-[10px] font-mono tracking-widest text-brandMuted uppercase block">Country Node Base*</label>
-                    <div class="relative">
-                        <i class="bi bi-globe2 absolute left-3.5 top-3 text-brandMuted text-xs"></i>
-                        <select class="w-full h-10 pl-9 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-xs text-white rounded-xl focus:outline-none transition-all appearance-none cursor-pointer font-mono">
-                            <option value="UK" selected>United Kingdom (UK Node)</option>
-                            <option value="IN">India (IN Core Node)</option>
-                            <option value="US">United States (US Core)</option>
-                        </select>
-                        <i class="bi bi-chevron-down absolute right-4 top-3 text-[9px] text-brandMuted pointer-events-none"></i>
-                    </div>
-                </div>
-
-                <!-- Wallet Transaction Password Layer -->
-                <div class="space-y-1.5">
-                    <label class="text-[10px] font-mono tracking-widest text-brandGold font-bold uppercase block">Enter Operational Wallet Password*</label>
-                    <div class="relative">
-                        <i class="bi bi-key-fill absolute left-3.5 top-3 text-brandGold text-xs"></i>
-                        <input type="password" placeholder="••••••••" class="w-full h-10 pl-9 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGold/40 text-xs text-white rounded-xl focus:outline-none transition-all font-mono" required>
-                    </div>
-                </div>
-
-                <!-- Ultra-Premium Dynamic Save CTA Button Box -->
-                <div class="pt-4 flex justify-start">
-                    <button type="submit" class="relative group/btn overflow-hidden h-11 px-6 bg-gradient-to-r from-brandGreen to-emerald-500 text-brandDark font-mono text-xs font-black rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(53,211,117,0.2)] hover:shadow-[0_4px_25px_rgba(230,195,106,0.2)] focus:outline-none uppercase tracking-widest">
-                        <div class="absolute inset-0 bg-gradient-to-r from-brandGold to-amber-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
-                        <span class="relative z-10 flex items-center gap-2"><i class="bi bi-shield-lock-fill"></i> Update Profile Token</span>
-                    </button>
-                </div>
-            </form>
+            
+            <div class="bg-brandDark/80 border border-slate-800 px-4 py-2 rounded-xl flex flex-col font-mono shadow-inner min-w-[160px] text-right sm:text-left">
+                <span class="text-[9px] text-brandMuted uppercase tracking-wider">[ CURRENT WALLET BALANCE ]</span>
+                <span class="text-sm font-black text-brandGold mt-0.5">$ 1.0187</span>
+            </div>
         </div>
 
-        <!-- ==========================================================================
-           RIGHT COLUMN: VIBRANT DYNAMIC META PROFILE METRICS SYSTEM VIEW
-           ========================================================================== -->
-        <div class="bg-[#131b2e]/90 backdrop-blur-md border border-slate-700/50 p-6 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.4)] relative group transition-all duration-300 hover:border-brandGold/30 h-max">
-            <!-- Neon Edge Accent Line Top Layer -->
-            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-brandGold via-amber-500 to-transparent"></div>
-            
-            <div class="border-b border-slate-800/80 pb-4 mb-5 font-mono">
-                <h3 class="text-sm font-black text-white flex items-center gap-2.5 uppercase tracking-wider">
-                    <i class="bi bi-person-vcard-fill text-brandGold"></i> System Profile Data
-                </h3>
-                <p class="text-[11px] text-brandMuted mt-0.5">Read-only account metadata nodes mapping matrix.</p>
+        <div class="space-y-3.5 mb-6">
+            <div class="p-4 bg-brandDark/40 border border-rose-500/20 rounded-xl flex gap-3.5 items-start transition-colors hover:border-rose-500/30">
+                <div class="w-7 h-7 rounded-lg bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 font-mono text-xs font-black shrink-0 shadow-sm">
+                    !
+                </div>
+                <div class="text-xs font-mono text-slate-400 leading-relaxed">
+                    <span class="text-rose-400 font-black tracking-wider uppercase">[ TRANSACTION MATRIX RULE ]</span> 
+                    Only one wallet address can be used for one transaction. If you want to deposit multiple times then you have to generate multiple address. If you generate only one address and do multiple payment then only one payment will be credit in your wallet and rest payment you will loose.
+                </div>
             </div>
 
-            <!-- Meta Data List Parameters Structure -->
-            <ul class="space-y-3.5 font-mono text-xs">
-                <!-- Member ID -->
-                <li class="flex items-center justify-between p-3 bg-brandDark/40 border border-slate-800/60 rounded-xl hover:border-slate-700/60 transition-colors">
-                    <span class="text-brandMuted uppercase flex items-center gap-2"><i class="bi bi-qr-code text-brandMuted"></i> Member ID</span>
-                    <span class="font-bold text-brandGreen">RG3038998</span>
-                </li>
-                <!-- Username -->
-                <li class="flex items-center justify-between p-3 bg-brandDark/40 border border-slate-800/60 rounded-xl hover:border-slate-700/60 transition-colors">
-                    <span class="text-brandMuted uppercase flex items-center gap-2"><i class="bi bi-telegram text-brandMuted"></i> Username</span>
-                    <span class="font-bold text-white font-sans">Realgains</span>
-                </li>
-                <!-- Full Name -->
-                <li class="flex items-center justify-between p-3 bg-brandDark/40 border border-slate-800/60 rounded-xl hover:border-slate-700/60 transition-colors">
-                    <span class="text-brandMuted uppercase flex items-center gap-2"><i class="bi bi-person-fill text-brandMuted"></i> Full Name</span>
-                    <span class="font-bold text-slate-200 font-sans">Realgains LLC</span>
-                </li>
-                <!-- Sponsor -->
-                <li class="flex items-center justify-between p-3 bg-brandDark/40 border border-slate-800/60 rounded-xl hover:border-slate-700/60 transition-colors">
-                    <span class="text-brandMuted uppercase flex items-center gap-2"><i class="bi bi-diagram-3-fill text-brandMuted"></i> Sponsor</span>
-                    <span class="font-bold text-brandGold">companyid</span>
-                </li>
-                <!-- Country -->
-                <li class="flex items-center justify-between p-3 bg-brandDark/40 border border-slate-800/60 rounded-xl hover:border-slate-700/60 transition-colors">
-                    <span class="text-brandMuted uppercase flex items-center gap-2"><i class="bi bi-flag-fill text-brandMuted"></i> Country</span>
-                    <span class="font-bold text-white font-sans">United Kingdom</span>
-                </li>
-                <!-- Registered Email -->
-                <li class="flex flex-col gap-1.5 p-3 bg-brandDark/40 border border-slate-800/60 rounded-xl hover:border-slate-700/60 transition-colors">
-                    <span class="text-brandMuted uppercase flex items-center gap-2"><i class="bi bi-envelope-at-fill text-brandMuted"></i> Email Node</span>
-                    <span class="font-bold text-slate-300 font-sans truncate text-right">info@realgains.llc</span>
-                </li>
-                <!-- Phone -->
-                <li class="flex items-center justify-between p-3 bg-brandDark/40 border border-slate-800/60 rounded-xl hover:border-slate-700/60 transition-colors">
-                    <span class="text-brandMuted uppercase flex items-center gap-2"><i class="bi bi-telephone-fill text-brandMuted"></i> Phone</span>
-                    <span class="text-slate-500 italic">[ Unmapped ]</span>
-                </li>
-                <!-- Activation Time Token -->
-                <li class="flex items-center justify-between p-3 bg-gradient-to-r from-brandGold/10 via-brandDark/40 to-transparent border border-brandGold/20 rounded-xl">
-                    <span class="text-brandGold font-bold uppercase flex items-center gap-2"><i class="bi bi-calendar-check-fill text-brandGold animate-pulse"></i> Activated</span>
-                    <span class="font-bold text-brandGold">2026-06-13</span>
-                </li>
-            </ul>
+            <div class="p-4 bg-brandDark/40 border border-brandGold/20 rounded-xl flex gap-3.5 items-start transition-colors hover:border-brandGold/30">
+                <div class="w-7 h-7 rounded-lg bg-brandGold/10 border border-brandGold/30 flex items-center justify-center text-brandGold font-mono text-xs font-black shrink-0 shadow-sm">
+                    i
+                </div>
+                <div class="text-xs font-mono text-slate-400 leading-relaxed">
+                    <span class="text-brandGold font-black tracking-wider uppercase">[ VALUE SLIPPAGE WARNING ]</span> 
+                    Kindly pay the exact amount which will show in your screen. If our payment gateway received less payment due to price fluctuation it may take some time to credit in your investment wallet. We suggest you to add some minor extra amount to avoid delay.
+                </div>
+            </div>
         </div>
+
+        <form onsubmit="event.preventDefault();" class="space-y-5 max-w-xl">
+            <div class="space-y-2">
+                <label class="text-[10px] font-mono tracking-widest text-brandMuted uppercase block">
+                    Enter amount (In USD) you want to load*
+                </label>
+                <div class="relative">
+                    <span class="absolute left-4 top-[11px] text-brandGreen font-mono text-sm font-black select-none">$</span>
+                    <input type="number" step="any" placeholder="Enter Amount*" class="w-full h-11 pl-8 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-sm font-mono text-white rounded-xl focus:outline-none transition-all placeholder:text-slate-600 shadow-inner" required>
+                </div>
+            </div>
+
+            <div class="pt-2">
+                <button type="submit" class="relative group/btn overflow-hidden h-11 px-8 bg-gradient-to-r from-brandGreen to-emerald-500 text-brandDark font-mono text-xs font-black rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(53,211,117,0.2)] hover:shadow-[0_4px_25px_rgba(230,195,106,0.2)] focus:outline-none uppercase tracking-widest">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brandGold to-amber-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
+                    <span class="relative z-10 flex items-center gap-2">
+                        <i class="bi bi-arrow-right-circle-fill text-sm"></i> Make Request Protocol
+                    </span>
+                </button>
+            </div>
+        </form>
 
     </div>
 </main>
+
+
 
         <footer
             class="mt-auto px-4 sm:px-8 py-5 bg-brandSurface/40 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-sm tracking-wide text-brandMuted">
@@ -669,7 +573,7 @@
                 <span>v2.4.0-Build [Active]</span>
             </div>
         </footer>
-        
+
     </div>
 
     <script src="assets/js/app.js"></script>
