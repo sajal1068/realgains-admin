@@ -42,14 +42,16 @@
                     MATRIX ]</span>
 
                 <ul class="space-y-1.5">
-
                     <li>
                         <a href="index.html"
-                            class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                             <i class="bi bi-grid-1x2-fill  group-hover:text-brandGold transition-colors"></i>
-                            <span>Dashboard</span>
+                            class="flex items-center justify-between px-4 py-3 bg-brandDark text-brandGold rounded-xl border border-brandGold/20 font-medium text-sm transition-all group">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-speedometer2 text-brandGold"></i>
+                                <span>Dashboard</span>
+                            </div>
+                            <span class="w-1.5 h-1.5 bg-brandGreen rounded-full animate-pulse"></span>
                         </a>
-                    </li>                    
+                    </li>
 
                     <li>
                         <a href="profile.html"
@@ -118,7 +120,7 @@
                         </ul>
                     </li>
 
-                     <li class="nav-dropdown-group space-y-1">
+                    <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
                             class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
                             <div class="flex items-center gap-3">
@@ -132,7 +134,7 @@
                         <ul
                             class="dropdown-content hidden pl-6 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
                             <li>
-                                <a href="deposit.php"
+                                <a href="transfer-fund.html"
                                     class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
                                     <span
                                         class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
@@ -140,7 +142,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="withdraw.php"
+                                <a href="withdraw-fund.html"
                                     class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
                                     <span
                                         class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
@@ -168,12 +170,12 @@
                     </li>
 
                     <li>
-                        <a href="affiliate.html"
+                        <a href="make-investment.html"
                             class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
                             <i class="bi bi-cash-stack group-hover:text-brandGold transition-colors"></i>
                             <span>Make Investment</span>
                         </a>
-                    </li> 
+                    </li>
 
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
@@ -215,11 +217,12 @@
                         </ul>
                     </li>
 
-                     <li class="nav-dropdown-group space-y-1">
+                    <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
                             class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-file-earmark-text-fill group-hover:text-brandGold transition-colors"></i>
+                                <i
+                                    class="bi bi-file-earmark-text-fill group-hover:text-brandGold transition-colors"></i>
                                 <span>Income Reports</span>
                             </div>
                             <i
@@ -253,7 +256,7 @@
                                 </a>
                             </li>
 
-                             <li>
+                            <li>
                                 <a href="history-plans.php"
                                     class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
                                     <span
@@ -295,7 +298,7 @@
                         <ul
                             class="dropdown-content hidden pl-6 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
                             <li>
-                                <a href="packages.php"
+                                <a href="update-login-password.html"
                                     class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
                                     <span
                                         class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
@@ -303,13 +306,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="history-plans.php"
+                                <a href="update-wallet-password.html"
                                     class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
                                     <span
                                         class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
                                     <span>Modify Wallet Password</span>
                                 </a>
-                            </li>                          
+                            </li>
 
                         </ul>
                     </li>
@@ -344,9 +347,10 @@
         <header
             class="h-20 bg-brandSurface/80 backdrop-blur-md border-b border-slate-800/60 sticky top-0 z-40 px-4 sm:px-8 flex items-center justify-between">
             <div class="flex items-center gap-4">
-                <button onclick="toggleMobileSidebar()" class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all focus:outline-none">
-    <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
-</button>
+                <button onclick="toggleMobileSidebar()"
+                    class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all focus:outline-none">
+                    <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
+                </button>
                 <div class="flex items-center h-10 overflow-hidden">
                     <img src="assets/images/logo.png" alt="Logo"
                         class="w-auto h-8 sm:h-9 object-contain custom-matrix-logo block md:hidden" style="max-width: 140px;">
@@ -356,7 +360,7 @@
             <div class="flex items-center gap-3">
 
                 <div class="relative">
-                   <button id="notificationBellBtn" onclick="toggleNotificationMenu()"
+                    <button id="notificationBellBtn" onclick="toggleNotificationMenu()"
                         class="w-10 h-10 rounded-xl bg-brandDark/80 border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold flex items-center justify-center transition-all relative focus:outline-none">
                         <i class="bi bi-bell"></i>
                         <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-brandGreen rounded-full"></span>
@@ -452,20 +456,20 @@
 
 
 
-<main class="p-4 sm:p-8 space-y-6 flex-1">
+        <main class="p-4 sm:p-8 space-y-6 flex-1 relative">
 
-      <div
-                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-800/60 mb-4">
+             <div
+                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-slate-800/60 mb-6">
                 <div class="space-y-1">
                     <div class="flex items-center gap-2 font-mono text-[11px] tracking-wider text-brandMuted uppercase">
-                        <span>[ Activation Wallet ]</span>
+                        <span>[ SYSTEM PORTAL ]</span>
                         <i class="bi bi-chevron-right text-[9px]"></i>
-                        <span class="text-brandGold" id="pageBreadcrumb">Add Fund</span>
+                        <span class="text-brandGold" id="pageBreadcrumb">DASHBOARD CORE</span>
                     </div>
                     <div class="flex items-center gap-3 mt-1">
                         <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white font-sans uppercase"
                             id="mainPageTitle">
-                            Add Fund
+                            Dashboard
                         </h2>
                         <span
                             class="flex items-center gap-1.5 px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-brandGreen text-[10px] font-mono rounded-md uppercase tracking-wide">
@@ -475,7 +479,14 @@
                     </div>
                 </div>
 
-                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">                  
+                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">
+                    <div
+                        class="px-4 py-2 bg-brandSurface border border-slate-800/60 rounded-xl flex flex-col min-w-[100px] sm:min-w-[120px]">
+                        <span class="text-[9px] text-brandMuted uppercase tracking-wider">[ NETWORK LATENCY ]</span>
+                        <span class="text-xs font-bold text-brandGreen mt-0.5 flex items-center gap-1">
+                            <i class="bi bi-wifi text-[11px]"></i> 14ms (Optimal)
+                        </span>
+                    </div>
 
                     <button onclick="window.location.reload()"
                         class="h-[42px] px-3 bg-brandDark border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold rounded-xl flex items-center justify-center transition-all text-sm focus:outline-none"
@@ -486,73 +497,131 @@
             </div>
     
     <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <div class="absolute top-[10%] right-[15%] w-[300px] h-[300px] bg-brandGold/5 rounded-full filter blur-[90px]"></div>
-        <div class="absolute bottom-[20%] left-[5%] w-[350px] h-[350px] bg-brandGreen/5 rounded-full filter blur-[80px] animate-pulse"></div>
+        <div class="absolute top-[10%] left-[10%] w-[500px] h-[500px] bg-brandGreen/5 rounded-full filter blur-[100px] animate-pulse"></div>
+        <div class="absolute bottom-[10%] right-[10%] w-[500px] h-[500px] bg-brandGold/5 rounded-full filter blur-[120px]"></div>
     </div>
 
-    <div class="relative z-10 bg-[#131b2e]/90 backdrop-blur-md border border-slate-700/50 p-6 sm:p-8 rounded-2xl shadow-[0_25px_50px_rgba(0,0,0,0.5)] group transition-all duration-300 hover:border-brandGold/30">
+    <div class="relative z-10 w-full bg-[#131b2e]/90 backdrop-blur-md border border-slate-700/50 p-6 sm:p-10 rounded-3xl shadow-[0_30px_60px_rgba(0,0,0,0.6)] group transition-all duration-300 hover:border-brandGold/20">
         
-        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-brandGold via-brandGreen to-transparent"></div>
+        <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brandGold via-brandGreen to-transparent"></div>
 
-        <div class="border-b border-slate-800/80 pb-5 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div class="border-b border-slate-800/80 pb-6 mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
             <div class="space-y-1">
-                <h3 class="text-base font-black text-white flex items-center gap-2.5 uppercase tracking-wider">
-                    <i class="bi bi-wallet-fill text-brandGold"></i> Add Fund In Investment Wallet
+                <div class="flex items-center gap-2 font-mono text-[10px] tracking-wider text-brandMuted uppercase">
+                    <span>[ LEDGER DEFI OUTBOUND ]</span>
+                    <i class="bi bi-chevron-right text-[8px]"></i>
+                    <span class="text-brandGreen">DEBIT INCOME WALLET</span>
+                </div>
+                <h3 class="text-lg sm:text-xl font-black text-white flex items-center gap-2.5 uppercase tracking-wider mt-1">
+                    <i class="bi bi-arrow-up-right-circle text-brandGreen"></i> Withdraw Fund from Income Wallet
                 </h3>
-                <p class="text-[11px] font-mono text-brandMuted">Deploy cryptographic fund pipelines to credit your system node layout.</p>
+                <p class="text-[11px] font-mono text-brandMuted">Process transactional payout nodes to route your earnings back to your secure cryptographic blockchain address.</p>
             </div>
             
-            <div class="bg-brandDark/80 border border-slate-800 px-4 py-2 rounded-xl flex flex-col font-mono shadow-inner min-w-[160px] text-right sm:text-left">
-                <span class="text-[9px] text-brandMuted uppercase tracking-wider">[ CURRENT WALLET BALANCE ]</span>
-                <span class="text-sm font-black text-brandGold mt-0.5">$ 1.0187</span>
+            <div class="bg-brandDark/80 border border-slate-800 px-5 py-3 rounded-2xl flex flex-col font-mono shadow-inner min-w-[200px] text-right md:text-left shrink-0">
+                <span class="text-[9px] text-brandMuted uppercase tracking-widest">[ TOTAL INCOME BALANCE ]</span>
+                <span class="text-xl font-black text-brandGreen mt-0.5">$ 0.0000</span>
             </div>
         </div>
 
-        <div class="space-y-3.5 mb-6">
-            <div class="p-4 bg-brandDark/40 border border-rose-500/20 rounded-xl flex gap-3.5 items-start transition-colors hover:border-rose-500/30">
-                <div class="w-7 h-7 rounded-lg bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 font-mono text-xs font-black shrink-0 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-8">
+            
+            <div class="lg:col-span-1 p-4 bg-brandDark/40 border border-slate-800 rounded-xl space-y-2.5 font-mono text-xs">
+                <div class="text-[10px] text-brandMuted uppercase tracking-wider font-bold mb-1">[ LIMIT MATRIX ]</div>
+                <div class="flex items-center justify-between text-slate-300">
+                    <span>Min Withdraw:</span> <span class="text-white font-bold">$10</span>
+                </div>
+                <div class="flex items-center justify-between text-slate-300">
+                    <span>Max Withdraw:</span> <span class="text-white font-bold">$5000</span>
+                </div>
+                <div class="flex items-center justify-between text-slate-300">
+                    <span>System Charge:</span> <span class="text-rose-400 font-bold">5% Fee</span>
+                </div>
+                <div class="pt-1.5 border-t border-slate-800/80 text-[10px] leading-tight text-brandGold flex gap-1.5 items-start">
+                    <i class="bi bi-info-circle-fill shrink-0"></i>
+                    <span>2 Direct active referral members is compulsory for withdrawal.</span>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 p-4 bg-brandDark/40 border border-rose-500/20 rounded-xl flex gap-3.5 items-start transition-colors hover:border-rose-500/30 shadow-inner">
+                <div class="w-7 h-7 rounded-lg bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 font-mono text-sm font-black shrink-0 shadow-sm animate-pulse">
                     !
                 </div>
                 <div class="text-xs font-mono text-slate-400 leading-relaxed">
-                    <span class="text-rose-400 font-black tracking-wider uppercase">[ TRANSACTION MATRIX RULE ]</span> 
-                    Only one wallet address can be used for one transaction. If you want to deposit multiple times then you have to generate multiple address. If you generate only one address and do multiple payment then only one payment will be credit in your wallet and rest payment you will loose.
+                    <span class="text-rose-400 font-black tracking-wider uppercase block mb-1">[ BLOCKCHAIN DESTRUCTION RISK NOTE ]</span> 
+                    Dear Community Members, Please choose your withdrawal wallet properly before you proceed to Next level. If you input any wrong wallet address we cannot revert your withdrawal from blockchain and it will consider as permanently loss. Kindly double verify your wallet address before you perform withdrawal process sequence.
                 </div>
             </div>
 
-            <div class="p-4 bg-brandDark/40 border border-brandGold/20 rounded-xl flex gap-3.5 items-start transition-colors hover:border-brandGold/30">
-                <div class="w-7 h-7 rounded-lg bg-brandGold/10 border border-brandGold/30 flex items-center justify-center text-brandGold font-mono text-xs font-black shrink-0 shadow-sm">
-                    i
-                </div>
-                <div class="text-xs font-mono text-slate-400 leading-relaxed">
-                    <span class="text-brandGold font-black tracking-wider uppercase">[ VALUE SLIPPAGE WARNING ]</span> 
-                    Kindly pay the exact amount which will show in your screen. If our payment gateway received less payment due to price fluctuation it may take some time to credit in your investment wallet. We suggest you to add some minor extra amount to avoid delay.
-                </div>
-            </div>
         </div>
 
-        <form onsubmit="event.preventDefault();" class="space-y-5 max-w-xl">
+        <form onsubmit="event.preventDefault();" class="space-y-6">
+            
             <div class="space-y-2">
-                <label class="text-[10px] font-mono tracking-widest text-brandMuted uppercase block">
-                    Enter amount (In USD) you want to load*
+                <label class="text-[10px] font-mono tracking-widest text-brandGreen font-bold uppercase block">
+                    Enter USDT (BEP20) wallet address*
                 </label>
                 <div class="relative">
-                    <span class="absolute left-4 top-[11px] text-brandGreen font-mono text-sm font-black select-none">$</span>
-                    <input type="number" step="any" placeholder="Enter Amount*" class="w-full h-11 pl-8 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-sm font-mono text-white rounded-xl focus:outline-none transition-all placeholder:text-slate-600 shadow-inner" required>
+                    <i class="bi bi-currency-bitcoin absolute left-4 top-3 text-brandGreen text-sm"></i>
+                    <input type="text" value="0xBa27944738BcE91ADCe1449055e867Ab52DCaBec" class="w-full h-11 pl-10 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-sm font-mono text-white rounded-xl focus:outline-none transition-all shadow-inner select-all" required>
                 </div>
             </div>
 
-            <div class="pt-2">
-                <button type="submit" class="relative group/btn overflow-hidden h-11 px-8 bg-gradient-to-r from-brandGreen to-emerald-500 text-brandDark font-mono text-xs font-black rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(53,211,117,0.2)] hover:shadow-[0_4px_25px_rgba(230,195,106,0.2)] focus:outline-none uppercase tracking-widest">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="space-y-2">
+                    <label class="text-[10px] font-mono tracking-widest text-brandMuted uppercase block">
+                        Enter amount to withdraw*
+                    </label>
+                    <div class="relative">
+                        <span class="absolute left-4 top-[11px] text-brandGreen font-mono text-sm font-black select-none">$</span>
+                        <input type="number" min="10" max="5000" step="any" placeholder="Enter Amount*" class="w-full h-11 pl-8 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-sm font-mono text-white rounded-xl focus:outline-none transition-all placeholder:text-slate-700 shadow-inner" required>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-[10px] font-mono tracking-widest text-brandGold font-bold uppercase block">
+                        Enter wallet password*
+                    </label>
+                    <div class="relative">
+                        <i class="bi bi-shield-lock absolute left-4 top-3 text-brandGold text-sm"></i>
+                        <input type="password" id="withdrawWalletPassword" placeholder="••••••••••••" class="w-full h-11 pl-10 pr-12 bg-brandDark/60 border border-slate-800 focus:border-brandGold/40 text-sm font-mono text-white rounded-xl focus:outline-none transition-all placeholder:text-slate-700 shadow-inner" required>
+                        <button type="button" onclick="toggleWithdrawPassMask()" class="absolute right-4 top-3 text-slate-600 hover:text-brandGold transition-colors focus:outline-none">
+                            <i id="withdrawPasswordToggleIcon" class="bi bi-eye text-base"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-4 flex justify-end">
+                <button type="submit" class="relative group/btn overflow-hidden h-12 px-10 bg-gradient-to-r from-brandGreen to-emerald-500 text-brandDark font-mono text-xs font-black rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-[0_4px_25px_rgba(53,211,117,0.2)] hover:shadow-[0_4px_30px_rgba(230,195,106,0.2)] focus:outline-none uppercase tracking-widest w-full sm:w-auto">
                     <div class="absolute inset-0 bg-gradient-to-r from-brandGold to-amber-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
-                    <span class="relative z-10 flex items-center gap-2">
-                        <i class="bi bi-arrow-right-circle-fill text-sm"></i> Make Request Protocol
+                    <span class="relative z-10 flex items-center justify-center gap-2">
+                        <i class="bi bi-arrow-right-circle-fill text-sm"></i> Initialize Proceed Request
                     </span>
                 </button>
             </div>
+            
         </form>
 
     </div>
 </main>
+
+<script>
+    function toggleWithdrawPassMask() {
+        const passwordInput = document.getElementById('withdrawWalletPassword');
+        const toggleIcon = document.getElementById('withdrawPasswordToggleIcon');
+        if (!passwordInput || !toggleIcon) return;
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.classList.replace('bi-eye', 'bi-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.classList.replace('bi-eye-slash', 'bi-eye');
+        }
+    }
+</script>
+
 
 
 

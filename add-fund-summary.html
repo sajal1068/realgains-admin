@@ -46,10 +46,10 @@
                     <li>
                         <a href="index.html"
                             class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                             <i class="bi bi-grid-1x2-fill  group-hover:text-brandGold transition-colors"></i>
+                            <i class="bi bi-grid-1x2-fill  group-hover:text-brandGold transition-colors"></i>
                             <span>Dashboard</span>
                         </a>
-                    </li>                    
+                    </li>
 
                     <li>
                         <a href="profile.html"
@@ -118,7 +118,7 @@
                         </ul>
                     </li>
 
-                     <li class="nav-dropdown-group space-y-1">
+                    <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
                             class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
                             <div class="flex items-center gap-3">
@@ -173,7 +173,7 @@
                             <i class="bi bi-cash-stack group-hover:text-brandGold transition-colors"></i>
                             <span>Make Investment</span>
                         </a>
-                    </li> 
+                    </li>
 
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
@@ -215,11 +215,12 @@
                         </ul>
                     </li>
 
-                     <li class="nav-dropdown-group space-y-1">
+                    <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
                             class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-file-earmark-text-fill group-hover:text-brandGold transition-colors"></i>
+                                <i
+                                    class="bi bi-file-earmark-text-fill group-hover:text-brandGold transition-colors"></i>
                                 <span>Income Reports</span>
                             </div>
                             <i
@@ -253,7 +254,7 @@
                                 </a>
                             </li>
 
-                             <li>
+                            <li>
                                 <a href="history-plans.php"
                                     class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
                                     <span
@@ -309,7 +310,7 @@
                                         class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
                                     <span>Modify Wallet Password</span>
                                 </a>
-                            </li>                          
+                            </li>
 
                         </ul>
                     </li>
@@ -344,19 +345,21 @@
         <header
             class="h-20 bg-brandSurface/80 backdrop-blur-md border-b border-slate-800/60 sticky top-0 z-40 px-4 sm:px-8 flex items-center justify-between">
             <div class="flex items-center gap-4">
-                <button onclick="toggleMobileSidebar()" class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all focus:outline-none">
-    <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
-</button>
+                <button onclick="toggleMobileSidebar()"
+                    class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all focus:outline-none">
+                    <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
+                </button>
                 <div class="flex items-center h-10 overflow-hidden">
                     <img src="assets/images/logo.png" alt="Logo"
-                        class="w-auto h-8 sm:h-9 object-contain custom-matrix-logo block md:hidden" style="max-width: 140px;">
+                        class="w-auto h-8 sm:h-9 object-contain custom-matrix-logo block md:hidden"
+                        style="max-width: 140px;">
                 </div>
             </div>
 
             <div class="flex items-center gap-3">
 
                 <div class="relative">
-                   <button id="notificationBellBtn" onclick="toggleNotificationMenu()"
+                    <button id="notificationBellBtn" onclick="toggleNotificationMenu()"
                         class="w-10 h-10 rounded-xl bg-brandDark/80 border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold flex items-center justify-center transition-all relative focus:outline-none">
                         <i class="bi bi-bell"></i>
                         <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-brandGreen rounded-full"></span>
@@ -445,16 +448,8 @@
         </header>
 
 
-
-
-
-
-
-
-
-<main class="p-4 sm:p-8 space-y-6 flex-1">
-
-      <div
+        <main class="p-4 sm:p-8 space-y-6 flex-1">
+            <div
                 class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-800/60 mb-4">
                 <div class="space-y-1">
                     <div class="flex items-center gap-2 font-mono text-[11px] tracking-wider text-brandMuted uppercase">
@@ -463,9 +458,9 @@
                         <span class="text-brandGold" id="pageBreadcrumb">Add Fund</span>
                     </div>
                     <div class="flex items-center gap-3 mt-1">
-                        <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white font-sans uppercase"
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white font-sans"
                             id="mainPageTitle">
-                            Add Fund
+                            Fund Deposit Summary
                         </h2>
                         <span
                             class="flex items-center gap-1.5 px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-brandGreen text-[10px] font-mono rounded-md uppercase tracking-wide">
@@ -475,7 +470,7 @@
                     </div>
                 </div>
 
-                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">                  
+                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">
 
                     <button onclick="window.location.reload()"
                         class="h-[42px] px-3 bg-brandDark border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold rounded-xl flex items-center justify-center transition-all text-sm focus:outline-none"
@@ -484,75 +479,214 @@
                     </button>
                 </div>
             </div>
-    
-    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <div class="absolute top-[10%] right-[15%] w-[300px] h-[300px] bg-brandGold/5 rounded-full filter blur-[90px]"></div>
-        <div class="absolute bottom-[20%] left-[5%] w-[350px] h-[350px] bg-brandGreen/5 rounded-full filter blur-[80px] animate-pulse"></div>
-    </div>
 
-    <div class="relative z-10 bg-[#131b2e]/90 backdrop-blur-md border border-slate-700/50 p-6 sm:p-8 rounded-2xl shadow-[0_25px_50px_rgba(0,0,0,0.5)] group transition-all duration-300 hover:border-brandGold/30">
-        
-        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-brandGold via-brandGreen to-transparent"></div>
 
-        <div class="border-b border-slate-800/80 pb-5 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div class="space-y-1">
-                <h3 class="text-base font-black text-white flex items-center gap-2.5 uppercase tracking-wider">
-                    <i class="bi bi-wallet-fill text-brandGold"></i> Add Fund In Investment Wallet
-                </h3>
-                <p class="text-[11px] font-mono text-brandMuted">Deploy cryptographic fund pipelines to credit your system node layout.</p>
-            </div>
+           
+
+
             
-            <div class="bg-brandDark/80 border border-slate-800 px-4 py-2 rounded-xl flex flex-col font-mono shadow-inner min-w-[160px] text-right sm:text-left">
-                <span class="text-[9px] text-brandMuted uppercase tracking-wider">[ CURRENT WALLET BALANCE ]</span>
-                <span class="text-sm font-black text-brandGold mt-0.5">$ 1.0187</span>
-            </div>
+
+
+            <div class="bg-[#131b2e]/90 backdrop-blur-md rounded-2xl border border-slate-700/50 overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.4)] relative group transition-all duration-300 hover:border-brandGold/20 select-none">
+    
+    <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brandGold via-brandGreen to-transparent"></div>
+
+    <div class="p-5 bg-brandDark/30 border-b border-slate-800/80 flex flex-col md:flex-row md:items-center md:justify-between gap-4 font-mono">
+        
+        <div class="flex items-center flex-wrap gap-2">
+            <span class="text-[10px] text-brandMuted uppercase tracking-wider me-2 block md:inline">[ EXPORT ]</span>
+            <button class="h-8 px-3 bg-brandDark border border-slate-800 hover:border-brandGold/40 text-slate-300 hover:text-brandGold rounded-lg text-[11px] font-bold transition-all flex items-center gap-1.5 focus:outline-none shadow-sm">
+                <i class="bi bi-copy"></i> Copy
+            </button>
+            <button class="h-8 px-3 bg-brandDark border border-slate-800 hover:border-brandGreen/40 text-slate-300 hover:text-brandGreen rounded-lg text-[11px] font-bold transition-all flex items-center gap-1.5 focus:outline-none shadow-sm">
+                <i class="bi bi-file-earmark-excel"></i> Excel
+            </button>
+            <button class="h-8 px-3 bg-brandDark border border-slate-800 hover:border-rose-500/40 text-slate-300 hover:text-rose-400 rounded-lg text-[11px] font-bold transition-all flex items-center gap-1.5 focus:outline-none shadow-sm">
+                <i class="bi bi-file-earmark-pdf"></i> PDF
+            </button>
+            <button class="h-8 px-3 bg-brandDark border border-slate-800 hover:border-cyan-500/40 text-slate-300 hover:text-cyan-400 rounded-lg text-[11px] font-bold transition-all flex items-center gap-1.5 focus:outline-none shadow-sm">
+                <i class="bi bi-printer"></i> Print
+            </button>
         </div>
 
-        <div class="space-y-3.5 mb-6">
-            <div class="p-4 bg-brandDark/40 border border-rose-500/20 rounded-xl flex gap-3.5 items-start transition-colors hover:border-rose-500/30">
-                <div class="w-7 h-7 rounded-lg bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 font-mono text-xs font-black shrink-0 shadow-sm">
-                    !
-                </div>
-                <div class="text-xs font-mono text-slate-400 leading-relaxed">
-                    <span class="text-rose-400 font-black tracking-wider uppercase">[ TRANSACTION MATRIX RULE ]</span> 
-                    Only one wallet address can be used for one transaction. If you want to deposit multiple times then you have to generate multiple address. If you generate only one address and do multiple payment then only one payment will be credit in your wallet and rest payment you will loose.
-                </div>
-            </div>
-
-            <div class="p-4 bg-brandDark/40 border border-brandGold/20 rounded-xl flex gap-3.5 items-start transition-colors hover:border-brandGold/30">
-                <div class="w-7 h-7 rounded-lg bg-brandGold/10 border border-brandGold/30 flex items-center justify-center text-brandGold font-mono text-xs font-black shrink-0 shadow-sm">
-                    i
-                </div>
-                <div class="text-xs font-mono text-slate-400 leading-relaxed">
-                    <span class="text-brandGold font-black tracking-wider uppercase">[ VALUE SLIPPAGE WARNING ]</span> 
-                    Kindly pay the exact amount which will show in your screen. If our payment gateway received less payment due to price fluctuation it may take some time to credit in your investment wallet. We suggest you to add some minor extra amount to avoid delay.
-                </div>
-            </div>
+        <div class="relative w-full md:w-72">
+            <span class="absolute left-3.5 top-2 text-[10px] text-brandMuted uppercase tracking-widest font-bold">[ SEARCH ]</span>
+            <input type="text" id="tableSearchInput" oninput="handleTableSearch()" placeholder="Filter transaction nodes..." class="w-full h-8 pl-16 pr-8 bg-brandDark/80 border border-slate-800 focus:border-brandGold/40 text-xs text-white font-mono rounded-lg focus:outline-none transition-colors placeholder:text-slate-700 shadow-inner">
+            <i class="bi bi-search absolute right-3 top-2 text-[11px] text-slate-600"></i>
         </div>
-
-        <form onsubmit="event.preventDefault();" class="space-y-5 max-w-xl">
-            <div class="space-y-2">
-                <label class="text-[10px] font-mono tracking-widest text-brandMuted uppercase block">
-                    Enter amount (In USD) you want to load*
-                </label>
-                <div class="relative">
-                    <span class="absolute left-4 top-[11px] text-brandGreen font-mono text-sm font-black select-none">$</span>
-                    <input type="number" step="any" placeholder="Enter Amount*" class="w-full h-11 pl-8 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-sm font-mono text-white rounded-xl focus:outline-none transition-all placeholder:text-slate-600 shadow-inner" required>
-                </div>
-            </div>
-
-            <div class="pt-2">
-                <button type="submit" class="relative group/btn overflow-hidden h-11 px-8 bg-gradient-to-r from-brandGreen to-emerald-500 text-brandDark font-mono text-xs font-black rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(53,211,117,0.2)] hover:shadow-[0_4px_25px_rgba(230,195,106,0.2)] focus:outline-none uppercase tracking-widest">
-                    <div class="absolute inset-0 bg-gradient-to-r from-brandGold to-amber-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
-                    <span class="relative z-10 flex items-center gap-2">
-                        <i class="bi bi-arrow-right-circle-fill text-sm"></i> Make Request Protocol
-                    </span>
-                </button>
-            </div>
-        </form>
-
     </div>
-</main>
+
+    <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse min-w-[1000px]">
+            <thead>
+                <tr class="bg-brandDark/40 border-b border-slate-800/60 text-[11px] font-mono uppercase tracking-widest text-brandMuted">
+                    <th class="py-4 px-5 text-center w-16">Sr.No.</th>
+                    <th class="py-4 px-6">Transaction ID</th>
+                    <th class="py-4 px-6">Amount (USD)</th>
+                    <th class="py-4 px-6">Amount (Crypto)</th>
+                    <th class="py-4 px-6">Paid (Crypto)</th>
+                    <th class="py-4 px-6">Mode</th>
+                    <th class="py-4 px-6">Confirmation</th>
+                    <th class="py-4 px-6 text-center w-36">Status Link</th>
+                    <th class="py-4 px-5">Timestamp Date</th>
+                </tr>
+            </thead>
+            <tbody id="ledgerTableBody" class="divide-y divide-slate-800/40 text-xs font-mono">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="p-4 bg-brandDark/20 border-t border-slate-800/60 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono text-[11px]">
+        <div class="text-brandMuted" id="tableEntryTracker">
+            Showing 0 to 0 of 0 ledger nodes entries
+        </div>
+
+        <div class="inline-flex rounded-xl bg-brandDark border border-slate-800 p-0.5 shadow-sm overflow-hidden">
+            <button id="btnPrevPage" onclick="goToPreviousPage()" class="h-8 px-3 text-slate-300 hover:bg-brandSurface/50 transition-all font-bold text-[11px] uppercase tracking-wider flex items-center gap-1 focus:outline-none disabled:text-slate-600 disabled:cursor-not-allowed disabled:hover:bg-transparent">
+                <i class="bi bi-chevron-left text-[9px]"></i> Prev
+            </button>
+            <div class="w-[1px] bg-slate-800/80 my-1.5"></div>
+            <button id="btnNextPage" onclick="goToNextPage()" class="h-8 px-3 text-slate-300 hover:bg-brandSurface/50 transition-all font-bold text-[11px] uppercase tracking-wider flex items-center gap-1 focus:outline-none disabled:text-slate-600 disabled:cursor-not-allowed disabled:hover:bg-transparent">
+                Next <i class="bi bi-chevron-right text-[9px]"></i>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // 1. Raw Alphanumeric Dummy Data Matrices (10 Records Matrix Array)
+    const transactionMasterDataset = [
+        { id: "TXN489301928", usd: "1,250.00", crypto: "1,250.00", paid: "1,250.00", mode: "USDT.TRC20", conf: "6/6 Max", status: "Success", date: "2026-06-22 18:45:12" },
+        { id: "TXN773910482", usd: "350.00", crypto: "350.00", paid: "350.00", mode: "USDT.BEP20", conf: "6/6 Max", status: "Success", date: "2026-06-21 14:22:05" },
+        { id: "TXN104928401", usd: "5,000.00", crypto: "5,000.00", paid: "0.00", mode: "USDT.TRC20", conf: "0/6 Block", status: "Pending", date: "2026-06-21 09:11:34" },
+        { id: "TXN992840192", usd: "150.00", crypto: "150.00", paid: "150.00", mode: "USDT.BEP20", conf: "6/6 Max", status: "Success", date: "2026-06-20 21:05:40" },
+        { id: "TXN338194029", usd: "2,100.00", crypto: "2,100.00", paid: "2,100.00", mode: "USDT.TRC20", conf: "6/6 Max", status: "Success", date: "2026-06-19 11:54:19" },
+        { id: "TXN556201948", usd: "850.00", crypto: "850.00", paid: "0.00", mode: "USDT.TRC20", conf: "1/6 Core", status: "Pending", date: "2026-06-18 16:30:22" },
+        { id: "TXN883019482", usd: "10,000.00", crypto: "10,000.00", paid: "10,000.00", mode: "USDT.BEP20", conf: "6/6 Max", status: "Success", date: "2026-06-17 08:15:00" },
+        { id: "TXN449201943", usd: "60.00", crypto: "60.00", paid: "60.00", mode: "USDT.TRC20", conf: "6/6 Max", status: "Success", date: "2026-06-15 19:22:11" },
+        { id: "TXN112049184", usd: "3,400.00", crypto: "3,400.00", paid: "0.00", mode: "USDT.BEP20", conf: "0/6 Block", status: "Pending", date: "2026-06-14 13:02:55" },
+        { id: "TXN667291048", usd: "450.00", crypto: "450.00", paid: "450.00", mode: "USDT.TRC20", conf: "6/6 Max", status: "Success", date: "2026-06-12 10:40:32" }
+    ];
+
+    // Pagination Configuration Properties
+    let targetedActiveFilteredRows = [...transactionMasterDataset];
+    let currentActivePage = 1;
+    const itemsPerMatrixPage = 4; // Display exactly 4 rows per grid chunk view
+
+    // 2. Engine Core Bootloader
+    function renderLedgerTableData() {
+        const tableBody = document.getElementById('ledgerTableBody');
+        const entryTracker = document.getElementById('tableEntryTracker');
+        const btnPrev = document.getElementById('btnPrevPage');
+        const btnNext = document.getElementById('btnNextPage');
+        
+        if (!tableBody) return;
+
+        // Calculate dynamic mathematical slice pointers
+        const totalEntries = targetedActiveFilteredRows.length;
+        const totalExpectedPages = Math.ceil(totalEntries / itemsPerMatrixPage) || 1;
+
+        // Boundary adjustments
+        if (currentActivePage > totalExpectedPages) currentActivePage = totalExpectedPages;
+        if (currentActivePage < 1) currentActivePage = 1;
+
+        const startIndex = (currentActivePage - 1) * itemsPerMatrixPage;
+        const endIndex = Math.min(startIndex + itemsPerMatrixPage, totalEntries);
+
+        // Reset Table Content rows frame
+        tableBody.innerHTML = "";
+
+        // Check if entries list is empty array
+        if (totalEntries === 0) {
+            tableBody.innerHTML = `
+                <tr>
+                    <td colspan="9" class="py-12 text-center bg-brandDark/10">
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                            <div class="w-12 h-12 rounded-full bg-brandDark border border-slate-800 flex items-center justify-center text-slate-700 text-lg shadow-inner"><i class="bi bi-search"></i></div>
+                            <span class="text-xs text-slate-500">No matching system transaction logs detected.</span>
+                        </div>
+                    </td>
+                </tr>`;
+            entryTracker.innerHTML = `Showing 0 to 0 of 0 ledger nodes entries`;
+            btnPrev.disabled = true;
+            btnNext.disabled = true;
+            return;
+        }
+
+        // Loop array slices data values loop logic
+        for (let i = startIndex; i < endIndex; i++) {
+            const currentItem = targetedActiveFilteredRows[i];
+            
+            // Dynamic status color compiler logic
+            const statusBadgeMarkup = currentItem.status === "Success" 
+                ? `<span class="inline-block px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/30 text-[10px] text-brandGreen font-black rounded-lg uppercase tracking-wide">Success</span>`
+                : `<span class="inline-block px-2.5 py-0.5 bg-amber-500/10 border border-amber-500/30 text-[10px] text-amber-400 font-black rounded-lg uppercase tracking-wide animate-pulse">Pending</span>`;
+
+            const rowTemplateString = `
+                <tr class="hover:bg-brandDark/20 transition-colors group">
+                    <td class="py-4 px-5 text-center text-brandMuted group-hover:text-brandGold font-bold">${i + 1}</td>
+                    <td class="py-4 px-6 text-white font-bold tracking-wide">${currentItem.id}</td>
+                    <td class="py-4 px-6 text-brandGreen font-black">$${currentItem.usd}</td>
+                    <td class="py-4 px-6 text-slate-300">${currentItem.crypto}</td>
+                    <td class="py-4 px-6 text-slate-400">${currentItem.paid}</td>
+                    <td class="py-4 px-6"><span class="px-2 py-0.5 bg-brandDark border border-slate-800 rounded text-[10px] text-slate-400 font-bold uppercase">${currentItem.mode}</span></td>
+                    <td class="py-4 px-6 text-slate-400">${currentItem.conf}</td>
+                    <td class="py-4 px-6 text-center">${statusBadgeMarkup}</td>
+                    <td class="py-4 px-5 text-brandMuted">${currentItem.date}</td>
+                </tr>`;
+            
+            tableBody.insertAdjacentHTML('beforeend', rowTemplateString);
+        }
+
+        // Update Text Counter strings indices values
+        entryTracker.innerHTML = `Showing <span class="text-slate-300 font-bold">${startIndex + 1}</span> to <span class="text-slate-300 font-bold">${endIndex}</span> of <span class="text-slate-300 font-bold">${totalEntries}</span> ledger nodes entries`;
+
+        // Configure pagination button active / state blocks
+        btnPrev.disabled = (currentActivePage === 1);
+        btnNext.disabled = (currentActivePage === totalExpectedPages);
+    }
+
+    // 3. Real-Time Incremental String Search Input Filter Logic
+    function handleTableSearch() {
+        const queryValue = document.getElementById('tableSearchInput').value.trim().toLowerCase();
+        
+        // Loop match array fields mapping logic evaluation parameters
+        targetedActiveFilteredRows = transactionMasterDataset.filter(item => {
+            return item.id.toLowerCase().includes(queryValue) || 
+                   item.usd.toLowerCase().includes(queryValue) || 
+                   item.mode.toLowerCase().includes(queryValue) || 
+                   item.status.toLowerCase().includes(queryValue);
+        });
+
+        currentActivePage = 1; // Direct jump view back to index segment 1
+        renderLedgerTableData();
+    }
+
+    // 4. Pagination Triggers Links Methods
+    function goToPreviousPage() {
+        if (currentActivePage > 1) {
+            currentActivePage--;
+            renderLedgerTableData();
+        }
+    }
+
+    function goToNextPage() {
+        const totalExpectedPages = Math.ceil(targetedActiveFilteredRows.length / itemsPerMatrixPage);
+        if (currentActivePage < totalExpectedPages) {
+            currentActivePage++;
+            renderLedgerTableData();
+        }
+    }
+
+    // Initialize ledger data tree loop render mapping on document loading execution
+    document.addEventListener("DOMContentLoaded", () => {
+        renderLedgerTableData();
+    });
+</script>
+        </main>
+
+
 
 
 
