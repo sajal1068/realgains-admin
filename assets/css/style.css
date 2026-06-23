@@ -31,3 +31,28 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #E6C36A;
         }
+
+
+
+/* Completely stripping default library aesthetics to clone your original design layout */
+    .datatable-wrapper .datatable-top, 
+    .datatable-wrapper .datatable-bottom {
+        display: none !important; 
+    }
+    .datatable-table {
+        border-collapse: collapse !important;
+        width: 100% !important;
+    }
+    .datatable-table th {
+        color: #94a3b8 !important; 
+        font-family: monospace !important;
+        font-size: 11px !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
+        padding: 1rem 1.5rem !important;
+        border-bottom: 1px solid rgba(30, 41, 59, 0.6) !important;
+    }
+    .datatable-table td {
+        padding: 1rem 1.5rem !important;
+        border-bottom: 1px solid rgba(30, 41, 59, 0.4) !important;
+    }
