@@ -441,36 +441,49 @@
 
         <main
             class="p-4 sm:p-8 space-y-6 flex-1 bg-gradient-to-br from-slate-50 via-slate-100 to-emerald-50/20 text-slate-800">
+            
+             <!-- Top Breadcrumb & Page Title -->
             <div
-                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-800/60 mb-4">
+                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-slate-300 mb-6">
                 <div class="space-y-1">
-                    <div class="flex items-center gap-2 font-mono text-[11px] tracking-wider text-brandMuted uppercase">
-                        <span>[ Activation Wallet ]</span>
-                        <i class="bi bi-chevron-right text-[9px]"></i>
-                        <span class="text-brandGold" id="pageBreadcrumb">Add Fund</span>
+                    <div class="flex items-center gap-2 font-mono text-xs tracking-wider text-slate-600 uppercase">
+                        <span>[ SYSTEM PORTAL ]</span>
+                        <i class="bi bi-chevron-right text-xs"></i>
+                        <span class="text-amber-600 font-bold" id="pageBreadcrumb">DASHBOARD CORE</span>
                     </div>
                     <div class="flex items-center gap-3 mt-1">
-                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white font-sans"
+                        <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 font-sans uppercase"
                             id="mainPageTitle">
                             Withdraw Fund Wallet
                         </h2>
                         <span
-                            class="flex items-center gap-1.5 px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-brandGreen text-[10px] font-mono rounded-md uppercase tracking-wide">
-                            <span class="w-1 h-1 bg-brandGreen rounded-full animate-pulse"></span>
-                            <span>Live Node</span>
+                            class="flex items-center gap-1.5 px-3 py-1 bg-emerald-600 text-white text-xs font-mono rounded-md uppercase tracking-wide shadow-sm">
+                            <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
+                            <span class="font-bold">Live Node</span>
                         </span>
                     </div>
                 </div>
+                <!-- Parent div modified: hidden on mobile, inline-row flex layout on desktop (md and up) -->
+                <div class="hidden md:inline-flex items-center gap-2 sm:gap-3 font-mono">
+                    
+                    <!-- Left Element: Network Latency Node -->
+                    <div class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 border border-emerald-700 text-white rounded-xl flex flex-col min-w-[120px] sm:min-w-[140px] shadow-md justify-center">
+                        <span class="text-xs text-emerald-100 uppercase tracking-wider font-semibold">[ NETWORK LATENCY ]</span>
+                        <span class="text-sm font-bold mt-0.5 flex items-center gap-1 whitespace-nowrap">
+                            <i class="bi bi-wifi text-sm text-amber-400"></i> 14ms (Optimal)
+                        </span>
+                    </div>
 
-                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">
-
+                    <!-- Right Element: Sync Reload Node -->
                     <button onclick="window.location.reload()"
-                        class="h-[42px] px-3 bg-brandDark border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold rounded-xl flex items-center justify-center transition-all text-sm focus:outline-none"
+                        class="h-[46px] w-[46px] bg-white border border-slate-300 hover:border-amber-500 text-slate-600 hover:text-amber-500 rounded-xl flex items-center justify-center transition-all text-base shadow-sm shrink-0"
                         title="Sync Current Component Nodes">
                         <i class="bi bi-arrow-clockwise"></i>
                     </button>
+                    
                 </div>
             </div>
+           
 
            <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
     <div class="absolute top-[10%] left-[10%] w-[500px] h-[500px] bg-brandGreen/5 rounded-full filter blur-[100px] animate-pulse"></div>
@@ -483,22 +496,22 @@
 
     <div class="border-b border-slate-100 pb-6 mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
         <div class="space-y-1">
-            <div class="flex items-center gap-2 font-mono text-[10px] tracking-wider text-slate-400 font-bold uppercase">
+            <div class="flex items-center gap-2 font-mono text-xs tracking-wider text-slate-400 font-bold uppercase">
                 <span>[ OUTBOUND TRANSACTION DISPATCH ]</span>
                 <i class="bi bi-chevron-right text-[8px]"></i>
-                <span class="text-brandGreen">WITHDRAWAL SECURE LINK</span>
+                <span class="text-emerald-600">WITHDRAWAL SECURE LINK</span>
             </div>
             <h3 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2.5 uppercase tracking-wider mt-1">
-                <i class="bi bi-send-plus-fill text-brandGreen animate-pulse"></i> Process Withdraw Now
+                <i class="bi bi-send-plus-fill text-emerald-600 animate-pulse"></i> Process Withdraw Now
             </h3>
-            <p class="text-[11px] font-mono text-slate-500 leading-relaxed max-w-xl">
+            <p class="text-xs font-mono text-slate-500 leading-relaxed max-w-xl">
                 Finalize your ledger validation parameters below to immediately dispatch digital assets onto the blockchain network node.
             </p>
         </div>
 
-        <div class="bg-slate-50 border border-slate-200/60 px-5 py-3 rounded-2xl flex flex-col font-mono shadow-[inner_0_2px_4px_rgba(0,0,0,0.02)] min-w-[200px] text-right md:text-left shrink-0">
-            <span class="text-[9px] text-slate-400 uppercase tracking-widest font-bold">[ ESTIMATED NET DISPATCH ]</span>
-            <span class="text-xl font-black text-brandGold mt-0.5" id="netPayableDisplay">$ 0.00</span>
+        <div class="bg-slate-50 border border-slate-300/60 px-5 py-3 rounded-2xl flex flex-col font-mono shadow-[inner_0_2px_4px_rgba(0,0,0,0.02)] min-w-[200px] text-right md:text-left shrink-0">
+            <span class="text-xs text-slate-400 uppercase tracking-widest font-bold">[ ESTIMATED NET DISPATCH ]</span>
+            <span class="text-xl font-black text-amber-600 mt-0.5" id="netPayableDisplay">$ 0.00</span>
         </div>
     </div>
 
@@ -507,7 +520,7 @@
             <i class="bi bi-shield-fill-check"></i>
         </div>
         <div class="text-xs font-mono text-slate-600 leading-relaxed">
-            <span class="text-brandGold font-black tracking-wider uppercase block mb-0.5">[ NODE VERIFICATION SECURITY SHIELD ]</span>
+            <span class="text-amber-600 font-black tracking-wider uppercase block mb-0.5">[ NODE VERIFICATION SECURITY SHIELD ]</span>
             This withdrawal pipeline execution cannot be altered or deleted once committed to the smart contract server. Ensure your destination blockchain address parameters map perfectly to avoid irreversible loss of ledger funds.
         </div>
     </div>
@@ -515,13 +528,13 @@
     <form onsubmit="event.preventDefault();" class="space-y-6">
 
         <div class="space-y-2">
-            <label class="text-[10px] font-mono tracking-widest text-brandGreen font-bold uppercase block">
+            <label class="text-sm font-mono tracking-widest text-emerald-600 font-bold uppercase block">
                 Target Blockchain Wallet Address (USDT.BEP20 Node)*
             </label>
             <div class="relative">
                 <i class="bi bi-cpu absolute left-4 top-3.5 text-brandGreen text-sm"></i>
                 <input type="text" value="0xBa27944738BcE91ADCe1449055e867Ab52DCaBec"
-                    class="w-full h-11 pl-10 pr-4 bg-slate-50 border border-slate-200 text-sm font-mono text-slate-700 rounded-xl focus:outline-none shadow-[inner_0_2px_4px_rgba(0,0,0,0.02)] select-all cursor-not-allowed opacity-90"
+                    class="w-full h-11 pl-10 pr-4 bg-slate-50 border border-slate-300 text-sm font-mono text-slate-700 rounded-lg focus:outline-none shadow-[inner_0_2px_4px_rgba(0,0,0,0.02)] select-all cursor-not-allowed opacity-90"
                     readonly>
                 <span class="absolute right-4 top-3 text-[10px] font-mono text-emerald-600 border border-emerald-200 bg-emerald-50 px-2 py-0.5 rounded uppercase font-bold">
                     [ VERIFIED NODE ]
@@ -531,26 +544,26 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div class="space-y-2">
-                <label class="text-[10px] font-mono tracking-widest text-slate-500 font-bold uppercase block">
+                <label class="text-sm font-mono tracking-widest text-slate-500 font-bold uppercase block">
                     Confirm Amount to Withdraw (USD)*
                 </label>
                 <div class="relative">
                     <span class="absolute left-4 top-[11px] text-brandGreen font-mono text-sm font-black select-none">$</span>
                     <input type="number" id="withdrawNowAmount" oninput="calculateWithdrawalFees()" min="10"
                         max="5000" step="any" placeholder="0.00"
-                        class="w-full h-11 pl-8 pr-4 bg-white border border-slate-200 focus:border-brandGreen/50 focus:ring-4 focus:ring-brandGreen/5 text-sm font-mono text-slate-800 rounded-xl focus:outline-none transition-all placeholder:text-slate-300 shadow-[inner_0_2px_4px_rgba(0,0,0,0.01)]"
+                        class="w-full h-11 pl-8 pr-4 bg-white border border-slate-300 focus:border-emerald-600/50 focus:ring-4 focus:ring-brandGreen/5 text-sm font-mono text-slate-800 rounded-lg focus:outline-none transition-all placeholder:text-slate-300 shadow-[inner_0_2px_4px_rgba(0,0,0,0.01)]"
                         required>
                 </div>
             </div>
 
             <div class="space-y-2">
-                <label class="text-[10px] font-mono tracking-widest text-brandGold font-bold uppercase block">
+                <label class="text-sm font-mono tracking-widest text-emerald-600 font-bold uppercase block">
                     Enter Operational Secure Code Wallet Password*
                 </label>
                 <div class="relative">
-                    <i class="bi bi-shield-lock absolute left-4 top-3 text-brandGold text-sm"></i>
+                    <i class="bi bi-shield-lock absolute left-4 top-3 text-amber-600 text-sm"></i>
                     <input type="password" id="nowWalletPassword" placeholder="••••••••••••"
-                        class="w-full h-11 pl-10 pr-12 bg-white border border-slate-200 focus:border-brandGold/50 focus:ring-4 focus:ring-brandGold/5 text-sm font-mono text-slate-800 rounded-xl focus:outline-none transition-all placeholder:text-slate-300 shadow-[inner_0_2px_4px_rgba(0,0,0,0.01)]"
+                        class="w-full h-11 pl-10 pr-12 bg-white border border-slate-300 focus:border-emerald-600/50 focus:ring-4 focus:ring-brandGold/5 text-sm font-mono text-slate-800 rounded-xl focus:outline-none transition-all placeholder:text-slate-300 shadow-[inner_0_2px_4px_rgba(0,0,0,0.01)]"
                         required>
                     <button type="button" onclick="toggleNowPassMask()"
                         class="absolute right-4 top-3 text-slate-400 hover:text-brandGold transition-colors focus:outline-none">
@@ -562,16 +575,16 @@
 
         <div class="p-4 bg-slate-50 border border-slate-200/60 rounded-2xl grid grid-cols-2 md:grid-cols-3 gap-4 font-mono text-xs text-slate-500 shadow-[inner_0_2px_4px_rgba(0,0,0,0.01)]">
             <div>
-                <span class="block text-[9px] uppercase tracking-wider text-slate-400 font-bold">[ LIQUIDITY GATEWAY FEE ]</span>
+                <span class="block text-sm uppercase tracking-wider text-slate-400 font-bold">[ LIQUIDITY GATEWAY FEE ]</span>
                 <span class="text-slate-800 font-bold mt-0.5 inline-block" id="gatewayFeeDisplay">5% ($0.00)</span>
             </div>
             <div>
-                <span class="block text-[9px] uppercase tracking-wider text-slate-400 font-bold">[ NETWORK BLOCK GAS ]</span>
-                <span class="text-brandGreen font-bold mt-0.5 inline-block bg-emerald-50 border border-emerald-100 px-1.5 rounded text-[11px]">FREE (0.00 MATIC)</span>
+                <span class="block text-sm uppercase tracking-wider text-slate-400 font-bold">[ NETWORK BLOCK GAS ]</span>
+                <span class="text-emerald-600 font-bold mt-0.5 inline-block bg-emerald-50 border border-emerald-100 px-1.5 rounded text-xs">FREE (0.00 MATIC)</span>
             </div>
             <div class="col-span-2 md:col-span-1 border-t md:border-t-0 md:border-l border-slate-200 pt-2 md:pt-0 md:pl-4">
-                <span class="block text-[9px] uppercase tracking-wider text-brandGold font-bold">[ LEDGER TRANSACTION STATUS ]</span>
-                <span class="text-slate-700 font-bold mt-0.5 inline-block uppercase tracking-wide text-[11px]">Awaiting Authorization</span>
+                <span class="block text-sm uppercase tracking-wider text-amber-600 font-bold">[ LEDGER TRANSACTION STATUS ]</span>
+                <span class="text-slate-700 font-bold mt-0.5 inline-block uppercase tracking-wide text-xs">Awaiting Authorization</span>
             </div>
         </div>
 
