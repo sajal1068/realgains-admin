@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
         rel="stylesheet">
-    
+
 
 </head>
 
@@ -21,305 +21,291 @@
         class="fixed inset-0 bg-brandDark/70 backdrop-blur-sm z-40 hidden transition-all duration-300 opacity-0"></div>
 
     <aside id="sidebarPanel"
-        class="w-64 bg-brandSurface border-r border-slate-800/60 h-screen fixed top-0 left-0 z-50 transition-all duration-300 transform -translate-x-full lg:translate-x-0 flex flex-col justify-between">
+        class="w-64 bg-slate-100 border-r border-slate-300 h-screen fixed top-0 left-0 z-50 transition-all duration-300 transform -translate-x-full lg:translate-x-0 flex flex-col justify-between">
         <div>
-            <div class="h-20 flex items-center justify-between px-6 border-b border-slate-800/60">
+            <!-- Top Logo Header -->
+            <div class="h-20 flex items-center justify-between px-6 border-b border-slate-300">
                 <div class="flex items-center gap-3">
                     <div class="w-13 h-13 flex items-center justify-center overflow-hidden py-2">
-                        <img src="assets/images/logo.png" alt="Logo"
-                            class="w-full h-full object-contain custom-matrix-logo">
+                        <img src="assets/images/logo.png" alt="Logo" class="w-full h-full object-contain">
                     </div>
-                    <span class="font-mono text-sm tracking-widest font-bold text-white">REALGAINS</span>
+                    <span class="font-mono text-sm tracking-widest font-bold text-slate-900">REALGAINS</span>
                 </div>
                 <button onclick="toggleMobileSidebar()"
-                    class="block lg:hidden text-brandGold text-xl hover:text-brandGreen transition-colors p-1 focus:outline-none"
+                    class="block lg:hidden text-amber-500 text-xl hover:text-emerald-600 transition-colors p-1 focus:outline-none"
                     aria-label="Close Sidebar">
                     <i class="bi bi-x-lg"></i>
                 </button>
             </div>
 
+
+
+            <!-- Navigation Menu -->
             <nav class="p-4">
-                <span class="px-3 text-[10px] font-mono tracking-wider text-brandMuted uppercase block mb-3">[ CORE NODE
+                <span class="px-3 text-[10px] font-mono tracking-wider text-slate-500 uppercase block mb-3">[ CORE NODE
                     MATRIX ]</span>
 
                 <ul class="space-y-1.5">
-
+                    <!-- Dashboard -->
                     <li>
                         <a href="index.html"
-                            class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-grid-1x2-fill  group-hover:text-brandGold transition-colors"></i>
-                            <span>Dashboard</span>
+                            class="flex items-center justify-between px-4 py-3 bg-emerald-600 text-white rounded-xl font-medium text-sm transition-all hover:bg-amber-500 group shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-speedometer2 text-white"></i>
+                                <span>Dashboard</span>
+                            </div>
+                            <span class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse"></span>
                         </a>
                     </li>
 
+                    <!-- My Profile -->
                     <li>
                         <a href="profile.html"
-                            class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-person-circle group-hover:text-brandGold transition-colors"></i>
+                            class="flex items-center gap-3 px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group shadow-sm">
+                            <i class="bi bi-person-circle"></i>
                             <span>My Profile</span>
                         </a>
                     </li>
 
+                    <!-- Activation Wallet (Dropdown) -->
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
-                            class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-wallet2 group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-wallet2"></i>
                                 <span>Activation Wallet</span>
                             </div>
                             <i
-                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 text-brandMuted group-hover:text-brandGold mt-0.5"></i>
+                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 mt-0.5"></i>
                         </button>
 
                         <ul
-                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
+                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
                             <li>
                                 <a href="add-fund.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Add Fund</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="add-fund-summary.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Add Fund Summary</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="transfer-fund.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Transfer Fund</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="transfer-summary.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Transfer Summary</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="wallet-summary.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Wallet Summary</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
+                    <!-- Income Wallet (Dropdown) -->
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
-                            class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-wallet-fill group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-wallet-fill"></i>
                                 <span>Income Wallet</span>
                             </div>
                             <i
-                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 text-brandMuted group-hover:text-brandGold mt-0.5"></i>
+                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 mt-0.5"></i>
                         </button>
 
                         <ul
-                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
+                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
                             <li>
                                 <a href="transfer-fund-wallet.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Transfer Fund</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="withdraw-fund-wallet.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
-                                    <span>Withdraw Fund </span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Withdraw Fund</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="withdrawal-history.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Withdrawal History</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="wallet-summary.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Wallet Summary</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
+                    <!-- Make Investment -->
                     <li>
                         <a href="make-investment.html"
-                            class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-cash-stack group-hover:text-brandGold transition-colors"></i>
+                            class="flex items-center gap-3 px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group shadow-sm">
+                            <i class="bi bi-cash-stack"></i>
                             <span>Make Investment</span>
                         </a>
                     </li>
 
+                    <!-- Team Reports (Dropdown) -->
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
-                            class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-people-fill group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-people-fill"></i>
                                 <span>Team Reports</span>
                             </div>
                             <i
-                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 text-brandMuted group-hover:text-brandGold mt-0.5"></i>
+                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 mt-0.5"></i>
                         </button>
 
                         <ul
-                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
+                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
                             <li>
                                 <a href="direct-team.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Direct Team</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="indirect-team.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Indirect Team</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="team-business-report.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Team Business Report</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
+                    <!-- Income Reports (Dropdown) -->
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
-                            class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
                             <div class="flex items-center gap-3">
-                                <i
-                                    class="bi bi-file-earmark-text-fill group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-file-earmark-text-fill"></i>
                                 <span>Income Reports</span>
                             </div>
                             <i
-                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 text-brandMuted group-hover:text-brandGold mt-0.5"></i>
+                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 mt-0.5"></i>
                         </button>
 
                         <ul
-                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
+                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
                             <li>
                                 <a href="daily-profit-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Daily Profit Income</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="direct-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Direct Income</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="profit-sharing-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Profit Sharing Income</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="team-pool-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Team Pool Income</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="rewards-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Rewards Income</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="weekly-salary-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Weekly Salary Income</span>
                                 </a>
                             </li>
-
                         </ul>
                     </li>
 
+                    <!-- Password Settings (Dropdown) -->
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
-                            class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-gear-fill group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-gear-fill"></i>
                                 <span>Password Settings</span>
                             </div>
                             <i
-                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 text-brandMuted group-hover:text-brandGold mt-0.5"></i>
+                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 mt-0.5"></i>
                         </button>
 
                         <ul
-                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
+                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
                             <li>
                                 <a href="update-login-password.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Modify Login Password</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="update-wallet-password.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Modify Wallet Password</span>
                                 </a>
                             </li>
-
                         </ul>
                     </li>
 
+                    <!-- Logout -->
                     <li>
                         <a href="#"
-                            class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-box-arrow-right group-hover:text-brandGold transition-colors"></i>
+                            class="flex items-center gap-3 px-4 py-3 bg-slate-200 text-slate-700 hover:bg-amber-500 hover:text-white rounded-xl text-sm transition-all group shadow-sm">
+                            <i class="bi bi-box-arrow-right text-amber-600 group-hover:text-white"></i>
                             <span>Logout</span>
                         </a>
                     </li>
@@ -327,15 +313,15 @@
             </nav>
         </div>
 
-        <div class="p-4 border-t border-slate-800/60 bg-brandDark/30">
-            <div class="flex items-center gap-3 p-2 bg-brandDark/50 rounded-xl border border-slate-800/40">
-                <div
-                    class="w-10 h-10 rounded-xl bg-brandSurface border border-brandGold/20 flex items-center justify-center">
-                    <i class="bi bi-person-circle text-brandGold text-lg"></i>
+        <!-- Bottom Operator Profile Card -->
+        <div class="p-4 border-t border-slate-300 bg-slate-200/50">
+            <div class="flex items-center gap-3 p-2 bg-white rounded-xl border border-slate-300 shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center shadow-md">
+                    <i class="bi bi-person-circle text-white text-lg"></i>
                 </div>
                 <div class="overflow-hidden">
-                    <h4 class="text-xs font-bold text-white truncate">Sajal Biswas</h4>
-                    <span class="text-[10px] font-mono text-brandGreen">[ Verified Operator ]</span>
+                    <h4 class="text-xs font-bold text-slate-800 truncate">Sajal Biswas</h4>
+                    <span class="text-[10px] font-mono text-emerald-600 font-bold">[ Verified Operator ]</span>
                 </div>
             </div>
         </div>
@@ -344,102 +330,102 @@
     <div id="mainContent" class="flex-1 lg:pl-64 flex flex-col min-h-screen w-full transition-all duration-300">
 
         <header
-            class="h-20 bg-brandSurface/80 backdrop-blur-md border-b border-slate-800/60 sticky top-0 z-40 px-4 sm:px-8 flex items-center justify-between">
+            class="h-20 bg-slate-100/90 backdrop-blur-md border-b border-slate-300 sticky top-0 z-40 px-4 sm:px-8 flex items-center justify-between">
             <div class="flex items-center gap-4">
+                <!-- Sidebar Toggle Button (Emerald Green to Golden on Hover) -->
                 <button onclick="toggleMobileSidebar()"
-                    class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all focus:outline-none">
+                    class="w-10 h-10 rounded-xl bg-emerald-600 border border-emerald-700/20 text-white flex items-center justify-center text-xl hover:bg-amber-500 hover:text-white transition-all focus:outline-none shadow-sm">
                     <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
                 </button>
                 <div class="flex items-center h-10 overflow-hidden">
                     <img src="assets/images/logo.png" alt="Logo"
-                        class="w-auto h-8 sm:h-9 object-contain custom-matrix-logo block md:hidden"
-                        style="max-width: 140px;">
+                        class="w-auto h-8 sm:h-9 object-contain block md:hidden" style="max-width: 140px;">
                 </div>
             </div>
 
             <div class="flex items-center gap-3">
-
+                <!-- Notification Section -->
                 <div class="relative">
                     <button id="notificationBellBtn" onclick="toggleNotificationMenu()"
-                        class="w-10 h-10 rounded-xl bg-brandDark/80 border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold flex items-center justify-center transition-all relative focus:outline-none">
+                        class="w-10 h-10 rounded-xl bg-white border border-slate-300 hover:border-amber-500 text-slate-600 hover:text-amber-500 flex items-center justify-center transition-all relative focus:outline-none shadow-sm">
                         <i class="bi bi-bell"></i>
-                        <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-brandGreen rounded-full"></span>
+                        <!-- Badge set to Emerald Green from logo.jpg -->
+                        <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-emerald-600 rounded-full"></span>
                     </button>
 
+                    <!-- Notification Dropdown Panel -->
                     <div id="notificationDropdownPanel"
-                        class="hidden opacity-0 scale-95 absolute top-14 right-0 w-80 bg-brandSurface border border-slate-800/80 rounded-2xl shadow-2xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">
-                        <div class="p-4 bg-brandDark/40 border-b border-slate-800/60 flex items-center justify-between">
-                            <span class="text-xs font-mono font-bold tracking-wider text-white uppercase">[ FEED MATRIX
-                                NOTICES ]</span>
+                        class="hidden opacity-0 scale-95 absolute top-14 right-0 w-80 bg-white border border-slate-300 rounded-2xl shadow-xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold tracking-wider text-slate-800 uppercase">[ FEED
+                                MATRIX NOTICES ]</span>
                             <button onclick="toggleNotificationMenu()"
-                                class="w-7 h-7 bg-brandDark hover:bg-brandGold/10 rounded-lg text-brandGold border border-slate-800 hover:border-brandGold/20 flex items-center justify-center text-sm transition-all focus:outline-none">
+                                class="w-7 h-7 bg-white hover:bg-amber-500 hover:text-white rounded-lg text-amber-500 border border-slate-200 flex items-center justify-center text-sm transition-all focus:outline-none shadow-sm">
                                 <i class="bi bi-clock"></i>
                             </button>
                         </div>
-                        <div class="divide-y divide-slate-800/40 max-h-64 overflow-y-auto">
-                            <div class="p-4 hover:bg-brandDark/20 transition-colors flex gap-3">
-                                <div class="text-brandGreen text-base mt-0.5"><i class="bi bi-patch-check-fill"></i>
+                        <div class="divide-y divide-slate-100 max-h-64 overflow-y-auto">
+                            <div class="p-4 hover:bg-slate-50 transition-colors flex gap-3">
+                                <div class="text-emerald-600 text-base mt-0.5"><i class="bi bi-patch-check-fill"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-xs font-bold text-white">Quantum Node Yield Sync Success</h4>
-                                    <span class="text-[10px] font-mono text-brandMuted block mt-0.5">2 mins ago</span>
+                                    <h4 class="text-xs font-bold text-slate-800">Quantum Node Yield Sync Success</h4>
+                                    <span class="text-[10px] font-mono text-slate-500 block mt-0.5">2 mins ago</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- <button
-                    class="w-10 h-10 rounded-xl bg-brandDark/80 border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold flex items-center justify-center transition-all focus:outline-none">
-                    <i class="bi bi-gear"></i>
-                </button> -->
-
+                <!-- User Profile Dropdown Button -->
                 <div class="relative">
                     <button id="adminProfileBtn" onclick="toggleProfileMenu()"
-                        class="h-10 pl-2 pr-3 bg-brandDark/80 border border-slate-800 hover:border-brandGold/30 rounded-xl flex items-center gap-2.5 transition-all focus:outline-none group">
+                        class="h-10 pl-2 pr-3 bg-white border border-slate-300 hover:border-amber-500 rounded-xl flex items-center gap-2.5 transition-all focus:outline-none group shadow-sm">
                         <div
-                            class="w-7 h-7 rounded-lg bg-brandSurface border border-brandGold/20 flex items-center justify-center overflow-hidden">
+                            class="w-7 h-7 rounded-lg bg-emerald-600 flex items-center justify-center overflow-hidden shadow-sm">
                             <i
-                                class="bi bi-person-fill text-brandGold text-sm group-hover:scale-110 transition-transform"></i>
+                                class="bi bi-person-fill text-white text-sm group-hover:scale-110 transition-transform"></i>
                         </div>
                         <span
-                            class="text-xs font-medium text-slate-300 group-hover:text-white hidden sm:inline transition-colors">Sajal
+                            class="text-xs font-medium text-slate-700 group-hover:text-slate-900 hidden sm:inline transition-colors">Sajal
                             Biswas</span>
                         <i
-                            class="bi bi-chevron-down text-[10px] text-brandMuted group-hover:text-brandGold transition-colors mt-0.5"></i>
+                            class="bi bi-chevron-down text-[10px] text-slate-400 group-hover:text-amber-500 transition-colors mt-0.5"></i>
                     </button>
 
+                    <!-- Profile Dropdown Panel -->
                     <div id="profileDropdownPanel"
-                        class="hidden opacity-0 scale-95 absolute top-14 right-0 w-56 bg-brandSurface border border-slate-800/80 rounded-2xl shadow-2xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">
-                        <div class="p-4 bg-brandDark/40 border-b border-slate-800/60 font-mono">
-                            <span class="text-[10px] tracking-wider text-brandMuted block uppercase">[ ACCOUNT CONSOLE
+                        class="hidden opacity-0 scale-95 absolute top-14 right-0 w-56 bg-white border border-slate-300 rounded-2xl shadow-xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200 font-mono">
+                            <span class="text-[10px] tracking-wider text-slate-500 block uppercase">[ ACCOUNT CONSOLE
                                 ]</span>
-                            <span class="text-xs font-bold text-brandGreen block mt-0.5 truncate">ID:
+                            <span class="text-xs font-bold text-emerald-600 block mt-0.5 truncate">ID:
                                 op_biswas_99</span>
                         </div>
 
                         <div class="p-2 space-y-0.5">
                             <a href="profile.php"
-                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-300 hover:text-brandGold hover:bg-brandDark/40 rounded-xl transition-all group">
-                                <i class="bi bi-person-vcard text-brandMuted group-hover:text-brandGold text-sm"></i>
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-700 hover:text-white hover:bg-emerald-600 rounded-xl transition-all group">
+                                <i class="bi bi-person-vcard text-slate-400 group-hover:text-white text-sm"></i>
                                 <span>My Account Profile</span>
                             </a>
                             <a href="wallet-settings.php"
-                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-300 hover:text-brandGold hover:bg-brandDark/40 rounded-xl transition-all group">
-                                <i class="bi bi-shield-lock text-brandMuted group-hover:text-brandGold text-sm"></i>
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-700 hover:text-white hover:bg-emerald-600 rounded-xl transition-all group">
+                                <i class="bi bi-shield-lock text-slate-400 group-hover:text-white text-sm"></i>
                                 <span>Security & Keys</span>
                             </a>
                             <a href="activity-logs.php"
-                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-300 hover:text-brandGold hover:bg-brandDark/40 rounded-xl transition-all group">
-                                <i class="bi bi-terminal text-brandMuted group-hover:text-brandGold text-sm"></i>
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-700 hover:text-white hover:bg-emerald-600 rounded-xl transition-all group">
+                                <i class="bi bi-terminal text-slate-400 group-hover:text-white text-sm"></i>
                                 <span>System Session Logs</span>
                             </a>
 
-                            <div class="border-t border-slate-800/50 my-1"></div>
+                            <div class="border-t border-slate-200 my-1"></div>
 
+                            <!-- Logout Link -->
                             <a href="logout.php"
-                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-rose-400 hover:text-rose-300 hover:bg-rose-500/10 rounded-xl transition-all group">
-                                <i class="bi bi-box-arrow-right text-rose-400/70 group-hover:text-rose-400 text-sm"></i>
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-rose-600 hover:text-white hover:bg-rose-600 rounded-xl transition-all group">
+                                <i class="bi bi-box-arrow-right text-rose-500 group-hover:text-white text-sm"></i>
                                 <span class="font-bold tracking-wide">SYSTEM LOGOUT</span>
                             </a>
                         </div>
@@ -449,11 +435,12 @@
         </header>
 
 
-      
 
 
 
- <main class="p-4 sm:p-8 space-y-6 flex-1">
+
+        <main
+            class="p-4 sm:p-8 space-y-6 flex-1 bg-gradient-to-br from-slate-50 via-slate-100 to-emerald-50/20 text-slate-800">
             <div
                 class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-800/60 mb-4">
                 <div class="space-y-1">
@@ -484,174 +471,175 @@
                     </button>
                 </div>
             </div>
-    
-    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <div class="absolute top-[10%] left-[10%] w-[500px] h-[500px] bg-brandGreen/5 rounded-full filter blur-[100px] animate-pulse"></div>
-        <div class="absolute bottom-[10%] right-[10%] w-[500px] h-[500px] bg-brandGold/5 rounded-full filter blur-[120px]"></div>
+
+           <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute top-[10%] left-[10%] w-[500px] h-[500px] bg-brandGreen/5 rounded-full filter blur-[100px] animate-pulse"></div>
+    <div class="absolute bottom-[10%] right-[10%] w-[500px] h-[500px] bg-brandGold/5 rounded-full filter blur-[120px]"></div>
+</div>
+
+<div class="relative z-10 w-full bg-white/95 backdrop-blur-md border border-slate-200/80 p-6 sm:p-10 rounded-3xl shadow-[0_20px_50px_rgba(15,23,42,0.06)] group transition-all duration-300 hover:border-brandGold/30">
+
+    <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brandGold via-brandGreen to-transparent"></div>
+
+    <div class="border-b border-slate-100 pb-6 mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+        <div class="space-y-1">
+            <div class="flex items-center gap-2 font-mono text-[10px] tracking-wider text-slate-400 font-bold uppercase">
+                <span>[ OUTBOUND TRANSACTION DISPATCH ]</span>
+                <i class="bi bi-chevron-right text-[8px]"></i>
+                <span class="text-brandGreen">WITHDRAWAL SECURE LINK</span>
+            </div>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2.5 uppercase tracking-wider mt-1">
+                <i class="bi bi-send-plus-fill text-brandGreen animate-pulse"></i> Process Withdraw Now
+            </h3>
+            <p class="text-[11px] font-mono text-slate-500 leading-relaxed max-w-xl">
+                Finalize your ledger validation parameters below to immediately dispatch digital assets onto the blockchain network node.
+            </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200/60 px-5 py-3 rounded-2xl flex flex-col font-mono shadow-[inner_0_2px_4px_rgba(0,0,0,0.02)] min-w-[200px] text-right md:text-left shrink-0">
+            <span class="text-[9px] text-slate-400 uppercase tracking-widest font-bold">[ ESTIMATED NET DISPATCH ]</span>
+            <span class="text-xl font-black text-brandGold mt-0.5" id="netPayableDisplay">$ 0.00</span>
+        </div>
     </div>
 
-    <div class="relative z-10 w-full  bg-[#131b2e]/90 backdrop-blur-md border border-slate-700/50 p-6 sm:p-10 rounded-3xl shadow-[0_30px_60px_rgba(0,0,0,0.6)] group transition-all duration-300 hover:border-brandGold/20">
-        
-        <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brandGold via-brandGreen to-transparent"></div>
+    <div class="mb-8 p-4 bg-amber-50/60 border border-brandGold/20 rounded-xl flex gap-3.5 items-start transition-colors hover:border-brandGold/30 shadow-sm">
+        <div class="w-7 h-7 rounded-lg bg-white border border-brandGold/30 flex items-center justify-center text-brandGold font-mono text-sm font-black shrink-0 shadow-sm">
+            <i class="bi bi-shield-fill-check"></i>
+        </div>
+        <div class="text-xs font-mono text-slate-600 leading-relaxed">
+            <span class="text-brandGold font-black tracking-wider uppercase block mb-0.5">[ NODE VERIFICATION SECURITY SHIELD ]</span>
+            This withdrawal pipeline execution cannot be altered or deleted once committed to the smart contract server. Ensure your destination blockchain address parameters map perfectly to avoid irreversible loss of ledger funds.
+        </div>
+    </div>
 
-        <div class="border-b border-slate-800/80 pb-6 mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
-            <div class="space-y-1">
-                <div class="flex items-center gap-2 font-mono text-[10px] tracking-wider text-brandMuted uppercase">
-                    <span>[ OUTBOUND TRANSACTION DISPATCH ]</span>
-                    <i class="bi bi-chevron-right text-[8px]"></i>
-                    <span class="text-brandGreen">WITHDRAWAL SECURE LINK</span>
-                </div>
-                <h3 class="text-lg sm:text-xl font-black text-white flex items-center gap-2.5 uppercase tracking-wider mt-1">
-                    <i class="bi bi-send-plus-fill text-brandGreen animate-pulse"></i> Process Withdraw Now
-                </h3>
-                <p class="text-[11px] font-mono text-brandMuted">Finalize your ledger validation parameters below to immediately dispatch digital assets onto the blockchain network node.</p>
-            </div>
-            
-            <div class="bg-brandDark/80 border border-slate-800 px-5 py-3 rounded-2xl flex flex-col font-mono shadow-inner min-w-[200px] text-right md:text-left shrink-0">
-                <span class="text-[9px] text-brandMuted uppercase tracking-widest">[ ESTIMATED NET DISPATCH ]</span>
-                <span class="text-xl font-black text-brandGold mt-0.5" id="netPayableDisplay">$ 0.00</span>
+    <form onsubmit="event.preventDefault();" class="space-y-6">
+
+        <div class="space-y-2">
+            <label class="text-[10px] font-mono tracking-widest text-brandGreen font-bold uppercase block">
+                Target Blockchain Wallet Address (USDT.BEP20 Node)*
+            </label>
+            <div class="relative">
+                <i class="bi bi-cpu absolute left-4 top-3.5 text-brandGreen text-sm"></i>
+                <input type="text" value="0xBa27944738BcE91ADCe1449055e867Ab52DCaBec"
+                    class="w-full h-11 pl-10 pr-4 bg-slate-50 border border-slate-200 text-sm font-mono text-slate-700 rounded-xl focus:outline-none shadow-[inner_0_2px_4px_rgba(0,0,0,0.02)] select-all cursor-not-allowed opacity-90"
+                    readonly>
+                <span class="absolute right-4 top-3 text-[10px] font-mono text-emerald-600 border border-emerald-200 bg-emerald-50 px-2 py-0.5 rounded uppercase font-bold">
+                    [ VERIFIED NODE ]
+                </span>
             </div>
         </div>
 
-        <div class="mb-8 p-4 bg-brandDark/40 border border-brandGold/20 rounded-xl flex gap-3.5 items-start transition-colors hover:border-brandGold/30 shadow-inner">
-            <div class="w-7 h-7 rounded-lg bg-brandGold/10 border border-brandGold/30 flex items-center justify-center text-brandGold font-mono text-sm font-black shrink-0 shadow-sm">
-                <i class="bi bi-shield-fill-check"></i>
-            </div>
-            <div class="text-xs font-mono text-slate-400 leading-relaxed">
-                <span class="text-brandGold font-black tracking-wider uppercase block mb-0.5">[ NODE VERIFICATION SECURITY SHIELD ]</span> 
-                This withdrawal pipeline execution cannot be altered or deleted once committed to the smart contract server. Ensure your destination blockchain address parameters map perfectly to avoid irreversible loss of ledger funds.
-            </div>
-        </div>
-
-        <form onsubmit="event.preventDefault();" class="space-y-6">
-            
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div class="space-y-2">
-                <label class="text-[10px] font-mono tracking-widest text-brandGreen font-bold uppercase block">
-                    Target Blockchain Wallet Address (USDT.BEP20 Node)*
+                <label class="text-[10px] font-mono tracking-widest text-slate-500 font-bold uppercase block">
+                    Confirm Amount to Withdraw (USD)*
                 </label>
                 <div class="relative">
-                    <i class="bi bi-cpu absolute left-4 top-3.5 text-brandGreen text-sm"></i>
-                    <input type="text" value="0xBa27944738BcE91ADCe1449055e867Ab52DCaBec" class="w-full h-11 pl-10 pr-4 bg-brandDark/60 border border-slate-800 text-sm font-mono text-white rounded-xl focus:outline-none shadow-inner select-all cursor-not-allowed opacity-90" readonly>
-                    <span class="absolute right-4 top-3 text-[10px] font-mono text-brandGreen/60 border border-brandGreen/20 bg-brandGreen/5 px-2 py-0.5 rounded uppercase">[ VERIFIED NODE ]</span>
+                    <span class="absolute left-4 top-[11px] text-brandGreen font-mono text-sm font-black select-none">$</span>
+                    <input type="number" id="withdrawNowAmount" oninput="calculateWithdrawalFees()" min="10"
+                        max="5000" step="any" placeholder="0.00"
+                        class="w-full h-11 pl-8 pr-4 bg-white border border-slate-200 focus:border-brandGreen/50 focus:ring-4 focus:ring-brandGreen/5 text-sm font-mono text-slate-800 rounded-xl focus:outline-none transition-all placeholder:text-slate-300 shadow-[inner_0_2px_4px_rgba(0,0,0,0.01)]"
+                        required>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div class="space-y-2">
-                    <label class="text-[10px] font-mono tracking-widest text-brandMuted uppercase block">
-                        Confirm Amount to Withdraw (USD)*
-                    </label>
-                    <div class="relative">
-                        <span class="absolute left-4 top-[11px] text-brandGreen font-mono text-sm font-black select-none">$</span>
-                        <input type="number" id="withdrawNowAmount" oninput="calculateWithdrawalFees()" min="10" max="5000" step="any" placeholder="0.00" class="w-full h-11 pl-8 pr-4 bg-brandDark/60 border border-slate-800 focus:border-brandGreen/40 text-sm font-mono text-white rounded-xl focus:outline-none transition-all placeholder:text-slate-700 shadow-inner" required>
-                    </div>
-                </div>
-
-                <div class="space-y-2">
-                    <label class="text-[10px] font-mono tracking-widest text-brandGold font-bold uppercase block">
-                        Enter Operational Secure Code Wallet Password*
-                    </label>
-                    <div class="relative">
-                        <i class="bi bi-shield-lock absolute left-4 top-3 text-brandGold text-sm"></i>
-                        <input type="password" id="nowWalletPassword" placeholder="••••••••••••" class="w-full h-11 pl-10 pr-12 bg-brandDark/60 border border-slate-800 focus:border-brandGold/40 text-sm font-mono text-white rounded-xl focus:outline-none transition-all placeholder:text-slate-700 shadow-inner" required>
-                        <button type="button" onclick="toggleNowPassMask()" class="absolute right-4 top-3 text-slate-600 hover:text-brandGold transition-colors focus:outline-none">
-                            <i id="nowPasswordToggleIcon" class="bi bi-eye text-base"></i>
-                        </button>
-                    </div>
+            <div class="space-y-2">
+                <label class="text-[10px] font-mono tracking-widest text-brandGold font-bold uppercase block">
+                    Enter Operational Secure Code Wallet Password*
+                </label>
+                <div class="relative">
+                    <i class="bi bi-shield-lock absolute left-4 top-3 text-brandGold text-sm"></i>
+                    <input type="password" id="nowWalletPassword" placeholder="••••••••••••"
+                        class="w-full h-11 pl-10 pr-12 bg-white border border-slate-200 focus:border-brandGold/50 focus:ring-4 focus:ring-brandGold/5 text-sm font-mono text-slate-800 rounded-xl focus:outline-none transition-all placeholder:text-slate-300 shadow-[inner_0_2px_4px_rgba(0,0,0,0.01)]"
+                        required>
+                    <button type="button" onclick="toggleNowPassMask()"
+                        class="absolute right-4 top-3 text-slate-400 hover:text-brandGold transition-colors focus:outline-none">
+                        <i id="nowPasswordToggleIcon" class="bi bi-eye text-base"></i>
+                    </button>
                 </div>
             </div>
+        </div>
 
-            <div class="p-4 bg-brandDark/20 border border-slate-800/80 rounded-2xl grid grid-cols-2 md:grid-cols-3 gap-4 font-mono text-xs text-brandMuted">
-                <div>
-                    <span class="block text-[9px] uppercase tracking-wider">[ LIQUIDITY GATEWAY FEE ]</span>
-                    <span class="text-white font-bold mt-0.5 inline-block" id="gatewayFeeDisplay">5% ($0.00)</span>
-                </div>
-                <div>
-                    <span class="block text-[9px] uppercase tracking-wider">[ NETWORK BLOCK GAS ]</span>
-                    <span class="text-brandGreen font-bold mt-0.5 inline-block">FREE (0.00 MATIC)</span>
-                </div>
-                <div class="col-span-2 md:col-span-1 border-t md:border-t-0 md:border-l border-slate-800/80 pt-2 md:pt-0 md:pl-4">
-                    <span class="block text-[9px] uppercase tracking-wider text-brandGold">[ LEDGER TRANSACTION STATUS ]</span>
-                    <span class="text-white font-black mt-0.5 inline-block uppercase tracking-wide">Awaiting Authorization</span>
-                </div>
+        <div class="p-4 bg-slate-50 border border-slate-200/60 rounded-2xl grid grid-cols-2 md:grid-cols-3 gap-4 font-mono text-xs text-slate-500 shadow-[inner_0_2px_4px_rgba(0,0,0,0.01)]">
+            <div>
+                <span class="block text-[9px] uppercase tracking-wider text-slate-400 font-bold">[ LIQUIDITY GATEWAY FEE ]</span>
+                <span class="text-slate-800 font-bold mt-0.5 inline-block" id="gatewayFeeDisplay">5% ($0.00)</span>
             </div>
-
-            <div class="pt-2 flex justify-end">
-                <button type="submit" class="relative group/btn overflow-hidden h-12 px-10 bg-gradient-to-r from-brandGreen to-emerald-500 text-brandDark font-mono text-xs font-black rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-[0_4px_25px_rgba(53,211,117,0.2)] hover:shadow-[0_4px_30px_rgba(230,195,106,0.2)] focus:outline-none uppercase tracking-widest w-full sm:w-auto">
-                    <div class="absolute inset-0 bg-gradient-to-r from-brandGold to-amber-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
-                    <span class="relative z-10 flex items-center justify-center gap-2">
-                        <i class="bi bi-lightning-charge-fill text-sm"></i> Confirm & Dispatch Withdrawal Now
-                    </span>
-                </button>
+            <div>
+                <span class="block text-[9px] uppercase tracking-wider text-slate-400 font-bold">[ NETWORK BLOCK GAS ]</span>
+                <span class="text-brandGreen font-bold mt-0.5 inline-block bg-emerald-50 border border-emerald-100 px-1.5 rounded text-[11px]">FREE (0.00 MATIC)</span>
             </div>
-            
-        </form>
+            <div class="col-span-2 md:col-span-1 border-t md:border-t-0 md:border-l border-slate-200 pt-2 md:pt-0 md:pl-4">
+                <span class="block text-[9px] uppercase tracking-wider text-brandGold font-bold">[ LEDGER TRANSACTION STATUS ]</span>
+                <span class="text-slate-700 font-bold mt-0.5 inline-block uppercase tracking-wide text-[11px]">Awaiting Authorization</span>
+            </div>
+        </div>
 
-    </div>
-</main>
+        <div class="pt-2 flex justify-end">
+            <button type="submit"
+                class="relative group/btn overflow-hidden h-12 px-10 bg-gradient-to-r from-brandGreen to-emerald-500 text-white font-mono text-xs font-bold rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-[0_6px_20px_rgba(4,120,87,0.15)] hover:shadow-[0_6px_25px_rgba(217,119,6,0.2)] focus:outline-none uppercase tracking-widest w-full sm:w-auto">
+                <div class="absolute inset-0 bg-gradient-to-r from-brandGold to-amber-500 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
+                <span class="relative z-10 flex items-center justify-center gap-2">
+                    <i class="bi bi-lightning-charge-fill text-sm"></i> Confirm & Dispatch Withdrawal Now
+                </span>
+            </button>
+        </div>
 
-<script>
-    // 1. Dynamic Real-Time Math Fee Deductions Engine
-    function calculateWithdrawalFees() {
-        const amountInput = document.getElementById('withdrawNowAmount');
-        const netDisplay = document.getElementById('netPayableDisplay');
-        const feeDisplay = document.getElementById('gatewayFeeDisplay');
-        
-        if (!amountInput || !netDisplay || !feeDisplay) return;
+    </form>
+</div>
+        </main>
 
-        const grossVal = parseFloat(amountInput.value) || 0;
-        
-        // Processing 5% operational network charge
-        const operationalFee = grossVal * 0.05;
-        const finalNetPayable = Math.max(0, grossVal - operationalFee);
-
-        // Rendering values dynamically onto views frames
-        feeDisplay.innerHTML = `5% ($${operationalFee.toFixed(2)})`;
-        netDisplay.innerHTML = `$ ${finalNetPayable.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-    }
-
-    // 2. Clear Password Masking Show/Hide View Matrix Toggler
-    function toggleNowPassMask() {
-        const passwordInput = document.getElementById('nowWalletPassword');
-        const toggleIcon = document.getElementById('nowPasswordToggleIcon');
-        if (!passwordInput || !toggleIcon) return;
-
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            toggleIcon.classList.replace('bi-eye', 'bi-eye-slash');
-        } else {
-            passwordInput.type = 'password';
-            toggleIcon.classList.replace('bi-eye-slash', 'bi-eye');
-        }
-    }
-</script>
+       
 
 
 
 
 
         <footer
-            class="mt-auto px-4 sm:px-8 py-5 bg-brandSurface/40 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-sm tracking-wide text-brandMuted">
-            <!-- Left Section: Copyright Identity -->
+            class="mt-auto px-4 sm:px-8 py-5 bg-slate-100 border-t border-slate-300 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs tracking-wide text-slate-500 shadow-inner">
             <div class="flex items-center gap-1">
                 <span>Copyright &copy; 2026. All rights reserved.</span>
             </div>
 
-            <!-- Right Section: System Version & Links -->
             <div class="flex items-center gap-4">
                 <div class="flex items-center gap-1.5">
-                    <span class="w-1 h-1 bg-brandGreen rounded-full animate-pulse"></span>
-                    <span class="text-white font-medium">REALGAINS<span class="text-brandGreen">.IO</span></span>
+                    <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-pulse"></span>
+                    <span class="text-slate-800 font-bold">REALGAINS<span class="text-emerald-600">.IO</span></span>
                 </div>
-                <span class="text-slate-700">|</span>
-                <span>v2.4.0-Build [Active]</span>
+                <span class="text-slate-300">|</span>
+                <span class="text-slate-600 font-medium">v2.4.0-Build [Active]</span>
             </div>
         </footer>
 
     </div>
 
-    <script src="assets/js/app.js"></script>   
-
+    <script src="assets/js/app.js"></script>
+     <script>            
+            function calculateWithdrawalFees() {
+                const amountInput = document.getElementById('withdrawNowAmount');
+                const netDisplay = document.getElementById('netPayableDisplay');
+                const feeDisplay = document.getElementById('gatewayFeeDisplay');
+                if (!amountInput || !netDisplay || !feeDisplay) return;
+                const grossVal = parseFloat(amountInput.value) || 0;                
+                const operationalFee = grossVal * 0.05;
+                const finalNetPayable = Math.max(0, grossVal - operationalFee);                
+                feeDisplay.innerHTML = `5% ($${operationalFee.toFixed(2)})`;
+                netDisplay.innerHTML = `$ ${finalNetPayable.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            }
+            
+            function toggleNowPassMask() {
+                const passwordInput = document.getElementById('nowWalletPassword');
+                const toggleIcon = document.getElementById('nowPasswordToggleIcon');
+                if (!passwordInput || !toggleIcon) return;
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    toggleIcon.classList.replace('bi-eye', 'bi-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    toggleIcon.classList.replace('bi-eye-slash', 'bi-eye');
+                }
+            }
+        </script>
 </body>
 
 </html>

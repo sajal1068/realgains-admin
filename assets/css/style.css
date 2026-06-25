@@ -56,3 +56,12 @@
         padding: 1rem 1.5rem !important;
         border-bottom: 1px solid rgba(30, 41, 59, 0.4) !important;
     }
+
+
+    .text-brandGold{
+        color:#d97706;
+    }
+    /* .text-brandGreen {
+        --tw-text-opacity: 1;
+        color: #059669;
+    } */

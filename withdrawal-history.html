@@ -8,9 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css">
 
 </head>
@@ -21,305 +19,291 @@
         class="fixed inset-0 bg-brandDark/70 backdrop-blur-sm z-40 hidden transition-all duration-300 opacity-0"></div>
 
     <aside id="sidebarPanel"
-        class="w-64 bg-brandSurface border-r border-slate-800/60 h-screen fixed top-0 left-0 z-50 transition-all duration-300 transform -translate-x-full lg:translate-x-0 flex flex-col justify-between">
+        class="w-64 bg-slate-100 border-r border-slate-300 h-screen fixed top-0 left-0 z-50 transition-all duration-300 transform -translate-x-full lg:translate-x-0 flex flex-col justify-between">
         <div>
-            <div class="h-20 flex items-center justify-between px-6 border-b border-slate-800/60">
+            <!-- Top Logo Header -->
+            <div class="h-20 flex items-center justify-between px-6 border-b border-slate-300">
                 <div class="flex items-center gap-3">
                     <div class="w-13 h-13 flex items-center justify-center overflow-hidden py-2">
-                        <img src="assets/images/logo.png" alt="Logo"
-                            class="w-full h-full object-contain custom-matrix-logo">
+                        <img src="assets/images/logo.png" alt="Logo" class="w-full h-full object-contain">
                     </div>
-                    <span class="font-mono text-sm tracking-widest font-bold text-white">REALGAINS</span>
+                    <span class="font-mono text-sm tracking-widest font-bold text-slate-900">REALGAINS</span>
                 </div>
                 <button onclick="toggleMobileSidebar()"
-                    class="block lg:hidden text-brandGold text-xl hover:text-brandGreen transition-colors p-1 focus:outline-none"
+                    class="block lg:hidden text-amber-500 text-xl hover:text-emerald-600 transition-colors p-1 focus:outline-none"
                     aria-label="Close Sidebar">
                     <i class="bi bi-x-lg"></i>
                 </button>
             </div>
 
+
+
+            <!-- Navigation Menu -->
             <nav class="p-4">
-                <span class="px-3 text-[10px] font-mono tracking-wider text-brandMuted uppercase block mb-3">[ CORE NODE
+                <span class="px-3 text-[10px] font-mono tracking-wider text-slate-500 uppercase block mb-3">[ CORE NODE
                     MATRIX ]</span>
 
                 <ul class="space-y-1.5">
-
+                    <!-- Dashboard -->
                     <li>
                         <a href="index.html"
-                            class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-grid-1x2-fill  group-hover:text-brandGold transition-colors"></i>
-                            <span>Dashboard</span>
+                            class="flex items-center justify-between px-4 py-3 bg-emerald-600 text-white rounded-xl font-medium text-sm transition-all hover:bg-amber-500 group shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-speedometer2 text-white"></i>
+                                <span>Dashboard</span>
+                            </div>
+                            <span class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse"></span>
                         </a>
                     </li>
 
+                    <!-- My Profile -->
                     <li>
                         <a href="profile.html"
-                            class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-person-circle group-hover:text-brandGold transition-colors"></i>
+                            class="flex items-center gap-3 px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group shadow-sm">
+                            <i class="bi bi-person-circle"></i>
                             <span>My Profile</span>
                         </a>
                     </li>
 
+                    <!-- Activation Wallet (Dropdown) -->
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
-                            class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-wallet2 group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-wallet2"></i>
                                 <span>Activation Wallet</span>
                             </div>
                             <i
-                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 text-brandMuted group-hover:text-brandGold mt-0.5"></i>
+                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 mt-0.5"></i>
                         </button>
 
                         <ul
-                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
+                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
                             <li>
                                 <a href="add-fund.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Add Fund</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="add-fund-summary.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Add Fund Summary</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="transfer-fund.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Transfer Fund</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="transfer-summary.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Transfer Summary</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="wallet-summary.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Wallet Summary</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
+                    <!-- Income Wallet (Dropdown) -->
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
-                            class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-wallet-fill group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-wallet-fill"></i>
                                 <span>Income Wallet</span>
                             </div>
                             <i
-                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 text-brandMuted group-hover:text-brandGold mt-0.5"></i>
+                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 mt-0.5"></i>
                         </button>
 
                         <ul
-                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
+                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
                             <li>
                                 <a href="transfer-fund-wallet.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Transfer Fund</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="withdraw-fund-wallet.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
-                                    <span>Withdraw Fund </span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Withdraw Fund</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="withdrawal-history.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Withdrawal History</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="wallet-summary.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Wallet Summary</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
+                    <!-- Make Investment -->
                     <li>
                         <a href="make-investment.html"
-                            class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-cash-stack group-hover:text-brandGold transition-colors"></i>
+                            class="flex items-center gap-3 px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group shadow-sm">
+                            <i class="bi bi-cash-stack"></i>
                             <span>Make Investment</span>
                         </a>
                     </li>
 
+                    <!-- Team Reports (Dropdown) -->
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
-                            class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-people-fill group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-people-fill"></i>
                                 <span>Team Reports</span>
                             </div>
                             <i
-                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 text-brandMuted group-hover:text-brandGold mt-0.5"></i>
+                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 mt-0.5"></i>
                         </button>
 
                         <ul
-                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
+                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
                             <li>
                                 <a href="direct-team.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Direct Team</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="indirect-team.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Indirect Team</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="team-business-report.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Team Business Report</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
+                    <!-- Income Reports (Dropdown) -->
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
-                            class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
                             <div class="flex items-center gap-3">
-                                <i
-                                    class="bi bi-file-earmark-text-fill group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-file-earmark-text-fill"></i>
                                 <span>Income Reports</span>
                             </div>
                             <i
-                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 text-brandMuted group-hover:text-brandGold mt-0.5"></i>
+                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 mt-0.5"></i>
                         </button>
 
                         <ul
-                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
+                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
                             <li>
                                 <a href="daily-profit-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Daily Profit Income</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="direct-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Direct Income</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="profit-sharing-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Profit Sharing Income</span>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="team-pool-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Team Pool Income</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="rewards-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Rewards Income</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="weekly-salary-income.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Weekly Salary Income</span>
                                 </a>
                             </li>
-
                         </ul>
                     </li>
 
+                    <!-- Password Settings (Dropdown) -->
                     <li class="nav-dropdown-group space-y-1">
                         <button onclick="toggleNavMenu(this)"
-                            class="w-full flex items-center justify-between px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group focus:outline-none">
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
                             <div class="flex items-center gap-3">
-                                <i class="bi bi-gear-fill group-hover:text-brandGold transition-colors"></i>
+                                <i class="bi bi-gear-fill"></i>
                                 <span>Password Settings</span>
                             </div>
                             <i
-                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 text-brandMuted group-hover:text-brandGold mt-0.5"></i>
+                                class="dropdown-chevron bi bi-chevron-down text-[10px] transition-transform duration-200 mt-0.5"></i>
                         </button>
 
                         <ul
-                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-[#0A101A]/90 border-l-2 border-brandGold/40 ml-4 my-1 rounded-xl space-y-1">
+                            class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
                             <li>
                                 <a href="update-login-password.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Modify Login Password</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="update-wallet-password.html"
-                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-brandMuted hover:text-brandGold hover:bg-brandSurface/40 transition-all rounded-lg group">
-                                    <span
-                                        class="w-1 h-1 bg-slate-700 group-hover:bg-brandGold rounded-full transition-colors"></span>
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
                                     <span>Modify Wallet Password</span>
                                 </a>
                             </li>
-
                         </ul>
                     </li>
 
+                    <!-- Logout -->
                     <li>
                         <a href="#"
-                            class="flex items-center gap-3 px-4 py-3 text-brandMuted hover:text-white hover:bg-brandDark/50 rounded-xl text-sm transition-all group">
-                            <i class="bi bi-box-arrow-right group-hover:text-brandGold transition-colors"></i>
+                            class="flex items-center gap-3 px-4 py-3 bg-slate-200 text-slate-700 hover:bg-amber-500 hover:text-white rounded-xl text-sm transition-all group shadow-sm">
+                            <i class="bi bi-box-arrow-right text-amber-600 group-hover:text-white"></i>
                             <span>Logout</span>
                         </a>
                     </li>
@@ -327,15 +311,15 @@
             </nav>
         </div>
 
-        <div class="p-4 border-t border-slate-800/60 bg-brandDark/30">
-            <div class="flex items-center gap-3 p-2 bg-brandDark/50 rounded-xl border border-slate-800/40">
-                <div
-                    class="w-10 h-10 rounded-xl bg-brandSurface border border-brandGold/20 flex items-center justify-center">
-                    <i class="bi bi-person-circle text-brandGold text-lg"></i>
+        <!-- Bottom Operator Profile Card -->
+        <div class="p-4 border-t border-slate-300 bg-slate-200/50">
+            <div class="flex items-center gap-3 p-2 bg-white rounded-xl border border-slate-300 shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center shadow-md">
+                    <i class="bi bi-person-circle text-white text-lg"></i>
                 </div>
                 <div class="overflow-hidden">
-                    <h4 class="text-xs font-bold text-white truncate">Sajal Biswas</h4>
-                    <span class="text-[10px] font-mono text-brandGreen">[ Verified Operator ]</span>
+                    <h4 class="text-xs font-bold text-slate-800 truncate">Sajal Biswas</h4>
+                    <span class="text-[10px] font-mono text-emerald-600 font-bold">[ Verified Operator ]</span>
                 </div>
             </div>
         </div>
@@ -344,102 +328,102 @@
     <div id="mainContent" class="flex-1 lg:pl-64 flex flex-col min-h-screen w-full transition-all duration-300">
 
         <header
-            class="h-20 bg-brandSurface/80 backdrop-blur-md border-b border-slate-800/60 sticky top-0 z-40 px-4 sm:px-8 flex items-center justify-between">
+            class="h-20 bg-slate-100/90 backdrop-blur-md border-b border-slate-300 sticky top-0 z-40 px-4 sm:px-8 flex items-center justify-between">
             <div class="flex items-center gap-4">
+                <!-- Sidebar Toggle Button (Emerald Green to Golden on Hover) -->
                 <button onclick="toggleMobileSidebar()"
-                    class="w-10 h-10 rounded-xl bg-brandDark border border-brandGold/20 text-brandGold flex items-center justify-center text-xl hover:text-brandGreen hover:border-brandGreen/40 transition-all focus:outline-none">
+                    class="w-10 h-10 rounded-xl bg-emerald-600 border border-emerald-700/20 text-white flex items-center justify-center text-xl hover:bg-amber-500 hover:text-white transition-all focus:outline-none shadow-sm">
                     <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
                 </button>
                 <div class="flex items-center h-10 overflow-hidden">
                     <img src="assets/images/logo.png" alt="Logo"
-                        class="w-auto h-8 sm:h-9 object-contain custom-matrix-logo block md:hidden"
-                        style="max-width: 140px;">
+                        class="w-auto h-8 sm:h-9 object-contain block md:hidden" style="max-width: 140px;">
                 </div>
             </div>
 
             <div class="flex items-center gap-3">
-
+                <!-- Notification Section -->
                 <div class="relative">
                     <button id="notificationBellBtn" onclick="toggleNotificationMenu()"
-                        class="w-10 h-10 rounded-xl bg-brandDark/80 border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold flex items-center justify-center transition-all relative focus:outline-none">
+                        class="w-10 h-10 rounded-xl bg-white border border-slate-300 hover:border-amber-500 text-slate-600 hover:text-amber-500 flex items-center justify-center transition-all relative focus:outline-none shadow-sm">
                         <i class="bi bi-bell"></i>
-                        <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-brandGreen rounded-full"></span>
+                        <!-- Badge set to Emerald Green from logo.jpg -->
+                        <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-emerald-600 rounded-full"></span>
                     </button>
 
+                    <!-- Notification Dropdown Panel -->
                     <div id="notificationDropdownPanel"
-                        class="hidden opacity-0 scale-95 absolute top-14 right-0 w-80 bg-brandSurface border border-slate-800/80 rounded-2xl shadow-2xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">
-                        <div class="p-4 bg-brandDark/40 border-b border-slate-800/60 flex items-center justify-between">
-                            <span class="text-xs font-mono font-bold tracking-wider text-white uppercase">[ FEED MATRIX
-                                NOTICES ]</span>
+                        class="hidden opacity-0 scale-95 absolute top-14 right-0 w-80 bg-white border border-slate-300 rounded-2xl shadow-xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold tracking-wider text-slate-800 uppercase">[ FEED
+                                MATRIX NOTICES ]</span>
                             <button onclick="toggleNotificationMenu()"
-                                class="w-7 h-7 bg-brandDark hover:bg-brandGold/10 rounded-lg text-brandGold border border-slate-800 hover:border-brandGold/20 flex items-center justify-center text-sm transition-all focus:outline-none">
+                                class="w-7 h-7 bg-white hover:bg-amber-500 hover:text-white rounded-lg text-amber-500 border border-slate-200 flex items-center justify-center text-sm transition-all focus:outline-none shadow-sm">
                                 <i class="bi bi-clock"></i>
                             </button>
                         </div>
-                        <div class="divide-y divide-slate-800/40 max-h-64 overflow-y-auto">
-                            <div class="p-4 hover:bg-brandDark/20 transition-colors flex gap-3">
-                                <div class="text-brandGreen text-base mt-0.5"><i class="bi bi-patch-check-fill"></i>
+                        <div class="divide-y divide-slate-100 max-h-64 overflow-y-auto">
+                            <div class="p-4 hover:bg-slate-50 transition-colors flex gap-3">
+                                <div class="text-emerald-600 text-base mt-0.5"><i class="bi bi-patch-check-fill"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-xs font-bold text-white">Quantum Node Yield Sync Success</h4>
-                                    <span class="text-[10px] font-mono text-brandMuted block mt-0.5">2 mins ago</span>
+                                    <h4 class="text-xs font-bold text-slate-800">Quantum Node Yield Sync Success</h4>
+                                    <span class="text-[10px] font-mono text-slate-500 block mt-0.5">2 mins ago</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- <button
-                    class="w-10 h-10 rounded-xl bg-brandDark/80 border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold flex items-center justify-center transition-all focus:outline-none">
-                    <i class="bi bi-gear"></i>
-                </button> -->
-
+                <!-- User Profile Dropdown Button -->
                 <div class="relative">
                     <button id="adminProfileBtn" onclick="toggleProfileMenu()"
-                        class="h-10 pl-2 pr-3 bg-brandDark/80 border border-slate-800 hover:border-brandGold/30 rounded-xl flex items-center gap-2.5 transition-all focus:outline-none group">
+                        class="h-10 pl-2 pr-3 bg-white border border-slate-300 hover:border-amber-500 rounded-xl flex items-center gap-2.5 transition-all focus:outline-none group shadow-sm">
                         <div
-                            class="w-7 h-7 rounded-lg bg-brandSurface border border-brandGold/20 flex items-center justify-center overflow-hidden">
+                            class="w-7 h-7 rounded-lg bg-emerald-600 flex items-center justify-center overflow-hidden shadow-sm">
                             <i
-                                class="bi bi-person-fill text-brandGold text-sm group-hover:scale-110 transition-transform"></i>
+                                class="bi bi-person-fill text-white text-sm group-hover:scale-110 transition-transform"></i>
                         </div>
                         <span
-                            class="text-xs font-medium text-slate-300 group-hover:text-white hidden sm:inline transition-colors">Sajal
+                            class="text-xs font-medium text-slate-700 group-hover:text-slate-900 hidden sm:inline transition-colors">Sajal
                             Biswas</span>
                         <i
-                            class="bi bi-chevron-down text-[10px] text-brandMuted group-hover:text-brandGold transition-colors mt-0.5"></i>
+                            class="bi bi-chevron-down text-[10px] text-slate-400 group-hover:text-amber-500 transition-colors mt-0.5"></i>
                     </button>
 
+                    <!-- Profile Dropdown Panel -->
                     <div id="profileDropdownPanel"
-                        class="hidden opacity-0 scale-95 absolute top-14 right-0 w-56 bg-brandSurface border border-slate-800/80 rounded-2xl shadow-2xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">
-                        <div class="p-4 bg-brandDark/40 border-b border-slate-800/60 font-mono">
-                            <span class="text-[10px] tracking-wider text-brandMuted block uppercase">[ ACCOUNT CONSOLE
+                        class="hidden opacity-0 scale-95 absolute top-14 right-0 w-56 bg-white border border-slate-300 rounded-2xl shadow-xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200 font-mono">
+                            <span class="text-[10px] tracking-wider text-slate-500 block uppercase">[ ACCOUNT CONSOLE
                                 ]</span>
-                            <span class="text-xs font-bold text-brandGreen block mt-0.5 truncate">ID:
+                            <span class="text-xs font-bold text-emerald-600 block mt-0.5 truncate">ID:
                                 op_biswas_99</span>
                         </div>
 
                         <div class="p-2 space-y-0.5">
                             <a href="profile.php"
-                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-300 hover:text-brandGold hover:bg-brandDark/40 rounded-xl transition-all group">
-                                <i class="bi bi-person-vcard text-brandMuted group-hover:text-brandGold text-sm"></i>
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-700 hover:text-white hover:bg-emerald-600 rounded-xl transition-all group">
+                                <i class="bi bi-person-vcard text-slate-400 group-hover:text-white text-sm"></i>
                                 <span>My Account Profile</span>
                             </a>
                             <a href="wallet-settings.php"
-                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-300 hover:text-brandGold hover:bg-brandDark/40 rounded-xl transition-all group">
-                                <i class="bi bi-shield-lock text-brandMuted group-hover:text-brandGold text-sm"></i>
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-700 hover:text-white hover:bg-emerald-600 rounded-xl transition-all group">
+                                <i class="bi bi-shield-lock text-slate-400 group-hover:text-white text-sm"></i>
                                 <span>Security & Keys</span>
                             </a>
                             <a href="activity-logs.php"
-                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-300 hover:text-brandGold hover:bg-brandDark/40 rounded-xl transition-all group">
-                                <i class="bi bi-terminal text-brandMuted group-hover:text-brandGold text-sm"></i>
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-700 hover:text-white hover:bg-emerald-600 rounded-xl transition-all group">
+                                <i class="bi bi-terminal text-slate-400 group-hover:text-white text-sm"></i>
                                 <span>System Session Logs</span>
                             </a>
 
-                            <div class="border-t border-slate-800/50 my-1"></div>
+                            <div class="border-t border-slate-200 my-1"></div>
 
+                            <!-- Logout Link -->
                             <a href="logout.php"
-                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-rose-400 hover:text-rose-300 hover:bg-rose-500/10 rounded-xl transition-all group">
-                                <i class="bi bi-box-arrow-right text-rose-400/70 group-hover:text-rose-400 text-sm"></i>
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-rose-600 hover:text-white hover:bg-rose-600 rounded-xl transition-all group">
+                                <i class="bi bi-box-arrow-right text-rose-500 group-hover:text-white text-sm"></i>
                                 <span class="font-bold tracking-wide">SYSTEM LOGOUT</span>
                             </a>
                         </div>
@@ -449,148 +433,184 @@
         </header>
 
 
-        <main class="p-4 sm:p-8 space-y-6 flex-1">
+
+
+
+
+        <main
+            class="p-4 sm:p-8 space-y-6 flex-1 bg-gradient-to-br from-slate-50 via-slate-100 to-emerald-50/20 text-slate-800">
+            
+             <!-- Top Breadcrumb & Page Title -->
             <div
-                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-800/60 mb-4">
+                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-slate-300 mb-6">
                 <div class="space-y-1">
-                    <div class="flex items-center gap-2 font-mono text-[11px] tracking-wider text-brandMuted uppercase">
-                        <span>[ Activation Wallet ]</span>
-                        <i class="bi bi-chevron-right text-[9px]"></i>
-                        <span class="text-brandGold" id="pageBreadcrumb">Add Fund</span>
+                    <div class="flex items-center gap-2 font-mono text-xs tracking-wider text-slate-600 uppercase">
+                        <span>[ SYSTEM PORTAL ]</span>
+                        <i class="bi bi-chevron-right text-xs"></i>
+                        <span class="text-amber-600 font-bold" id="pageBreadcrumb">DASHBOARD CORE</span>
                     </div>
                     <div class="flex items-center gap-3 mt-1">
-                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white font-sans"
+                        <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 font-sans uppercase"
                             id="mainPageTitle">
                             Withdraw Fund Wallet Summary
                         </h2>
                         <span
-                            class="flex items-center gap-1.5 px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-brandGreen text-[10px] font-mono rounded-md uppercase tracking-wide">
-                            <span class="w-1 h-1 bg-brandGreen rounded-full animate-pulse"></span>
-                            <span>Live Node</span>
+                            class="flex items-center gap-1.5 px-3 py-1 bg-emerald-600 text-white text-xs font-mono rounded-md uppercase tracking-wide shadow-sm">
+                            <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
+                            <span class="font-bold">Live Node</span>
                         </span>
                     </div>
                 </div>
 
+                <!-- Latency and Refresh -->
                 <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">
+                    <!-- <div
+                        class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 border border-emerald-700 text-white rounded-xl flex flex-col min-w-[120px] sm:min-w-[140px] shadow-md">
+                        <span class="text-xs text-emerald-100 uppercase tracking-wider font-semibold">[ NETWORK LATENCY
+                            ]</span>
+                        <span class="text-sm font-bold mt-0.5 flex items-center gap-1">
+                            <i class="bi bi-wifi text-sm text-amber-400"></i> 14ms (Optimal)
+                        </span>
+                    </div> -->
 
                     <button onclick="window.location.reload()"
-                        class="h-[42px] px-3 bg-brandDark border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold rounded-xl flex items-center justify-center transition-all text-sm focus:outline-none"
+                        class="h-[46px] w-[46px] bg-white border border-slate-300 hover:border-amber-500 text-slate-600 hover:text-amber-500 rounded-xl flex items-center justify-center transition-all text-base shadow-sm"
                         title="Sync Current Component Nodes">
                         <i class="bi bi-arrow-clockwise"></i>
                     </button>
                 </div>
             </div>
 
+          
+
+
+             <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+                <div
+                    class="absolute top-[10%] right-[15%] w-[300px] h-[300px] bg-brandGold/5 rounded-full filter blur-[90px]">
+                </div>
+                <div
+                    class="absolute bottom-[20%] left-[5%] w-[350px] h-[350px] bg-brandGreen/5 rounded-full filter blur-[80px] animate-pulse">
+                </div>
+            </div>
 
             <div
-                class="relative z-10 w-full bg-[#131b2e]/90 backdrop-blur-md border border-slate-700/50 rounded-2xl overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-300 hover:border-brandGold/20 mt-8 select-none">
+                class="relative z-10 w-full bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:border-brandGold/30 mt-8 select-none">
 
                 <div
                     class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brandGold via-brandGreen to-transparent">
                 </div>
 
                 <div
-                    class="p-5 bg-brandDark/30 border-b border-slate-800/80 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono">
+                    class="p-5 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono">
 
                     <div class="flex items-center flex-wrap gap-2">
-                        <span class="text-[10px] text-brandMuted uppercase tracking-wider me-2 block sm:inline">[ EXPORT
-                            LEDGER ]</span>
+                        <span
+                            class="text-[10px] text-brandMuted uppercase tracking-wider me-2 block sm:inline font-bold">[
+                            EXPORT LEDGER ]</span>
                         <button onclick="window.print()"
-                            class="h-8 px-3 bg-brandDark border border-slate-800 hover:border-brandGold/40 text-slate-300 hover:text-brandGold rounded-lg text-[11px] font-bold transition-all flex items-center gap-1.5 focus:outline-none shadow-sm">
-                            <i class="bi bi-copy"></i> Copy
+                            class="h-8 px-3 bg-white border border-slate-200 hover:border-brandGold/40 text-brandDark hover:text-brandGold rounded-lg text-[11px] font-bold transition-all flex items-center gap-1.5 focus:outline-none shadow-sm">
+                            <i class="bi bi-copy text-brandGold"></i> Copy
                         </button>
                         <button
-                            class="h-8 px-3 bg-brandDark border border-slate-800 hover:border-brandGreen/40 text-slate-300 hover:text-brandGreen rounded-lg text-[11px] font-bold transition-all flex items-center gap-1.5 focus:outline-none shadow-sm">
-                            <i class="bi bi-file-earmark-excel"></i> Excel
+                            class="h-8 px-3 bg-white border border-slate-200 hover:border-brandGreen/40 text-brandDark hover:text-brandGreen rounded-lg text-[11px] font-bold transition-all flex items-center gap-1.5 focus:outline-none shadow-sm">
+                            <i class="bi bi-file-earmark-excel text-brandGreen"></i> Excel
                         </button>
                         <button
-                            class="h-8 px-3 bg-brandDark border border-slate-800 hover:border-rose-500/40 text-slate-300 hover:text-rose-400 rounded-lg text-[11px] font-bold transition-all flex items-center gap-1.5 focus:outline-none shadow-sm">
-                            <i class="bi bi-file-earmark-pdf"></i> PDF
+                            class="h-8 px-3 bg-white border border-slate-200 hover:border-rose-500/40 text-brandDark hover:text-rose-500 rounded-lg text-[11px] font-bold transition-all flex items-center gap-1.5 focus:outline-none shadow-sm">
+                            <i class="bi bi-file-earmark-pdf text-rose-500"></i> PDF
                         </button>
                     </div>
 
                     <div class="relative w-full sm:w-72">
-                       
                         <input type="text" id="customTableSearch" placeholder="Filter payout nodes..."
-                            class="w-full h-8 pl-5 pr-8 bg-brandDark/80 border border-slate-800 focus:border-brandGold/40 text-xs text-white font-mono rounded-lg focus:outline-none transition-colors placeholder:text-slate-700 shadow-inner">
-                        <i class="bi bi-search absolute right-3 top-2 text-[11px] text-slate-600"></i>
+                            class="w-full h-8 pl-4 pr-8 bg-white border border-slate-200 focus:border-brandGold/40 text-xs text-brandDark font-mono rounded-lg focus:outline-none transition-colors placeholder:text-slate-400 shadow-inner">
+                        <i class="bi bi-search absolute right-3 top-2 text-[11px] text-brandMuted"></i>
                     </div>
                 </div>
 
                 <div
-                    class="w-full overflow-x-auto scrollbar-thin scrollbar-thumb-slate-800 scrollbar-track-transparent">
+                    class="w-full overflow-x-auto scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
                     <table id="withdrawalCloneTable" class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="bg-brandDark/40">
-                                <th class="text-center w-16">Sr.No.</th>
-                                <th>Transaction ID</th>
-                                <th>Withdrawal</th>
-                                <th>Charges</th>
-                                <th>Payablw</th>
-                                <th>Mode</th>
-                                <th class="text-center w-36">Address</th>
-                                <th>Date</th>
+                            <tr
+                                class="bg-slate-50/50 border-b border-slate-200 text-[11px] font-mono uppercase tracking-widest text-brandMuted">
+                                <th class="py-3 px-5 text-center w-16">Sr.No.</th>
+                                <th class="py-3 px-6">Transaction ID</th>
+                                <th class="py-3 px-6">Wallet Address (Target)</th>
+                                <th class="py-3 px-6">Withdrawal</th>
+                                <th class="py-3 px-6">Charges</th>
+                                <th class="py-3 px-6">Payable</th>
+                                <th class="py-3 px-6 text-center w-36">Status</th>
+                                <th class="py-3 px-5">Date</th>
                             </tr>
                         </thead>
-                        <tbody class="text-xs font-mono text-slate-300 divide-y divide-slate-800/40">
-                            <tr class="hover:bg-brandDark/20 transition-colors group">
-                                <td class="text-center text-brandMuted group-hover:text-brandGold font-bold">1</td>
-                                <td class="text-white font-base tracking-wide">WTH88492019</td>
-                                <td class="text-slate-400 font-sans select-all max-w-[200px] truncate">
-                                    0xBa27944738BcE91ADCe1449055e867Ab52DCaBec</td>
-                                <td class="font-base text-slate-200">$500.00</td>
-                                <td class="text-rose-400">-$25.00</td>
-                                <td class="text-brandGreen font-base">$475.00</td>
-                                <td class="text-center"><span
-                                        class="inline-block px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/30 text-[10px] text-brandGreen font-base rounded-lg uppercase tracking-wide">Success</span>
+                        <tbody class="text-xs font-mono text-brandDark divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50 transition-colors group">
+                                <td class="py-4 px-5 text-center text-brandMuted group-hover:text-brandGold font-bold">1
                                 </td>
-                                <td class="text-brandMuted">2026-06-23 10:14:02</td>
+                                <td class="py-4 px-6 font-bold tracking-wide">WTH88492019</td>
+                                <td class="py-4 px-6 text-slate-500 font-sans select-all max-w-[200px] truncate">
+                                    0xBa27944738BcE91ADCe1449055e867Ab52DCaBec</td>
+                                <td class="py-4 px-6 font-bold text-slate-700">$500.00</td>
+                                <td class="py-4 px-6 text-rose-500 font-semibold">-$25.00</td>
+                                <td class="py-4 px-6 text-brandGreen font-bold">$475.00</td>
+                                <td class="py-4 px-6 text-center">
+                                    <span
+                                        class="inline-block px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-[10px] text-brandGreen font-bold rounded-lg uppercase tracking-wide">Success</span>
+                                </td>
+                                <td class="py-4 px-5 text-brandMuted">2026-06-23 10:14:02</td>
                             </tr>
-                            <tr class="hover:bg-brandDark/20 transition-colors group">
-                                <td class="text-center text-brandMuted group-hover:text-brandGold font-bold">2</td>
-                                <td class="text-white font-base tracking-wide">WTH11029481</td>
-                                <td class="text-slate-400 font-sans select-all max-w-[200px] truncate">
-                                    0xBa27944738BcE91ADCe1449055e867Ab52DCaBec</td>
-                                <td class="font-base text-slate-200">$120.00</td>
-                                <td class="text-rose-400">-$6.00</td>
-                                <td class="text-brandGreen font-base">$114.00</td>
-                                <td class="text-center"><span
-                                        class="inline-block px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/30 text-[10px] text-brandGreen font-base rounded-lg uppercase tracking-wide">Success</span>
+                            <tr class="hover:bg-slate-50 transition-colors group">
+                                <td class="py-4 px-5 text-center text-brandMuted group-hover:text-brandGold font-bold">2
                                 </td>
-                                <td class="text-brandMuted">2026-06-20 15:30:45</td>
+                                <td class="py-4 px-6 font-bold tracking-wide">WTH11029481</td>
+                                <td class="py-4 px-6 text-slate-500 font-sans select-all max-w-[200px] truncate">
+                                    0xBa27944738BcE91ADCe1449055e867Ab52DCaBec</td>
+                                <td class="py-4 px-6 font-bold text-slate-700">$120.00</td>
+                                <td class="py-4 px-6 text-rose-500 font-semibold">-$6.00</td>
+                                <td class="py-4 px-6 text-brandGreen font-bold">$114.00</td>
+                                <td class="py-4 px-6 text-center">
+                                    <span
+                                        class="inline-block px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-[10px] text-brandGreen font-bold rounded-lg uppercase tracking-wide">Success</span>
+                                </td>
+                                <td class="py-4 px-5 text-brandMuted">2026-06-20 15:30:45</td>
                             </tr>
-                            <tr class="hover:bg-brandDark/20 transition-colors group">
-                                <td class="text-center text-brandMuted group-hover:text-brandGold font-bold">3</td>
-                                <td class="text-white font-base tracking-wide">WTH66391024</td>
-                                <td class="text-slate-400 font-sans select-all max-w-[200px] truncate">
-                                    0xBa27944738BcE91ADCe1449055e867Ab52DCaBec</td>
-                                <td class="font-base text-slate-200">$2,500.00</td>
-                                <td class="text-rose-400">-$125.00</td>
-                                <td class="text-brandGreen font-base">$2,375.00</td>
-                                <td class="text-center"><span
-                                        class="inline-block px-2.5 py-0.5 bg-amber-500/10 border border-amber-500/30 text-[10px] text-amber-400 font-base rounded-lg uppercase tracking-wide animate-pulse">Processing</span>
+                            <tr class="hover:bg-slate-50 transition-colors group">
+                                <td class="py-4 px-5 text-center text-brandMuted group-hover:text-brandGold font-bold">3
                                 </td>
-                                <td class="text-brandMuted">2026-06-19 08:45:11</td>
+                                <td class="py-4 px-6 font-bold tracking-wide">WTH66391024</td>
+                                <td class="py-4 px-6 text-slate-500 font-sans select-all max-w-[200px] truncate">
+                                    0xBa27944738BcE91ADCe1449055e867Ab52DCaBec</td>
+                                <td class="py-4 px-6 font-bold text-slate-700">$2,500.00</td>
+                                <td class="py-4 px-6 text-rose-500 font-semibold">-$125.00</td>
+                                <td class="py-4 px-6 text-brandGreen font-bold">$2,375.00</td>
+                                <td class="py-4 px-6 text-center">
+                                    <span
+                                        class="inline-block px-2.5 py-0.5 bg-amber-500/10 border border-amber-500/20 text-[10px] text-amber-600 font-bold rounded-lg uppercase tracking-wide animate-pulse">Processing</span>
+                                </td>
+                                <td class="py-4 px-5 text-brandMuted">2026-06-19 08:45:11</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <div
-                    class="p-4 bg-brandDark/20 border-t border-slate-800/60 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono text-[11px]">
+                    class="p-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono text-[11px]">
                     <div class="text-brandMuted text-center sm:text-left" id="customTrackerInfo">
-                        Showing 1 to 3 of 3 entries
+                        Showing <span class="text-brandDark font-bold">1</span> to <span
+                            class="text-brandDark font-bold">3</span> of <span class="text-brandDark font-bold">3</span>
+                        entries
                     </div>
 
                     <div
-                        class="inline-flex rounded-xl bg-brandDark border border-slate-800 p-0.5 shadow-sm overflow-hidden justify-center mx-auto sm:mx-0">
+                        class="inline-flex rounded-xl bg-white border border-slate-200 p-0.5 shadow-sm overflow-hidden justify-center mx-auto sm:mx-0">
                         <button id="customPrevBtn"
-                            class="h-8 px-3 text-slate-300 hover:bg-[#131b2e] transition-all font-bold text-[11px] uppercase tracking-wider flex items-center gap-1 focus:outline-none disabled:text-slate-600 disabled:cursor-not-allowed">
+                            class="h-8 px-3 text-slate-600 hover:bg-slate-100 transition-all font-bold text-[11px] uppercase tracking-wider flex items-center gap-1 focus:outline-none disabled:text-slate-300 disabled:cursor-not-allowed">
                             <i class="bi bi-chevron-left text-[9px]"></i> Prev
                         </button>
-                        <div class="w-[1px] bg-slate-800/80 my-1.5"></div>
+                        <div class="w-[1px] bg-slate-200 my-1.5"></div>
                         <button id="customNextBtn"
-                            class="h-8 px-3 text-slate-300 hover:bg-[#131b2e] transition-all font-bold text-[11px] uppercase tracking-wider flex items-center gap-1 focus:outline-none disabled:text-slate-600 disabled:cursor-not-allowed">
+                            class="h-8 px-3 text-slate-600 hover:bg-slate-100 transition-all font-bold text-[11px] uppercase tracking-wider flex items-center gap-1 focus:outline-none disabled:text-slate-300 disabled:cursor-not-allowed">
                             Next <i class="bi bi-chevron-right text-[9px]"></i>
                         </button>
                     </div>
@@ -598,37 +618,25 @@
 
             </div>
 
-
-
-
-
-
-
-
-
-
-
         </main>
 
 
 
 
 
-        <footer
-            class="mt-auto px-4 sm:px-8 py-5 bg-brandSurface/40 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-sm tracking-wide text-brandMuted">
-            <!-- Left Section: Copyright Identity -->
+         <footer
+            class="mt-auto px-4 sm:px-8 py-5 bg-slate-100 border-t border-slate-300 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs tracking-wide text-slate-500 shadow-inner">            
             <div class="flex items-center gap-1">
                 <span>Copyright &copy; 2026. All rights reserved.</span>
             </div>
 
-            <!-- Right Section: System Version & Links -->
             <div class="flex items-center gap-4">
                 <div class="flex items-center gap-1.5">
-                    <span class="w-1 h-1 bg-brandGreen rounded-full animate-pulse"></span>
-                    <span class="text-white font-medium">REALGAINS<span class="text-brandGreen">.IO</span></span>
+                    <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-pulse"></span>
+                    <span class="text-slate-800 font-bold">REALGAINS<span class="text-emerald-600">.IO</span></span>
                 </div>
-                <span class="text-slate-700">|</span>
-                <span>v2.4.0-Build [Active]</span>
+                <span class="text-slate-300">|</span>
+                <span class="text-slate-600 font-medium">v2.4.0-Build [Active]</span>
             </div>
         </footer>
 
