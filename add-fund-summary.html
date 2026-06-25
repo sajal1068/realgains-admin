@@ -446,7 +446,7 @@
                         <span class="text-amber-600 font-bold" id="pageBreadcrumb">DASHBOARD CORE</span>
                     </div>
                     <div class="flex items-center gap-3 mt-1">
-                        <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 font-sans uppercase"
+                        <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 font-sans md:uppercase"
                             id="mainPageTitle">
                             Fund Deposit Summary
                         </h2>
@@ -459,22 +459,25 @@
                 </div>
 
                 <!-- Latency and Refresh -->
-                <div class="hidden md:inline-flex items-center gap-2 sm:gap-3 font-mono">
-                    <!-- <div
-                        class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 border border-emerald-700 text-white rounded-xl flex flex-col min-w-[120px] sm:min-w-[140px] shadow-md">
-                        <span class="text-xs text-emerald-100 uppercase tracking-wider font-semibold">[ NETWORK LATENCY
-                            ]</span>
-                        <span class="text-sm font-bold mt-0.5 flex items-center gap-1">
-                            <i class="bi bi-wifi text-sm text-amber-400"></i> 14ms (Optimal)
-                        </span>
-                    </div> -->
+               <!-- Parent div modified: hidden on mobile, inline-row flex layout on desktop (md and up) -->
+<div class="hidden md:inline-flex items-center gap-2 sm:gap-3 font-mono">
+    
+    <!-- Left Element: Network Latency Node -->
+    <div class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 border border-emerald-700 text-white rounded-xl flex flex-col min-w-[120px] sm:min-w-[140px] shadow-md justify-center">
+        <span class="text-xs text-emerald-100 uppercase tracking-wider font-semibold">[ NETWORK LATENCY ]</span>
+        <span class="text-sm font-bold mt-0.5 flex items-center gap-1 whitespace-nowrap">
+            <i class="bi bi-wifi text-sm text-amber-400"></i> 14ms (Optimal)
+        </span>
+    </div>
 
-                    <button onclick="window.location.reload()"
-                        class="h-[46px] w-[46px] bg-white border border-slate-300 hover:border-amber-500 text-slate-600 hover:text-amber-500 rounded-xl flex items-center justify-center transition-all text-base shadow-sm"
-                        title="Sync Current Component Nodes">
-                        <i class="bi bi-arrow-clockwise"></i>
-                    </button>
-                </div>
+    <!-- Right Element: Sync Reload Node -->
+    <button onclick="window.location.reload()"
+        class="h-[46px] w-[46px] bg-white border border-slate-300 hover:border-amber-500 text-slate-600 hover:text-amber-500 rounded-xl flex items-center justify-center transition-all text-base shadow-sm shrink-0"
+        title="Sync Current Component Nodes">
+        <i class="bi bi-arrow-clockwise"></i>
+    </button>
+    
+</div>
             </div>
 
             <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
