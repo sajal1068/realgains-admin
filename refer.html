@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realgains // Matrix Admin Framework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="bg-brandDark text-white font-sans antialiased min-h-screen flex overflow-x-hidden">
+
+    <div id="sidebarOverlay" onclick="toggleMobileSidebar()"
+        class="fixed inset-0 bg-brandDark/70 backdrop-blur-sm z-40 hidden transition-all duration-300 opacity-0"></div>
+
+   <aside id="sidebarPanel"
+    class="w-64 bg-slate-100 border-r border-slate-300 h-screen fixed top-0 left-0 z-50 transition-all duration-300 transform -translate-x-full lg:translate-x-0 flex flex-col justify-between">
+    
+    <!-- UPPER CONTAINER (Logo + Scrollable Navigation Menu) -->
+    <!-- flex-1 aur overflow-hidden lagane se content hamesha bounds ke andar rahega -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+        
+        <!-- Top Logo Header (Static Height) -->
+        <div class="h-20 flex items-center justify-between px-6 border-b border-slate-300 shrink-0 bg-slate-100">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 flex items-center justify-center overflow-hidden py-2">
+                    <img src="assets/images/logo.png" alt="Logo" class="w-full h-full object-contain">
+                </div>
+                <span class="font-mono text-sm tracking-widest font-bold text-slate-900">REALGAINS</span>
+            </div>
+            <button onclick="toggleMobileSidebar()"
+                class="block lg:hidden text-amber-500 text-xl hover:text-emerald-600 transition-colors p-1 focus:outline-none"
+                aria-label="Close Sidebar">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+
+        <!-- Navigation Menu (Scrolled Context Area) -->
+        <!-- 'overflow-y-auto' lagane se choti screen par ya dropdown khulne par yahan smooth scrollbar aa jayega -->
+        <nav class="p-4 flex-1 overflow-y-auto space-y-4 advanced-scrollbar">
+            <div>
+                <span class="px-3 text-xs font-mono tracking-wider text-slate-500 uppercase block mb-3">[ CORE NODE MATRIX ]</span>
+
+                <ul class="space-y-2">
+                    <!-- Dashboard -->
+                    <li>
+                        <a href="index.html"
+                            class="flex items-center justify-between px-4 py-3 bg-emerald-600 text-white rounded-xl font-medium text-sm transition-all hover:bg-amber-500 group shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-speedometer2 text-white text-base"></i>
+                                <span>Dashboard</span>
+                            </div>
+                            <span class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse"></span>
+                        </a>
+                    </li>
+
+                    <!-- My Profile -->
+                    <li>
+                        <a href="profile.html"
+                            class="flex items-center gap-3 px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group shadow-sm">
+                            <i class="bi bi-person-circle text-base"></i>
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+
+                    <!-- Activation Wallet (Dropdown) -->
+                    <li class="nav-dropdown-group space-y-1">
+                        <button onclick="toggleNavMenu(this)"
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-wallet2 text-base"></i>
+                                <span>Activation Wallet</span>
+                            </div>
+                            <i class="dropdown-chevron bi bi-chevron-down text-xs transition-transform duration-200 mt-0.5"></i>
+                        </button>
+
+                        <ul class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
+                            <li>
+                                <a href="add-fund.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Add Fund</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="add-fund-summary.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Add Fund Summary</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="transfer-fund.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Transfer Fund</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="transfer-summary.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Transfer Summary</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="wallet-summary.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Wallet Summary</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Income Wallet (Dropdown) -->
+                    <li class="nav-dropdown-group space-y-1">
+                        <button onclick="toggleNavMenu(this)"
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-wallet-fill text-base"></i>
+                                <span>Income Wallet</span>
+                            </div>
+                            <i class="dropdown-chevron bi bi-chevron-down text-xs transition-transform duration-200 mt-0.5"></i>
+                        </button>
+
+                        <ul class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
+                            <li>
+                                <a href="transfer-fund-wallet.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Transfer Fund</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="withdraw-fund-wallet.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Withdraw Fund</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="withdrawal-history.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Withdrawal History</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="wallet-summary.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Wallet Summary</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Make Investment -->
+                    <li>
+                        <a href="make-investment.html"
+                            class="flex items-center gap-3 px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group shadow-sm">
+                            <i class="bi bi-cash-stack text-base"></i>
+                            <span>Make Investment</span>
+                        </a>
+                    </li>
+
+                    <!-- Team Reports (Dropdown) -->
+                    <li class="nav-dropdown-group space-y-1">
+                        <button onclick="toggleNavMenu(this)"
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-people-fill text-base"></i>
+                                <span>Team Reports</span>
+                            </div>
+                            <i class="dropdown-chevron bi bi-chevron-down text-xs transition-transform duration-200 mt-0.5"></i>
+                        </button>
+
+                        <ul class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
+                            <li>
+                                <a href="direct-team.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Direct Team</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="indirect-team.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Indirect Team</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="team-business-report.html"
+                                    class="flex items-center gap-2.5 py-2 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Team Business Report</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Income Reports (Dropdown) -->
+                    <li class="nav-dropdown-group space-y-1">
+                        <button onclick="toggleNavMenu(this)"
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-file-earmark-text-fill text-base"></i>
+                                <span>Income Reports</span>
+                            </div>
+                            <i class="dropdown-chevron bi bi-chevron-down text-xs transition-transform duration-200 mt-0.5"></i>
+                        </button>
+
+                        <ul class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
+                            <li>
+                                <a href="daily-profit-income.html"
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Daily Profit Income</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="direct-income.html"
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Direct Income</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="profit-sharing-income.html"
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Profit Sharing Income</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="team-pool-income.html"
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Team Pool Income</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="rewards-income.html"
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Rewards Income</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="weekly-salary-income.html"
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Weekly Salary Income</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Password Settings (Dropdown) -->
+                    <li class="nav-dropdown-group space-y-1">
+                        <button onclick="toggleNavMenu(this)"
+                            class="w-full flex items-center justify-between px-4 py-3 bg-emerald-600 text-white hover:bg-amber-500 rounded-xl text-sm transition-all group focus:outline-none shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <i class="bi bi-gear-fill text-base"></i>
+                                <span>Password Settings</span>
+                            </div>
+                            <i class="dropdown-chevron bi bi-chevron-down text-xs transition-transform duration-200 mt-0.5"></i>
+                        </button>
+
+                        <ul class="dropdown-content hidden pl-3 pr-2 py-1 bg-emerald-50 border-l-2 border-amber-500 ml-4 my-1 rounded-xl space-y-1">
+                            <li>
+                                <a href="update-login-password.html"
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Modify Login Password</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="update-wallet-password.html"
+                                    class="flex items-center gap-2.5 py-2.5 px-3 text-xs text-slate-700 hover:text-amber-600 hover:bg-slate-200/60 transition-all rounded-lg">
+                                    <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                    <span>Modify Wallet Password</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Logout -->
+                    <li>
+                        <a href="#"
+                            class="flex items-center gap-3 px-4 py-3 bg-slate-200 text-slate-700 hover:bg-amber-500 hover:text-white rounded-xl text-sm transition-all group shadow-sm">
+                            <i class="bi bi-box-arrow-right text-amber-600 group-hover:text-white text-base"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- BOTTOM OPERATOR PROFILE CARD (Static Height Lock) -->
+    <!-- 'shrink-0' lagane se yeh element hamesha bottom par float karega aur menu items ise daba nahi payenge -->
+    <div class="p-4 border-t border-slate-300 bg-slate-200/50 shrink-0">
+        <div class="flex items-center gap-3 p-2 bg-white rounded-xl border border-slate-300 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center shadow-md">
+                <i class="bi bi-person-circle text-white text-lg"></i>
+            </div>
+            <div class="overflow-hidden">
+                <h4 class="text-xs font-bold text-slate-800 truncate">Sajal Biswas</h4>
+                <span class="text-[10px] font-mono text-emerald-600 font-bold">[ Verified Operator ]</span>
+            </div>
+        </div>
+    </div>
+</aside>
+
+    <div id="mainContent" class="flex-1 lg:pl-64 flex flex-col min-h-screen w-full transition-all duration-300">
+
+        <header
+            class="h-20 bg-slate-100/90 backdrop-blur-md border-b border-slate-300 sticky top-0 z-40 px-4 sm:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <!-- Sidebar Toggle Button (Emerald Green to Golden on Hover) -->
+                <button onclick="toggleMobileSidebar()"
+                    class="w-10 h-10 rounded-xl bg-emerald-600 border border-emerald-700/20 text-white flex items-center justify-center text-xl hover:bg-amber-500 hover:text-white transition-all focus:outline-none shadow-sm">
+                    <i id="menuToggleIcon" class="bi bi-list transition-transform duration-200"></i>
+                </button>
+                <div class="flex items-center h-10 overflow-hidden">
+                    <img src="assets/images/logo.png" alt="Logo"
+                        class="w-auto h-8 sm:h-9 object-contain block md:hidden" style="max-width: 140px;">
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <!-- Notification Section -->
+                <div class="relative">
+                    <button id="notificationBellBtn" onclick="toggleNotificationMenu()"
+                        class="w-10 h-10 rounded-xl bg-white border border-slate-300 hover:border-amber-500 text-slate-600 hover:text-amber-500 flex items-center justify-center transition-all relative focus:outline-none shadow-sm">
+                        <i class="bi bi-bell"></i>
+                        <!-- Badge set to Emerald Green from logo.jpg -->
+                        <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-emerald-600 rounded-full"></span>
+                    </button>
+
+                    <!-- Notification Dropdown Panel -->
+                    <div id="notificationDropdownPanel"
+                        class="hidden opacity-0 scale-95 absolute top-14 right-0 w-80 bg-white border border-slate-300 rounded-2xl shadow-xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                            <span class="text-xs font-mono font-bold tracking-wider text-slate-800 uppercase">[ FEED
+                                MATRIX NOTICES ]</span>
+                            <button onclick="toggleNotificationMenu()"
+                                class="w-7 h-7 bg-white hover:bg-amber-500 hover:text-white rounded-lg text-amber-500 border border-slate-200 flex items-center justify-center text-sm transition-all focus:outline-none shadow-sm">
+                                <i class="bi bi-clock"></i>
+                            </button>
+                        </div>
+                        <div class="divide-y divide-slate-100 max-h-64 overflow-y-auto">
+                            <div class="p-4 hover:bg-slate-50 transition-colors flex gap-3">
+                                <div class="text-emerald-600 text-base mt-0.5"><i class="bi bi-patch-check-fill"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-slate-800">Quantum Node Yield Sync Success</h4>
+                                    <span class="text-[10px] font-mono text-slate-500 block mt-0.5">2 mins ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Profile Dropdown Button -->
+                <div class="relative">
+                    <button id="adminProfileBtn" onclick="toggleProfileMenu()"
+                        class="h-10 pl-2 pr-3 bg-white border border-slate-300 hover:border-amber-500 rounded-xl flex items-center gap-2.5 transition-all focus:outline-none group shadow-sm">
+                        <div
+                            class="w-7 h-7 rounded-lg bg-emerald-600 flex items-center justify-center overflow-hidden shadow-sm">
+                            <i
+                                class="bi bi-person-fill text-white text-sm group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <span
+                            class="text-xs font-medium text-slate-700 group-hover:text-slate-900 hidden sm:inline transition-colors">Sajal
+                            Biswas</span>
+                        <i
+                            class="bi bi-chevron-down text-[10px] text-slate-400 group-hover:text-amber-500 transition-colors mt-0.5"></i>
+                    </button>
+
+                    <!-- Profile Dropdown Panel -->
+                    <div id="profileDropdownPanel"
+                        class="hidden opacity-0 scale-95 absolute top-14 right-0 w-56 bg-white border border-slate-300 rounded-2xl shadow-xl z-50 transition-all duration-200 transform origin-top-right overflow-hidden">
+                        <div class="p-4 bg-slate-50 border-b border-slate-200 font-mono">
+                            <span class="text-[10px] tracking-wider text-slate-500 block uppercase">[ ACCOUNT CONSOLE
+                                ]</span>
+                            <span class="text-xs font-bold text-emerald-600 block mt-0.5 truncate">ID:
+                                op_biswas_99</span>
+                        </div>
+
+                        <div class="p-2 space-y-0.5">
+                            <a href="profile.php"
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-700 hover:text-white hover:bg-emerald-600 rounded-xl transition-all group">
+                                <i class="bi bi-person-vcard text-slate-400 group-hover:text-white text-sm"></i>
+                                <span>My Account Profile</span>
+                            </a>
+                            <a href="wallet-settings.php"
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-700 hover:text-white hover:bg-emerald-600 rounded-xl transition-all group">
+                                <i class="bi bi-shield-lock text-slate-400 group-hover:text-white text-sm"></i>
+                                <span>Security & Keys</span>
+                            </a>
+                            <a href="activity-logs.php"
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-slate-700 hover:text-white hover:bg-emerald-600 rounded-xl transition-all group">
+                                <i class="bi bi-terminal text-slate-400 group-hover:text-white text-sm"></i>
+                                <span>System Session Logs</span>
+                            </a>
+
+                            <div class="border-t border-slate-200 my-1"></div>
+
+                            <!-- Logout Link -->
+                            <a href="logout.php"
+                                class="flex items-center gap-3 px-3 py-2.5 text-xs text-rose-600 hover:text-white hover:bg-rose-600 rounded-xl transition-all group">
+                                <i class="bi bi-box-arrow-right text-rose-500 group-hover:text-white text-sm"></i>
+                                <span class="font-bold tracking-wide">SYSTEM LOGOUT</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main
+            class="p-4 sm:p-8 space-y-6 flex-1 bg-gradient-to-br from-slate-50 via-slate-100 to-emerald-50/20 text-slate-800">
+
+            <!-- Top Breadcrumb & Page Title -->
+            <div
+                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-slate-300 mb-6">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2 font-mono text-xs tracking-wider text-slate-600 uppercase">
+                        <span>[ NETWORK ENGINE ]</span>
+                        <i class="bi bi-chevron-right text-xs"></i>
+                        <span class="text-amber-600 font-bold">AFFILIATE CONTROL</span>
+                    </div>
+                    <div class="flex items-center gap-3 mt-1">
+                        <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 font-sans uppercase"
+                            id="mainPageTitle">
+                            Refer & Earn
+                        </h2>
+                        <span
+                            class="flex items-center gap-1.5 px-3 py-1 bg-emerald-600 text-white text-xs font-mono rounded-md uppercase tracking-wide shadow-sm">
+                            <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
+                            <span class="font-bold">Active Network</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Latency and Refresh -->
+                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">
+                    <div
+                        class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 border border-emerald-700 text-white rounded-xl flex flex-col min-w-[120px] sm:min-w-[140px] shadow-md">
+                        <span class="text-xs text-emerald-100 uppercase tracking-wider font-semibold">[ NETWORK LATENCY
+                            ]</span>
+                        <span class="text-sm font-bold mt-0.5 flex items-center gap-1">
+                            <i class="bi bi-wifi text-sm text-amber-400"></i> 14ms (Optimal)
+                        </span>
+                    </div>
+
+                    <button onclick="window.location.reload()"
+                        class="h-[46px] w-[46px] bg-white border border-slate-300 hover:border-amber-500 text-slate-600 hover:text-amber-500 rounded-xl flex items-center justify-center transition-all text-base shadow-sm"
+                        title="Sync Current Component Nodes">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                </div>
+            </div>
+
+           
+
+              <!-- Referral Link Share & Commission Box -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Share Link Card -->
+                <div class="lg:col-span-2 bg-white border border-slate-300 rounded-2xl p-6 shadow-md space-y-4">
+                    <div>
+                        <h3 class="text-lg font-black text-slate-900 uppercase tracking-tight">Your Unique Invitation Link</h3>
+                        <p class="text-xs text-slate-500 font-mono mt-0.5">Share this link with your downline network to earn commission nodes.</p>
+                    </div>
+                    
+                    <div class="h-14 bg-slate-50 border border-slate-200 rounded-xl px-4 flex items-center justify-between overflow-hidden group hover:border-emerald-500 transition-colors shadow-inner">
+                        <div class="flex items-center gap-3 overflow-hidden w-[75%]">
+                            <i class="bi bi-link-45deg text-amber-500 text-2xl shrink-0"></i>
+                            <span class="text-sm font-mono text-slate-800 truncate tracking-wide font-semibold">https://realgains.lc/referral.php?id=RG3038998</span>
+                        </div>
+                        <button onclick="navigator.clipboard.writeText('https://realgains.lc/referral.php?id=RG3038998')"
+                            class="h-10 px-4 bg-emerald-600 hover:bg-amber-500 text-white font-mono text-xs font-black rounded-lg transition-all flex items-center gap-1.5 shrink-0 focus:outline-none shadow-md">
+                            <i class="bi bi-copy text-sm"></i> COPY LINK
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Commission Rate Card -->
+                <div class="bg-gradient-to-br from-amber-500 to-amber-600 text-white border border-amber-600 rounded-2xl p-6 flex flex-col justify-between shadow-md">
+                    <div class="flex justify-between items-start font-mono">
+                        <span class="text-xs tracking-wider text-amber-100 font-bold uppercase">[ DIRECT INCENTIVE ]</span>
+                        <i class="bi bi-pie-chart text-2xl text-amber-100"></i>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="text-4xl font-black font-mono tracking-tight text-white">10% Fix</h4>
+                        <p class="text-xs text-amber-100 font-mono mt-1 font-medium">On Every Direct Active Package Node</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Affiliate Mini-Stats Dashboard -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <!-- Stat 1: Total Referrals -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-300 shadow-sm flex items-center gap-4 hover:border-emerald-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl border border-emerald-200 shrink-0">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div class="font-mono">
+                        <span class="text-xs text-slate-500 uppercase font-bold tracking-wide">[ TOTAL REFERRALS ]</span>
+                        <h3 class="text-2xl font-black text-slate-900 mt-0.5">12 Members</h3>
+                    </div>
+                </div>
+
+                <!-- Stat 2: Active Referrals -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-300 shadow-sm flex items-center gap-4 hover:border-amber-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl border border-amber-200 shrink-0">
+                        <i class="bi bi-person-check-fill"></i>
+                    </div>
+                    <div class="font-mono">
+                        <span class="text-xs text-slate-500 uppercase font-bold tracking-wide">[ ACTIVE NODES ]</span>
+                        <h3 class="text-2xl font-black text-emerald-600 mt-0.5">8 Active</h3>
+                    </div>
+                </div>
+
+                <!-- Stat 3: Pending Referrals -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-300 shadow-sm flex items-center gap-4 hover:border-rose-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl border border-rose-200 shrink-0">
+                        <i class="bi bi-person-x-fill"></i>
+                    </div>
+                    <div class="font-mono">
+                        <span class="text-xs text-slate-500 uppercase font-bold tracking-wide">[ PENDING NODES ]</span>
+                        <h3 class="text-2xl font-black text-rose-600 mt-0.5">4 Inactive</h3>
+                    </div>
+                </div>
+
+                <!-- Stat 4: Total Referral Income -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-300 shadow-sm flex items-center gap-4 hover:border-purple-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl border border-purple-200 shrink-0">
+                        <i class="bi bi-cash-stack"></i>
+                    </div>
+                    <div class="font-mono">
+                        <span class="text-xs text-slate-500 uppercase font-bold tracking-wide">[ TOTAL REWARD ]</span>
+                        <h3 class="text-2xl font-black text-slate-900 mt-0.5">$500.00</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+                DOWNLINE REGISTERED DIRECT MEMBERS TABLE (HIGH CONTRAST & BIG FONTS)
+            ========================================================================== -->
+            <div class="bg-white rounded-2xl border border-slate-300 overflow-hidden shadow-md relative group transition-all duration-300 hover:border-emerald-500">
+                <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-emerald-500 via-amber-500 to-emerald-600"></div>
+
+                <!-- Table Title Block -->
+                <div class="p-6 bg-gradient-to-b from-slate-100 to-slate-50 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono">
+                    <div class="space-y-1">
+                        <h3 class="text-sm font-black text-slate-900 flex items-center gap-2.5 uppercase tracking-wider">
+                            <i class="bi bi-diagram-3 text-emerald-600 text-lg"></i> Direct Downline Registry Node
+                        </h3>
+                        <p class="text-xs text-slate-600 font-medium">List of accounts registered directly under your system matrix link.</p>
+                    </div>
+                    <div>
+                        <span class="px-3 py-1.5 bg-emerald-600 text-white text-xs font-black rounded-xl uppercase tracking-widest shadow-md">
+                            [ 12 Accounts Mapped ]
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Data Table with Enhanced Typography -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[850px]">
+                        <thead>
+                            <tr class="bg-slate-100 border-b border-slate-200 text-xs font-mono uppercase tracking-widest text-slate-700 font-bold">
+                                <th class="py-4 px-5 text-center w-20">SL No</th>
+                                <th class="py-4 px-6">User Architecture</th>
+                                <th class="py-4 px-6">System ID</th>
+                                <th class="py-4 px-6">Date of Joining</th>
+                                <th class="py-4 px-6">Investment Node</th>
+                                <th class="py-4 px-6 text-center w-40">Matrix Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-sm font-mono text-slate-800">
+                            <!-- ROW 1 -->
+                            <tr class="hover:bg-slate-50/80 transition-all duration-200">
+                                <td class="py-4 px-5 text-center text-slate-500 font-bold text-sm">01</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-sans font-bold text-sm border border-slate-300">
+                                            AM
+                                        </div>
+                                        <span class="text-base font-black font-sans text-slate-900 tracking-wide">Alex Mercer</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 font-bold text-slate-600 tracking-wide">RG992184</td>
+                                <td class="py-4 px-6 text-slate-600 font-medium">2026-06-24 • 14:20</td>
+                                <td class="py-4 px-6 font-black text-slate-950 text-base">$1,500.00</td>
+                                <td class="py-4 px-6 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-black rounded-xl border border-emerald-200 uppercase tracking-wide">
+                                        ● Active
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- ROW 2 -->
+                            <tr class="hover:bg-slate-50/80 transition-all duration-200">
+                                <td class="py-4 px-5 text-center text-slate-500 font-bold text-sm">02</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-sans font-bold text-sm border border-slate-300">
+                                            SC
+                                        </div>
+                                        <span class="text-base font-black font-sans text-slate-900 tracking-wide">Sarah Connor</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 font-bold text-slate-600 tracking-wide">RG992150</td>
+                                <td class="py-4 px-6 text-slate-600 font-medium">2026-06-22 • 09:12</td>
+                                <td class="py-4 px-6 font-black text-slate-950 text-base">$500.00</td>
+                                <td class="py-4 px-6 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-black rounded-xl border border-emerald-200 uppercase tracking-wide">
+                                        ● Active
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- ROW 3 -->
+                            <tr class="hover:bg-slate-50/80 transition-all duration-200">
+                                <td class="py-4 px-5 text-center text-slate-500 font-bold text-sm">03</td>
+                                <td class="py-4 px-6">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center font-sans font-bold text-sm border border-slate-300">
+                                            JD
+                                        </div>
+                                        <span class="text-base font-black font-sans text-slate-900 tracking-wide">John Doe</span>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6 font-bold text-slate-600 tracking-wide">RG991044</td>
+                                <td class="py-4 px-6 text-slate-600 font-medium">2026-06-20 • 18:45</td>
+                                <td class="py-4 px-6 font-bold text-slate-400 text-base">$0.00</td>
+                                <td class="py-4 px-6 text-center">
+                                    <span class="inline-flex items-center gap-1 px-3 py-1 bg-rose-50 text-rose-700 text-xs font-black rounded-xl border border-rose-200 uppercase tracking-wide">
+                                        ○ Inactive
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+           
+
+          
+
+          
+
+       
+
+        </main>
+
+
+
+
+        <footer
+            class="mt-auto px-4 sm:px-8 py-5 bg-slate-100 border-t border-slate-300 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs tracking-wide text-slate-500 shadow-inner">
+            <div class="flex items-center gap-1">
+                <span>Copyright &copy; 2026. All rights reserved.</span>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-pulse"></span>
+                    <span class="text-slate-800 font-bold">REALGAINS<span class="text-emerald-600">.IO</span></span>
+                </div>
+                <span class="text-slate-300">|</span>
+                <span class="text-slate-600 font-medium">v2.4.0-Build [Active]</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
