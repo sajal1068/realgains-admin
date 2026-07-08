@@ -446,7 +446,7 @@
                         <span class="text-amber-600 font-bold" id="pageBreadcrumb">DASHBOARD CORE</span>
                     </div>
                     <div class="flex items-center gap-3 mt-1">
-                        <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 font-sans uppercase"
+                        <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 font-sans md:uppercase"
                             id="mainPageTitle">
                             Fund Deposit Summary
                         </h2>
@@ -459,22 +459,25 @@
                 </div>
 
                 <!-- Latency and Refresh -->
-                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">
-                    <!-- <div
-                        class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 border border-emerald-700 text-white rounded-xl flex flex-col min-w-[120px] sm:min-w-[140px] shadow-md">
-                        <span class="text-xs text-emerald-100 uppercase tracking-wider font-semibold">[ NETWORK LATENCY
-                            ]</span>
-                        <span class="text-sm font-bold mt-0.5 flex items-center gap-1">
-                            <i class="bi bi-wifi text-sm text-amber-400"></i> 14ms (Optimal)
-                        </span>
-                    </div> -->
+               <!-- Parent div modified: hidden on mobile, inline-row flex layout on desktop (md and up) -->
+<div class="hidden md:inline-flex items-center gap-2 sm:gap-3 font-mono">
+    
+    <!-- Left Element: Network Latency Node -->
+    <div class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 border border-emerald-700 text-white rounded-xl flex flex-col min-w-[120px] sm:min-w-[140px] shadow-md justify-center">
+        <span class="text-xs text-emerald-100 uppercase tracking-wider font-semibold">[ NETWORK LATENCY ]</span>
+        <span class="text-sm font-bold mt-0.5 flex items-center gap-1 whitespace-nowrap">
+            <i class="bi bi-wifi text-sm text-amber-400"></i> 14ms (Optimal)
+        </span>
+    </div>
 
-                    <button onclick="window.location.reload()"
-                        class="h-[46px] w-[46px] bg-white border border-slate-300 hover:border-amber-500 text-slate-600 hover:text-amber-500 rounded-xl flex items-center justify-center transition-all text-base shadow-sm"
-                        title="Sync Current Component Nodes">
-                        <i class="bi bi-arrow-clockwise"></i>
-                    </button>
-                </div>
+    <!-- Right Element: Sync Reload Node -->
+    <button onclick="window.location.reload()"
+        class="h-[46px] w-[46px] bg-white border border-slate-300 hover:border-amber-500 text-slate-600 hover:text-amber-500 rounded-xl flex items-center justify-center transition-all text-base shadow-sm shrink-0"
+        title="Sync Current Component Nodes">
+        <i class="bi bi-arrow-clockwise"></i>
+    </button>
+    
+</div>
             </div>
 
             <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
@@ -526,8 +529,8 @@
                     <table id="withdrawalCloneTable" class="w-full text-left border-collapse">
                         <thead>
                             <tr
-                                class="bg-slate-50/50 border-b border-slate-200 text-[11px] font-mono uppercase tracking-widest text-brandMuted">
-                                <th class="py-3 px-5 text-center w-16">Sr.No.</th>
+                                class="bg-slate-50/50 border-b border-slate-200 text-sm font-mono uppercase tracking-widest text-brandMuted">
+                                <th class="py-3 px-5 text-center w-16 text-sm">Sr.No.</th>
                                 <th class="py-3 px-6">Transaction ID</th>
                                 <th class="py-3 px-6">Wallet Address (Target)</th>
                                 <th class="py-3 px-6">Withdrawal</th>
@@ -546,7 +549,7 @@
                                     0xBa27944738BcE91ADCe1449055e867Ab52DCaBec</td>
                                 <td class="py-4 px-6 font-bold text-slate-700">$500.00</td>
                                 <td class="py-4 px-6 text-rose-500 font-semibold">-$25.00</td>
-                                <td class="py-4 px-6 text-brandGreen font-bold">$475.00</td>
+                                <td class="py-4 px-6 text-emerald-600 font-bold">$475.00</td>
                                 <td class="py-4 px-6 text-center">
                                     <span
                                         class="inline-block px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-[10px] text-brandGreen font-bold rounded-lg uppercase tracking-wide">Success</span>
@@ -561,10 +564,10 @@
                                     0xBa27944738BcE91ADCe1449055e867Ab52DCaBec</td>
                                 <td class="py-4 px-6 font-bold text-slate-700">$120.00</td>
                                 <td class="py-4 px-6 text-rose-500 font-semibold">-$6.00</td>
-                                <td class="py-4 px-6 text-brandGreen font-bold">$114.00</td>
+                                <td class="py-4 px-6 text-emerald-600 font-bold">$114.00</td>
                                 <td class="py-4 px-6 text-center">
                                     <span
-                                        class="inline-block px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-[10px] text-brandGreen font-bold rounded-lg uppercase tracking-wide">Success</span>
+                                        class="inline-block px-2.5 py-0.5 bg-emerald-600/10 border border-brandGreen/20 text-[10px] text-brandGreen font-bold rounded-lg uppercase tracking-wide">Success</span>
                                 </td>
                                 <td class="py-4 px-5 text-brandMuted">2026-06-20 15:30:45</td>
                             </tr>
@@ -576,7 +579,7 @@
                                     0xBa27944738BcE91ADCe1449055e867Ab52DCaBec</td>
                                 <td class="py-4 px-6 font-bold text-slate-700">$2,500.00</td>
                                 <td class="py-4 px-6 text-rose-500 font-semibold">-$125.00</td>
-                                <td class="py-4 px-6 text-brandGreen font-bold">$2,375.00</td>
+                                <td class="py-4 px-6 text-emerald-600 font-bold">$2,375.00</td>
                                 <td class="py-4 px-6 text-center">
                                     <span
                                         class="inline-block px-2.5 py-0.5 bg-amber-500/10 border border-amber-500/20 text-[10px] text-amber-600 font-bold rounded-lg uppercase tracking-wide animate-pulse">Processing</span>

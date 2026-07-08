@@ -440,34 +440,48 @@
 
         <main
             class="p-4 sm:p-8 space-y-6 flex-1 bg-gradient-to-br from-slate-50 via-slate-100 to-emerald-50/20 text-slate-800">
+            
+
+
+             <!-- Top Breadcrumb & Page Title -->
             <div
-                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-800/60 mb-4">
+                class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-slate-300 mb-6">
                 <div class="space-y-1">
-                    <div class="flex items-center gap-2 font-mono text-[11px] tracking-wider text-brandMuted uppercase">
-                        <span>[ Activation Wallet ]</span>
-                        <i class="bi bi-chevron-right text-[9px]"></i>
-                        <span class="text-brandGold" id="pageBreadcrumb">Add Fund</span>
+                    <div class="flex items-center gap-2 font-mono text-xs tracking-wider text-slate-600 uppercase">
+                        <span>[ SYSTEM PORTAL ]</span>
+                        <i class="bi bi-chevron-right text-xs"></i>
+                        <span class="text-amber-600 font-bold" id="pageBreadcrumb">DASHBOARD CORE</span>
                     </div>
                     <div class="flex items-center gap-3 mt-1">
-                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white font-sans"
+                        <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 font-sans md:uppercase"
                             id="mainPageTitle">
                             Income Wallet Summary
                         </h2>
                         <span
-                            class="flex items-center gap-1.5 px-2.5 py-0.5 bg-brandGreen/10 border border-brandGreen/20 text-brandGreen text-[10px] font-mono rounded-md uppercase tracking-wide">
-                            <span class="w-1 h-1 bg-brandGreen rounded-full animate-pulse"></span>
-                            <span>Live Node</span>
+                            class="flex items-center gap-1.5 px-3 py-1 bg-emerald-600 text-white text-xs font-mono rounded-md uppercase tracking-wide shadow-sm">
+                            <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
+                            <span class="font-bold">Live Node</span>
                         </span>
                     </div>
                 </div>
+                <!-- Parent div modified: hidden on mobile, inline-row flex layout on desktop (md and up) -->
+                <div class="hidden md:inline-flex items-center gap-2 sm:gap-3 font-mono">
+                    
+                    <!-- Left Element: Network Latency Node -->
+                    <!-- <div class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 border border-emerald-700 text-white rounded-xl flex flex-col min-w-[120px] sm:min-w-[140px] shadow-md justify-center">
+                        <span class="text-xs text-emerald-100 uppercase tracking-wider font-semibold">[ NETWORK LATENCY ]</span>
+                        <span class="text-sm font-bold mt-0.5 flex items-center gap-1 whitespace-nowrap">
+                            <i class="bi bi-wifi text-sm text-amber-400"></i> 14ms (Optimal)
+                        </span>
+                    </div> -->
 
-                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto font-mono">
-
+                    <!-- Right Element: Sync Reload Node -->
                     <button onclick="window.location.reload()"
-                        class="h-[42px] px-3 bg-brandDark border border-slate-800 hover:border-brandGold/30 text-brandMuted hover:text-brandGold rounded-xl flex items-center justify-center transition-all text-sm focus:outline-none"
+                        class="h-[46px] w-[46px] bg-white border border-slate-300 hover:border-amber-500 text-slate-600 hover:text-amber-500 rounded-xl flex items-center justify-center transition-all text-base shadow-sm shrink-0"
                         title="Sync Current Component Nodes">
                         <i class="bi bi-arrow-clockwise"></i>
                     </button>
+                    
                 </div>
             </div>
 
